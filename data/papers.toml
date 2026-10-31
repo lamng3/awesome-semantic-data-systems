@@ -42,7 +42,6 @@ year = 2026
 section = "sds-semantic-layers"
 url = "https://arxiv.org/abs/2609.15779"
 code = "https://github.com/ruc-datalab/EvoOntology"
-star = true
 tldr = "An ontology layer, served over MCP, that data agents query at runtime and that refines itself."
 summary = "Wraps an ontology of heterogeneous data (tables, files, databases) as an MCP server with schema, content, and tool layers. A builder agent constructs it, and a self-evolution loop applies attribution-guided typed edits, keeping each only if a paired evaluation shows it helps."
 added = 2026-10-31

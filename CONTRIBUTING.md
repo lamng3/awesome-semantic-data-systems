@@ -1,6 +1,6 @@
 # Contributing
 
-This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one section, newest first.
+This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one section, newest first, and every entry is presented the same way: no badges, rankings, or highlights.
 
 ## Scope
 
@@ -77,9 +77,7 @@ added = 2026-10-31
 | `section` | yes | One section id. See the placement rules. |
 | `url` | yes | Canonical page. For arXiv, use the versionless abstract page, `https://arxiv.org/abs/NNNN.NNNNN`, not a PDF. |
 | `arxiv` | no | The arXiv abstract page of a paper whose `url` is the published version, so readers have a free copy. |
-| `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. |
-| `star` | no | `star = true` marks a standout entry with ⭐. Use it sparingly, or it stops meaning anything. |
-| `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
+| `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. || `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
 | `summary` | no | At most 400 characters, hidden until the TL;DR is clicked. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
 | `added` | yes | The date the entry was added. Drives "Recently Added". |
 | `bibtex` | no | The official BibTeX, pasted as a `"""` multi-line string, for example from DBLP or the publisher. Used verbatim in `references.bib`. Prefer it for published papers. |

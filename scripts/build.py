@@ -25,7 +25,7 @@ README = ROOT / "README.md"
 BIB = ROOT / "references.bib"
 
 REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
-OPTIONAL = {"authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex", "star"}
+OPTIONAL = {"authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex"}
 BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
 BIB_SKIP_WORDS = {"a", "an", "the", "on", "of", "towards", "toward"}
 ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
@@ -112,8 +112,6 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
                 errors.append(f"{where}: arXiv links use the versionless abstract page, https://arxiv.org/abs/NNNN.NNNNN")
         if "arxiv" in e and ARXIV_ABS.match(e["url"]):
             errors.append(f"{where}: url is already the arXiv page; drop arxiv")
-        if "star" in e and e["star"] is not True:
-            errors.append(f"{where}: star must be true, or omitted")
         for key in ["url"] + [k for k, _ in EXTRA_LINKS]:
             if key in e and not e[key].startswith("https://"):
                 errors.append(f"{where}: {key} must start with https://")
@@ -219,8 +217,7 @@ def render_entry(e: dict) -> str:
     # The citation may break only after its comma, and never leaves the title's last word behind.
     links = "".join(f"&nbsp;·&nbsp;[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
     citation = f"({nbsp(md_escape(cite(e)))}, {nbsp(md_escape(e['venue']))}&nbsp;{e['year']})"
-    star = "⭐&nbsp;" if e.get("star") else ""
-    head = f"- {star}**[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
+    head = f"- **[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
 
     details = []
     if "summary" in e:

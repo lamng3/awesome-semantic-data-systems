@@ -15,15 +15,20 @@ import html
 import re
 import sys
 import tomllib
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = ROOT / "data" / "taxonomy.toml"
 PAPERS = ROOT / "data" / "papers.toml"
 README = ROOT / "README.md"
+BIB = ROOT / "references.bib"
 
 REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
-OPTIONAL = {"authors", "org", "cite", "code", "docs", "project", "summary"}
+OPTIONAL = {"authors", "org", "cite", "code", "docs", "project", "summary", "bibkey", "bibtex"}
+BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
+BIB_SKIP_WORDS = {"a", "an", "the", "on", "of", "towards", "toward"}
+ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
 EXTRA_LINKS = [("code", "Code"), ("docs", "Docs"), ("project", "Project")]
 # Long enough for one clause, short enough to stay on one line in GitHub's README column.
 MAX_TLDR = 100
@@ -35,7 +40,7 @@ SECTION_ID = re.compile(r"^(sds|mem)-[a-z0-9-]+$")
 SURNAME_PARTICLES = {"da", "das", "de", "del", "della", "der", "di", "dos", "du", "la", "le", "ten", "ter", "van", "von"}
 NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
 # Headings written by hand in README.md; generated anchors must not collide with them.
-STATIC_HEADINGS = {"Awesome Semantic DB", "Contents", "Recently Added", "Contributing", "License"}
+STATIC_HEADINGS = {"Awesome Semantic DB", "Contents", "Recently Added", "Citing", "Contributing", "License"}
 
 
 def slug(text: str) -> str:
@@ -82,6 +87,7 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
 
     seen_urls: dict[str, str] = {}
     seen_titles: dict[str, str] = {}
+    seen_keys: dict[str, str] = {}
     this_year = dt.date.today().year
     for e in entries:
         name = e.get("title", "<untitled>")
@@ -115,7 +121,17 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
                 errors.append(f"{where}: {key} must be a single line")
         if e["title"].endswith("."):
             errors.append(f"{where}: title ends with a period")
-        for seen, key, label in [(seen_urls, e["url"], "url"), (seen_titles, e["title"].casefold(), "title")]:
+        if "bibtex" in e and not e["bibtex"].lstrip().startswith("@"):
+            errors.append(f"{where}: bibtex must be a complete BibTeX entry starting with @")
+        if "bibtex" in e and not bibkey(e):
+            errors.append(f"{where}: could not read the key from bibtex")
+        elif "bibtex" not in e and not BIBKEY.match(bibkey(e)):
+            errors.append(f"{where}: bibtex key {bibkey(e)!r} must look like smith2026title; set bibkey")
+        for seen, key, label in [
+            (seen_urls, e["url"], "url"),
+            (seen_titles, e["title"].casefold(), "title"),
+            (seen_keys, bibkey(e), "bibtex key"),
+        ]:
             if key in seen:
                 errors.append(f"{where}: same {label} as {seen[key]!r}")
             seen[key] = name
@@ -146,6 +162,54 @@ def cite(e: dict) -> str:
     return f"{names[0]} et al."
 
 
+def ascii_word(text: str) -> str:
+    folded = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]", "", folded.lower())
+
+
+def bibkey(e: dict) -> str:
+    """surname + year + first significant title word, e.g. tsapelas2026nousdb."""
+    if "bibtex" in e:
+        match = re.match(r"\s*@\w+\s*\{\s*([^,\s]+)\s*,", e["bibtex"])
+        return match.group(1) if match else ""
+    if "bibkey" in e:
+        return e["bibkey"]
+    if "org" in e:
+        who = e["org"].split()[0]
+    else:
+        who = surname(e["authors"][0]) if e.get("authors") else ""
+    words = [w for w in (ascii_word(t) for t in re.split(r"[\s:\-]+", e["title"])) if w]
+    first = next((w for w in words if w not in BIB_SKIP_WORDS), words[0] if words else "")
+    return f"{ascii_word(who)}{e['year']}{first}"
+
+
+def bib_escape(text: str) -> str:
+    return re.sub(r"([&%$#_])", r"\\\1", text)
+
+
+def render_bib_entry(e: dict) -> str:
+    if "bibtex" in e:
+        return e["bibtex"].strip()
+    if "org" in e:
+        author = f"{{{bib_escape(e['org'])}}}"
+    else:
+        author = " and ".join(bib_escape(a) for a in e["authors"])
+    fields = [("author", author), ("title", f"{{{bib_escape(e['title'])}}}"), ("year", str(e["year"]))]
+    if arxiv := ARXIV_ID.search(e["url"]):
+        fields += [("eprint", arxiv.group(1)), ("archivePrefix", "arXiv")]
+    else:
+        fields.append(("howpublished", bib_escape(e["venue"])))
+    fields.append(("url", e["url"]))
+    body = ",\n".join(f"  {name:<13} = {{{value}}}" for name, value in fields)
+    return f"@misc{{{bibkey(e)},\n{body}\n}}"
+
+
+def render_bib(grouped) -> str:
+    header = "% Generated from data/papers.toml by scripts/build.py. Do not edit by hand.\n"
+    entries = [e for _, sections in grouped for _, members in sections for e in members]
+    return header + "\n" + "\n\n".join(render_bib_entry(e) for e in entries) + "\n"
+
+
 def render_entry(e: dict) -> str:
     # The citation may break only after its comma, and never leaves the title's last word behind.
     links = "".join(f"&nbsp;·&nbsp;[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
@@ -157,6 +221,7 @@ def render_entry(e: dict) -> str:
         details.append(no_widow(html.escape(e["summary"])))
     if "authors" in e:
         details.append(f"<i>Authors:</i> {no_widow(html.escape(', '.join(e['authors'])))}")
+    details.append(f'<i>BibTeX:</i> <a href="references.bib"><code>{bibkey(e)}</code></a>')
     tldr = no_widow(html.escape(e["tldr"]))
     if not details:
         return f"{head}<br>\n  {tldr}"
@@ -236,13 +301,16 @@ def main() -> int:
     updated = fill(updated, "CONTENTS", render_contents(grouped, len(entries)))
     updated = fill(updated, "RECENT", render_recent(entries))
     updated = fill(updated, "LIST", render_list(grouped))
+    bib = render_bib(grouped)
 
     if check:
-        if updated != current:
-            print("README.md is out of date. Run `make` and commit the result.", file=sys.stderr)
+        stale = [p.name for p, text in [(README, updated), (BIB, bib)] if not p.exists() or p.read_text() != text]
+        if stale:
+            print(f"{', '.join(stale)} out of date. Run `make` and commit the result.", file=sys.stderr)
             return 1
         return 0
     README.write_text(updated)
+    BIB.write_text(bib)
     print(f"README.md: {len(entries)} entries")
     return 0
 

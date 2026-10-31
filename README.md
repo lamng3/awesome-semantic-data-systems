@@ -38,14 +38,14 @@ Data systems where meaning is first class, in the query operators or in the data
 Semantic operators, their algebra, and the engines that run them inside declarative&nbsp;queries.
 
 - **[NousDB - A Fast Query Engine for Semantic Analytics](https://arxiv.org/abs/2610.28551)**&nbsp;(Tsapelas&nbsp;et&nbsp;al., arXiv&nbsp;2026)
-  <details><summary>Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM&nbsp;calls.</summary><blockquote>A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token&nbsp;histograms.<br><br><i>Authors:</i> Christos Tsapelas, Georgia Koutrika, Yannis&nbsp;Ioannidis</blockquote></details>
+  <details><summary>Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM&nbsp;calls.</summary><blockquote>A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token&nbsp;histograms.<br><br><i>Authors:</i> Christos Tsapelas, Georgia Koutrika, Yannis&nbsp;Ioannidis<br><br><i>BibTeX:</i> <a href="references.bib"><code>tsapelas2026nousdb</code></a></blockquote></details>
 
 ### <a id="sds-knowledge-graphs"></a>Knowledge Graph and Ontology Databases
 
 Storage and query engines for RDF, OWL ontologies, and property&nbsp;graphs.
 
 - **[OntoDB: A Database Management System for Ontologies](https://github.com/lamng3/OntoDB)**&nbsp;(Nguyen, GitHub&nbsp;2026)
-  <details><summary>An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic&nbsp;search.</summary><blockquote>An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing&nbsp;triples.<br><br><i>Authors:</i> Lam&nbsp;Nguyen</blockquote></details>
+  <details><summary>An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic&nbsp;search.</summary><blockquote>An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing&nbsp;triples.<br><br><i>Authors:</i> Lam&nbsp;Nguyen<br><br><i>BibTeX:</i> <a href="references.bib"><code>nguyen2026ontodb</code></a></blockquote></details>
 
 ## Agent Memory
 
@@ -56,8 +56,12 @@ How agents store, organize, and recall what they learn, and how to tell whether 
 End-to-end memory designs and production systems that agents read from and write&nbsp;to.
 
 - **[MemCurrent: Designing Persistent Memory for Production Agents](https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents)**&nbsp;(Databricks&nbsp;AI&nbsp;Research, Databricks&nbsp;Blog&nbsp;2026)
-  <details><summary>Episodic and derived memory for production agents, kept fresh by an offline consolidation&nbsp;pipeline.</summary><blockquote>Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and&nbsp;Genie.</blockquote></details>
+  <details><summary>Episodic and derived memory for production agents, kept fresh by an offline consolidation&nbsp;pipeline.</summary><blockquote>Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and&nbsp;Genie.<br><br><i>BibTeX:</i> <a href="references.bib"><code>databricks2026memcurrent</code></a></blockquote></details>
 <!-- END LIST -->
+
+## Citing
+
+BibTeX for every entry is in [references.bib](references.bib).
 
 ## Contributing
 

@@ -42,8 +42,8 @@ Each entry goes in exactly one section, chosen by its main contribution:
 ## Adding an entry
 
 1. Add an `[[entry]]` to [`data/papers.toml`](data/papers.toml).
-2. Run `make`. It validates the data and regenerates `README.md`.
-3. Commit both files. CI fails if `README.md` does not match the data.
+2. Run `make`. It validates the data and regenerates `README.md` and `references.bib`.
+3. Commit all three files. CI fails if either generated file does not match the data.
 
 `make` needs [uv](https://docs.astral.sh/uv/). Without it, run `python3 scripts/build.py` with Python 3.11 or newer.
 
@@ -78,6 +78,12 @@ added = 2026-10-31
 | `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
 | `summary` | no | At most 400 characters, hidden until the TL;DR is clicked. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
 | `added` | yes | The date the entry was added. Drives "Recently Added". |
+| `bibtex` | no | The official BibTeX, pasted as a `"""` multi-line string, for example from DBLP or the publisher. Used verbatim in `references.bib`. Prefer it for published papers. |
+| `bibkey` | no | Overrides the generated key (`surname` + `year` + first title word, such as `tsapelas2026nousdb`). Only needed when two entries would get the same key. |
+
+## BibTeX
+
+`make` also writes [`references.bib`](references.bib) with one entry per item, in README order. Without a `bibtex` field, arXiv papers become `@misc` entries with `eprint`, and everything else becomes `@misc` with `howpublished` set to the venue. Keys never change once published, so set `bibkey` rather than renaming when titles change.
 
 ## Checks
 

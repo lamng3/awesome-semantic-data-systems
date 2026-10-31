@@ -1,6 +1,6 @@
 # Contributing
 
-This is a curated list. The maintainer chooses what goes in, and suggestions are welcome as issues.
+This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one section, newest first.
 
 ## Scope
 

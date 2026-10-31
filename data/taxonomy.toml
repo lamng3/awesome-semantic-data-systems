@@ -1,0 +1,61 @@
+# Parts and sections, in display order.
+# A section with no entries is hidden from the README until it gets one.
+# Section ids are stable: entries in papers.toml refer to them.
+
+[[part]]
+title = "Semantic Data Systems"
+description = "Database systems where semantics are first class, either because models run as query operators or because the data model itself encodes meaning."
+
+  [[part.section]]
+  id = "semantic-query-engines"
+  title = "Semantic Query Engines and Operators"
+  description = "Systems that run LLM-powered operators (filter, join, extract, aggregate) inside declarative queries over structured and unstructured data."
+
+  [[part.section]]
+  id = "semantic-optimization"
+  title = "Optimization and Cost Models"
+  description = "Query rewriting, cost models, batching, caching, and model selection for queries that call models."
+
+  [[part.section]]
+  id = "ontology-kg-databases"
+  title = "Ontology and Knowledge Graph Databases"
+  description = "Storage and query engines for RDF, OWL ontologies, and knowledge graphs, including reasoning and semantic search over them."
+
+  [[part.section]]
+  id = "vector-hybrid-search"
+  title = "Vector and Hybrid Search"
+  description = "Embedding indexes and systems that combine vector similarity with relational or graph predicates."
+
+  [[part.section]]
+  id = "semantic-benchmarks"
+  title = "Benchmarks"
+  description = "Workloads and datasets for evaluating semantic query processing."
+
+  [[part.section]]
+  id = "semantic-surveys"
+  title = "Surveys and Vision Papers"
+  description = "Overviews of the area and arguments about where it should go."
+
+[[part]]
+title = "Agent Memory"
+description = "How agents store, consolidate, and retrieve what they learn across sessions, and how to measure whether memory helps."
+
+  [[part.section]]
+  id = "memory-systems"
+  title = "Memory Architectures and Systems"
+  description = "Designs and production systems for persistent agent memory."
+
+  [[part.section]]
+  id = "memory-management"
+  title = "Consolidation, Updating, and Forgetting"
+  description = "Methods for deciding what to keep, merging and correcting memories, and removing stale ones."
+
+  [[part.section]]
+  id = "memory-benchmarks"
+  title = "Benchmarks and Evaluation"
+  description = "Benchmarks and methods for measuring whether memory improves an agent."
+
+  [[part.section]]
+  id = "memory-surveys"
+  title = "Surveys"
+  description = "Overviews of memory for LLM agents."

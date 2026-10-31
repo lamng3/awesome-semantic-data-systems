@@ -1,45 +1,35 @@
 # Contributing
 
-This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one section, newest first, and every entry is presented the same way: no badges, rankings, or highlights.
+This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one pillar, newest first, and every entry is presented the same way: no badges, rankings, or highlights.
 
 ## Scope
 
-The list has two pillars. An entry belongs here if its main contribution falls under one of them:
+An entry belongs here if its main contribution falls under one of three pillars:
 
-- **Semantic Data Systems.** Data systems where meaning is first class: engines and operators that call models, the optimization of such queries, knowledge graph and ontology databases, and vector or hybrid search treated as a database problem.
-- **Agent Memory.** How agents store, organize, recall, and forget knowledge across sessions, and how memory is evaluated.
+- **Semantic Query Processing.** Engines and operators that call models inside declarative queries, the optimization of such queries, and vector or hybrid search treated as a query-processing problem.
+- **Knowledge Graphs and Ontologies.** Storing and querying ontologies and knowledge graphs, matching them, versioning and evolving them, checking changes for errors, and ontologies built for agents to use.
+- **Agent Memory.** How agents store, organize, recall, and forget what they learn across sessions, and how memory is evaluated.
 
-General LLM papers, prompt-engineering techniques, and RAG applications that make no systems or memory contribution are out of scope.
+Out of scope: general LLM papers, prompt engineering, ontology or knowledge graph applications with no contribution to how the knowledge is managed, and RAG pipelines that make no systems or memory contribution.
 
 ## Structure
 
-Both pillars follow the same order: surveys, then systems, then techniques, then benchmarks. Semantic Data Systems has two extra sections for ontologies, which are a focus of this list. Sections are defined in [`data/taxonomy.toml`](data/taxonomy.toml).
-
-| Semantic Data Systems | Agent Memory |
-| --- | --- |
-| `sds-surveys` Surveys and Vision | `mem-surveys` Surveys and Vision |
-| `sds-engines` Semantic Operators and Query Engines | `mem-systems` Memory Architectures and Systems |
-| `sds-optimization` Query Optimization and Execution | `mem-representation` Representation and Retrieval |
-| `sds-semantic-layers` Ontologies and Semantic Layers for Agents | `mem-management` Consolidation, Updating, and Forgetting |
-| `sds-knowledge-graphs` Knowledge Graph and Ontology Databases | `mem-experiential` Experiential and Procedural Memory |
-| `sds-ontology-evolution` Ontology Matching, Versioning, and Evolution | `mem-benchmarks` Benchmarks and Evaluation |
-| `sds-vector-search` Vector and Hybrid Search | |
-| `sds-benchmarks` Benchmarks | |
+The pillars are defined in [`data/taxonomy.toml`](data/taxonomy.toml). Each is one flat list, newest first, until it is large enough to need sections.
 
 ### Placement rules
 
-Each entry goes in exactly one section, chosen by its main contribution:
+Each entry goes in exactly one pillar, chosen by its main contribution:
 
-1. **Pillar first.** Memory systems built on a database belong to Agent Memory. Data systems designed for agent workloads belong to Semantic Data Systems.
-2. **Surveys and benchmarks win.** A survey goes in Surveys and Vision, and a benchmark goes in Benchmarks, even if it also proposes a system or a baseline.
-3. **Systems over techniques.** A paper that presents a complete engine or memory system goes in the systems section, even if it also introduces an optimization or a retrieval method. It goes in a technique section only when that technique is the main contribution and the system is a vehicle for it.
-4. **When torn, pick the section a reader would look in first** and keep the TL;DR specific enough that it is still findable.
+1. **Memory is about the agent's own experience.** A store of what an agent learned across sessions is Agent Memory, even when it is built on a database or a knowledge graph.
+2. **Ontologies and knowledge graphs are about curated domain knowledge.** An ontology or knowledge graph that an agent reads, including one the agent builds or refines, is Knowledge Graphs and Ontologies.
+3. **Query processing is about running queries.** An engine, operator, or optimizer is Semantic Query Processing, even when its queries run over a knowledge graph, unless the contribution is specific to ontologies.
+4. **When torn, pick the pillar a reader would look in first,** and keep the TL;DR specific enough that the entry is still findable.
 
-### Changing the structure
+### Splitting a pillar
 
-- An empty section stays hidden until it gets an entry, so planned sections cost nothing.
-- Section ids are the README link anchors. Never change an id once it has entries. Titles can be renamed freely.
-- Add a section only when an existing one doesn't fit and the new one will collect several entries. Split a section once it passes about 15 entries and has a natural seam.
+- Split a pillar once it passes about 15 entries, into 2 to 4 sections along a seam the entries already show. The likely seams are noted in `data/taxonomy.toml`.
+- Never create a section ahead of the entries that fill it, and never for a single paper.
+- Once a pillar is split, every entry in it needs a `section`. Section ids become README anchors, so never change one once it has entries.
 
 ## Adding an entry
 
@@ -55,7 +45,7 @@ title = "Exact Title as Published"
 authors = ["First Author", "Second Author"]   # or: org = "Databricks AI Research"
 venue = "VLDB"                               # arXiv, SIGMOD, CIDR, Databricks Blog, GitHub, ...
 year = 2026
-section = "sds-engines"                      # an id from data/taxonomy.toml
+pillar = "query"                            # query, knowledge, or memory
 url = "https://arxiv.org/abs/2610.28551"
 code = "https://github.com/..."              # optional
 docs = "https://..."                         # optional
@@ -74,7 +64,8 @@ added = 2026-10-31
 | `cite` | no | Overrides the citation when the family name is not the last word, for example `cite = "Zhang Wei"`. |
 | `venue` | yes | The venue where it was published. When a preprint is accepted, change `arXiv` to the conference and keep the same `url`. |
 | `year` | yes | Year of the version being linked. |
-| `section` | yes | One section id. See the placement rules. |
+| `pillar` | yes | `query`, `knowledge`, or `memory`. See the placement rules. |
+| `section` | only in a split pillar | One of the pillar's section ids. |
 | `url` | yes | Canonical page. For arXiv, use the versionless abstract page, `https://arxiv.org/abs/NNNN.NNNNN`, not a PDF. |
 | `arxiv` | no | The arXiv abstract page of a paper whose `url` is the published version, so readers have a free copy. |
 | `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. || `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |

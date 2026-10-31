@@ -24,8 +24,8 @@ PAPERS = ROOT / "data" / "papers.toml"
 README = ROOT / "README.md"
 BIB = ROOT / "references.bib"
 
-REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
-OPTIONAL = {"authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex"}
+REQUIRED = {"title", "venue", "year", "pillar", "url", "tldr", "added"}
+OPTIONAL = {"section", "authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex"}
 BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
 BIB_SKIP_WORDS = {"a", "an", "the", "on", "of", "towards", "toward"}
 ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
@@ -36,11 +36,14 @@ MAX_DESCRIPTION = 100
 MAX_SUMMARY = 400
 RECENT_COUNT = 10
 ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
-SECTION_ID = re.compile(r"^(sds|mem)-[a-z0-9-]+$")
+PILLAR_ID = re.compile(r"^[a-z]+$")
+SECTION_ID = re.compile(r"^[a-z]+-[a-z0-9-]+$")
+# A pillar stays one flat list until it is worth splitting; then it gets 2 to 4 sections.
+MAX_SECTIONS = 4
 SURNAME_PARTICLES = {"da", "das", "de", "del", "della", "der", "di", "dos", "du", "la", "le", "ten", "ter", "van", "von"}
 NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
 # Headings written by hand in README.md; generated anchors must not collide with them.
-STATIC_HEADINGS = {"Awesome Semantic DB", "Contents", "Recently Added", "Citing", "Contributing", "License"}
+STATIC_HEADINGS = {"Awesome Semantic Data Systems", "Contents", "Recently Added", "Citing", "Contributing", "License"}
 
 
 def slug(text: str) -> str:
@@ -68,22 +71,31 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
     entries = tomllib.loads(PAPERS.read_text()).get("entry", [])
 
     anchors = {slug(h) for h in STATIC_HEADINGS}
-    section_ids: set[str] = set()
+    sections_of: dict[str, set[str]] = {}
     for pillar in pillars:
+        pid = pillar["id"]
+        if not PILLAR_ID.match(pid) or pid in sections_of:
+            errors.append(f"taxonomy: pillar id {pid!r} must be one unique lowercase word")
         if slug(pillar["title"]) in anchors:
             errors.append(f"taxonomy: pillar {pillar['title']!r} collides with another heading")
         anchors.add(slug(pillar["title"]))
-    for item in [*pillars, *(s for p in pillars for s in p["section"])]:
+        sections = pillar.get("section", [])
+        if len(sections) == 1 or len(sections) > MAX_SECTIONS:
+            errors.append(f"taxonomy: pillar {pid!r} has {len(sections)} sections; use none, or 2 to {MAX_SECTIONS}")
+        sections_of[pid] = {s["id"] for s in sections}
+    all_sections = [s for p in pillars for s in p.get("section", [])]
+    for item in [*pillars, *all_sections]:
         if len(item["description"]) > MAX_DESCRIPTION:
             errors.append(f"taxonomy: description of {item['title']!r} is {len(item['description'])} characters, limit {MAX_DESCRIPTION}")
+    seen_sections: set[str] = set()
     for pillar in pillars:
-        for section in pillar["section"]:
+        for section in pillar.get("section", []):
             sid = section["id"]
-            if not SECTION_ID.match(sid):
-                errors.append(f"taxonomy: section id {sid!r} must look like sds-name or mem-name")
-            if sid in section_ids or sid in anchors:
+            if not sid.startswith(f"{pillar['id']}-") or not SECTION_ID.match(sid):
+                errors.append(f"taxonomy: section id {sid!r} must look like {pillar['id']}-name")
+            if sid in seen_sections or sid in anchors:
                 errors.append(f"taxonomy: section id {sid!r} is not unique")
-            section_ids.add(sid)
+            seen_sections.add(sid)
 
     seen_urls: dict[str, str] = {}
     seen_titles: dict[str, str] = {}
@@ -101,8 +113,12 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             errors.append(f"{where}: set exactly one of authors or org")
         if "authors" in e and (not e["authors"] or not all(isinstance(a, str) and a.strip() for a in e["authors"])):
             errors.append(f"{where}: authors must be a non-empty list of names")
-        if e["section"] not in section_ids:
-            errors.append(f"{where}: unknown section {e['section']!r}")
+        if e["pillar"] not in sections_of:
+            errors.append(f"{where}: unknown pillar {e['pillar']!r}")
+        elif sections_of[e["pillar"]] and e.get("section") not in sections_of[e["pillar"]]:
+            errors.append(f"{where}: pillar {e['pillar']!r} is split; set section to one of {', '.join(sorted(sections_of[e['pillar']]))}")
+        elif not sections_of[e["pillar"]] and "section" in e:
+            errors.append(f"{where}: pillar {e['pillar']!r} has no sections; drop section")
         if not isinstance(e["year"], int) or not 1950 <= e["year"] <= this_year + 1:
             errors.append(f"{where}: year must be an integer between 1950 and {this_year + 1}")
         if not isinstance(e["added"], dt.date):
@@ -236,15 +252,22 @@ def newest_first(entries: list[dict]) -> list[dict]:
     return sorted(entries, key=lambda e: (-e["year"], -e["added"].toordinal(), e["title"].casefold()))
 
 
-def group(pillars: list[dict], entries: list[dict]) -> list[tuple[dict, list[tuple[dict, list[dict]]]]]:
-    """Pillars with their non-empty sections, each section's entries newest first."""
+def group(pillars: list[dict], entries: list[dict]) -> list[tuple[dict, list[tuple[dict | None, list[dict]]]]]:
+    """Pillars with their non-empty sections, each section's entries newest first.
+
+    A pillar without sections is one flat list, returned as a single section of None.
+    """
     out = []
     for pillar in pillars:
-        sections = []
-        for section in pillar["section"]:
-            members = [e for e in entries if e["section"] == section["id"]]
-            if members:
-                sections.append((section, newest_first(members)))
+        members = [e for e in entries if e["pillar"] == pillar["id"]]
+        if "section" not in pillar:
+            sections = [(None, newest_first(members))] if members else []
+        else:
+            sections = []
+            for section in pillar["section"]:
+                in_section = [e for e in members if e["section"] == section["id"]]
+                if in_section:
+                    sections.append((section, newest_first(in_section)))
         out.append((pillar, sections))
     return out
 
@@ -257,7 +280,7 @@ def render_contents(grouped, total: int) -> str:
         if not sections:
             continue
         lines.append(f"- [{pillar['title']}](#{slug(pillar['title'])})")
-        lines += [f"  - [{s['title']}](#{s['id']})" for s, _ in sections]
+        lines += [f"  - [{s['title']}](#{s['id']})" for s, _ in sections if s]
     return "\n".join(lines)
 
 
@@ -277,7 +300,9 @@ def render_list(grouped) -> str:
             continue
         lines = [f"## {pillar['title']}", "", no_widow(pillar["description"])]
         for section, members in sections:
-            lines += ["", f'### <a id="{section["id"]}"></a>{section["title"]}', "", no_widow(section["description"]), ""]
+            if section:
+                lines += ["", f'### <a id="{section["id"]}"></a>{section["title"]}', "", no_widow(section["description"])]
+            lines.append("")
             lines += [render_entry(e) for e in members]
         blocks.append("\n".join(lines))
     return "\n\n".join(blocks)

@@ -1,85 +1,29 @@
-# Two pillars, each with sections in display order:
-# surveys first, then systems, then techniques, then benchmarks.
+# Three pillars, in display order. Each entry belongs to exactly one.
 #
-# A section with no entries is hidden from the README until it gets one.
-# Section ids are the README link anchors, so never change an id once it has entries;
-# titles can be renamed freely. Placement rules are in CONTRIBUTING.md.
+# A pillar is one flat list until it passes about 15 entries. Then split it into
+# 2 to 4 sections along a seam the entries already show, and give every entry
+# in it a section. Never create a section ahead of the entries that fill it.
+#
+# Likely seams, for when the time comes:
+#   query:     engines and operators / optimization / vector and hybrid search
+#   knowledge: storage and querying / matching and versioning / ontologies for agents
+#   memory:    memory systems / representation and retrieval / consolidation and forgetting
+#
+# Pillar and section ids are referenced by data/papers.toml; section ids also become
+# README anchors, so never change one once it has entries.
 # Descriptions are limited to 100 characters so each renders as a single line.
 
 [[pillar]]
-title = "Semantic Data Systems"
-description = "Data systems where meaning is first class, in the query operators or in the data model."
-
-  [[pillar.section]]
-  id = "sds-surveys"
-  title = "Surveys and Vision"
-  description = "Surveys, tutorials, and position papers on semantic data systems."
-
-  [[pillar.section]]
-  id = "sds-engines"
-  title = "Semantic Operators and Query Engines"
-  description = "Semantic operators, their algebra, and the engines that run them inside declarative queries."
-
-  [[pillar.section]]
-  id = "sds-optimization"
-  title = "Query Optimization and Execution"
-  description = "Cost models, rewrites, batching, model cascades, and caching for queries that call models."
-
-  [[pillar.section]]
-  id = "sds-semantic-layers"
-  title = "Ontologies and Semantic Layers for Agents"
-  description = "Ontologies and semantic layers that give agents a typed, queryable view of their data."
-
-  [[pillar.section]]
-  id = "sds-knowledge-graphs"
-  title = "Knowledge Graph and Ontology Databases"
-  description = "Storage and query engines for RDF, OWL ontologies, and property graphs."
-
-  [[pillar.section]]
-  id = "sds-ontology-evolution"
-  title = "Ontology Matching, Versioning, and Evolution"
-  description = "Aligning ontologies, tracking how they change, and checking each change for errors."
-
-  [[pillar.section]]
-  id = "sds-vector-search"
-  title = "Vector and Hybrid Search"
-  description = "Embedding indexes, alone or combined with relational, text, or graph predicates."
-
-  [[pillar.section]]
-  id = "sds-benchmarks"
-  title = "Benchmarks"
-  description = "Workloads and datasets for evaluating semantic query processing."
+id = "query"
+title = "Semantic Query Processing"
+description = "Engines that run models as query operators, and the techniques that make such queries efficient."
 
 [[pillar]]
+id = "knowledge"
+title = "Knowledge Graphs and Ontologies"
+description = "Storing, querying, aligning, versioning, and evolving ontologies and knowledge graphs."
+
+[[pillar]]
+id = "memory"
 title = "Agent Memory"
 description = "How agents store, organize, and recall what they learn, and how to tell whether memory helps."
-
-  [[pillar.section]]
-  id = "mem-surveys"
-  title = "Surveys and Vision"
-  description = "Surveys, taxonomies, and position papers on memory for LLM agents."
-
-  [[pillar.section]]
-  id = "mem-systems"
-  title = "Memory Architectures and Systems"
-  description = "End-to-end memory designs and production systems that agents read from and write to."
-
-  [[pillar.section]]
-  id = "mem-representation"
-  title = "Representation and Retrieval"
-  description = "How memories are structured (text, graphs, hierarchies, weights) and how they are found."
-
-  [[pillar.section]]
-  id = "mem-management"
-  title = "Consolidation, Updating, and Forgetting"
-  description = "Deciding what to keep, merging and correcting memories, and retiring stale ones."
-
-  [[pillar.section]]
-  id = "mem-experiential"
-  title = "Experiential and Procedural Memory"
-  description = "Learning reusable skills, workflows, and lessons from past trajectories."
-
-  [[pillar.section]]
-  id = "mem-benchmarks"
-  title = "Benchmarks and Evaluation"
-  description = "Benchmarks and methods for measuring whether memory improves an agent."

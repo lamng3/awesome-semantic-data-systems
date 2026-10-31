@@ -18,6 +18,8 @@
 
 **A curated reading list on semantic data systems and memory for AI agents.**
 
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0%201.0-lightgrey.svg)](LICENSE)
+
 [🔎 Semantic Data Systems](#-semantic-data-systems) · [🧠 Agent Memory](#-agent-memory) · [🔖 Legend](#-legend)
 
 </div>
@@ -85,3 +87,9 @@ Architectures and production systems for persistent agent memory.
 | 📖 Docs | Documentation or manual |
 
 Entries are listed newest first within each section.
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the maintainer has waived all copyright and related rights to this list. See [LICENSE](LICENSE).

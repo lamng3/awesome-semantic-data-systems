@@ -23,15 +23,17 @@ PAPERS = ROOT / "data" / "papers.toml"
 README = ROOT / "README.md"
 
 REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
-OPTIONAL = {"authors", "org", "code", "docs", "project", "summary"}
+OPTIONAL = {"authors", "org", "cite", "code", "docs", "project", "summary"}
 EXTRA_LINKS = [("code", "Code"), ("docs", "Docs"), ("project", "Project")]
-MAX_AUTHORS = 3
 # Long enough for one clause, short enough to stay on one line in GitHub's README column.
 MAX_TLDR = 100
 MAX_SUMMARY = 400
 RECENT_COUNT = 10
 ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
-# Headings written by hand in README.md; generated headings must not collide with them.
+SECTION_ID = re.compile(r"^(sds|mem)-[a-z0-9-]+$")
+SURNAME_PARTICLES = {"da", "das", "de", "del", "della", "der", "di", "dos", "du", "la", "le", "ten", "ter", "van", "von"}
+NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
+# Headings written by hand in README.md; generated anchors must not collide with them.
 STATIC_HEADINGS = {"Awesome Semantic DB", "Contents", "Recently Added", "Contributing", "License"}
 
 
@@ -40,22 +42,29 @@ def slug(text: str) -> str:
     return text.replace(" ", "-")
 
 
+def md_escape(text: str) -> str:
+    return re.sub(r"([\\`*_\[\]<>])", r"\\\1", text)
+
+
 def load() -> tuple[list[dict], list[dict], list[str]]:
     errors: list[str] = []
-    parts = tomllib.loads(TAXONOMY.read_text())["part"]
+    pillars = tomllib.loads(TAXONOMY.read_text())["pillar"]
     entries = tomllib.loads(PAPERS.read_text()).get("entry", [])
 
+    anchors = {slug(h) for h in STATIC_HEADINGS}
     section_ids: set[str] = set()
-    slugs = {slug(h) for h in STATIC_HEADINGS}
-    for part in parts:
-        for heading in [part["title"]] + [s["title"] for s in part["section"]]:
-            if slug(heading) in slugs:
-                errors.append(f"taxonomy: heading {heading!r} collides with another heading")
-            slugs.add(slug(heading))
-        for section in part["section"]:
-            if section["id"] in section_ids:
-                errors.append(f"taxonomy: duplicate section id {section['id']!r}")
-            section_ids.add(section["id"])
+    for pillar in pillars:
+        if slug(pillar["title"]) in anchors:
+            errors.append(f"taxonomy: pillar {pillar['title']!r} collides with another heading")
+        anchors.add(slug(pillar["title"]))
+    for pillar in pillars:
+        for section in pillar["section"]:
+            sid = section["id"]
+            if not SECTION_ID.match(sid):
+                errors.append(f"taxonomy: section id {sid!r} must look like sds-name or mem-name")
+            if sid in section_ids or sid in anchors:
+                errors.append(f"taxonomy: section id {sid!r} is not unique")
+            section_ids.add(sid)
 
     seen_urls: dict[str, str] = {}
     seen_titles: dict[str, str] = {}
@@ -70,6 +79,8 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             errors.append(f"{where}: unknown field {', '.join(sorted(unknown))}")
         if ("authors" in e) == ("org" in e):
             errors.append(f"{where}: set exactly one of authors or org")
+        if "authors" in e and (not e["authors"] or not all(isinstance(a, str) and a.strip() for a in e["authors"])):
+            errors.append(f"{where}: authors must be a non-empty list of names")
         if e["section"] not in section_ids:
             errors.append(f"{where}: unknown section {e['section']!r}")
         if not isinstance(e["year"], int) or not 1950 <= e["year"] <= this_year + 1:
@@ -85,7 +96,7 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             errors.append(f"{where}: tldr is {len(e['tldr'])} characters, limit {MAX_TLDR}")
         if len(e.get("summary", "")) > MAX_SUMMARY:
             errors.append(f"{where}: summary is {len(e['summary'])} characters, limit {MAX_SUMMARY}")
-        for key in ("tldr", "summary"):
+        for key in ("tldr", "summary", "cite"):
             if "\n" in e.get(key, ""):
                 errors.append(f"{where}: {key} must be a single line")
         if e["title"].endswith("."):
@@ -94,63 +105,81 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             if key in seen:
                 errors.append(f"{where}: same {label} as {seen[key]!r}")
             seen[key] = name
-    return parts, entries, errors
+    return pillars, entries, errors
 
 
-def byline(e: dict) -> str:
+def surname(name: str) -> str:
+    tokens = name.split()
+    while len(tokens) > 1 and tokens[-1].lower() in NAME_SUFFIXES:
+        tokens.pop()
+    start = len(tokens) - 1
+    while start > 0 and tokens[start - 1].lower() in SURNAME_PARTICLES:
+        start -= 1
+    return " ".join(tokens[start:])
+
+
+def cite(e: dict) -> str:
+    """Author part of an inline citation: Smith, Smith and Lee, or Smith et al."""
+    if "cite" in e:
+        return e["cite"]
     if "org" in e:
         return e["org"]
-    authors = e["authors"]
-    if len(authors) > MAX_AUTHORS:
-        return f"{authors[0]} et al."
-    return ", ".join(authors)
+    names = [surname(a) for a in e["authors"]]
+    if len(names) == 1:
+        return names[0]
+    if len(names) == 2:
+        return f"{names[0]} and {names[1]}"
+    return f"{names[0]} et al."
 
 
 def render_entry(e: dict) -> str:
-    meta = [html.escape(byline(e)), f"<i>{html.escape(e['venue'])} {e['year']}</i>"]
-    meta += [f'<a href="{e[key]}">{label}</a>' for key, label in EXTRA_LINKS if key in e]
-    head = f"- **[{e['title']}]({e['url']})**<br>\n  <sub>{' · '.join(meta)}</sub>\n"
+    links = "".join(f" · [{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
+    head = (
+        f"- **[{md_escape(e['title'])}]({e['url']})** "
+        f"({md_escape(cite(e))}, {md_escape(e['venue'])} {e['year']}){links}"
+    )
 
     details = []
     if "summary" in e:
         details.append(html.escape(e["summary"]))
-    if len(e.get("authors", [])) > MAX_AUTHORS:
+    if "authors" in e:
         details.append(f"<i>Authors:</i> {html.escape(', '.join(e['authors']))}")
     tldr = html.escape(e["tldr"])
     if not details:
-        return head + f"  <br>{tldr}"
+        return f"{head}<br>\n  {tldr}"
     body = "<br><br>".join(details)
-    return head + f"  <details><summary>{tldr}</summary><blockquote>{body}</blockquote></details>"
+    return f"{head}\n  <details><summary>{tldr}</summary><blockquote>{body}</blockquote></details>"
 
 
 def newest_first(entries: list[dict]) -> list[dict]:
     return sorted(entries, key=lambda e: (-e["year"], -e["added"].toordinal(), e["title"].casefold()))
 
 
-def group(parts: list[dict], entries: list[dict]) -> list[tuple[dict, list[tuple[dict, list[dict]]]]]:
-    """Parts and sections that have entries, each section's entries newest first."""
+def group(pillars: list[dict], entries: list[dict]) -> list[tuple[dict, list[tuple[dict, list[dict]]]]]:
+    """Pillars with their non-empty sections, each section's entries newest first."""
     out = []
-    for part in parts:
+    for pillar in pillars:
         sections = []
-        for section in part["section"]:
+        for section in pillar["section"]:
             members = [e for e in entries if e["section"] == section["id"]]
             if members:
                 sections.append((section, newest_first(members)))
-        if sections:
-            out.append((part, sections))
+        out.append((pillar, sections))
     return out
 
 
 def render_contents(grouped, total: int) -> str:
-    n_sections = sum(len(s) for _, s in grouped)
-    lines = [f"{total} entries across {n_sections} sections.", ""]
-    if total >= RECENT_COUNT:
-        lines.append(f"- [Recently Added](#{slug('Recently Added')})")
-    for part, sections in grouped:
+    width = f"{100 // len(grouped)}%"
+    header, cells = [], []
+    for pillar, sections in grouped:
         count = sum(len(m) for _, m in sections)
-        lines.append(f"- [{part['title']}](#{slug(part['title'])}) ({count})")
-        for section, members in sections:
-            lines.append(f"  - [{section['title']}](#{slug(section['title'])}) ({len(members)})")
+        header.append(f'<th width="{width}"><a href="#{slug(pillar["title"])}">{html.escape(pillar["title"])}</a> ({count})</th>')
+        rows = [f'<a href="#{s["id"]}">{html.escape(s["title"])}</a> ({len(m)})' for s, m in sections]
+        cells.append(f'<td valign="top">{"<br>".join(rows) or "<i>Coming soon</i>"}</td>')
+    lines = []
+    if total >= RECENT_COUNT:
+        lines += [f"[Recently Added](#{slug('Recently Added')})", ""]
+    lines += ["<table>", "<tr>", *header, "</tr>", "<tr>", *cells, "</tr>", "</table>"]
     return "\n".join(lines)
 
 
@@ -159,16 +188,18 @@ def render_recent(entries: list[dict]) -> str:
         return ""
     recent = sorted(entries, key=lambda e: (-e["added"].toordinal(), e["title"].casefold()))[:RECENT_COUNT]
     lines = ["## Recently Added", ""]
-    lines += [f"- {e['added'].isoformat()} · [{e['title']}]({e['url']})" for e in recent]
+    lines += [f"- {e['added'].isoformat()} · [{md_escape(e['title'])}]({e['url']})" for e in recent]
     return "\n".join(lines)
 
 
 def render_list(grouped) -> str:
     blocks = []
-    for part, sections in grouped:
-        lines = [f"## {part['title']}", "", part["description"], ""]
+    for pillar, sections in grouped:
+        if not sections:
+            continue
+        lines = [f"## {pillar['title']}", "", pillar["description"], ""]
         for section, members in sections:
-            lines += [f"### {section['title']}", "", section["description"], ""]
+            lines += [f'### <a id="{section["id"]}"></a>{section["title"]}', "", section["description"], ""]
             lines += [render_entry(e) for e in members]
             lines.append("")
         lines.append('<div align="right"><a href="#awesome-semantic-db">Back to top</a></div>')
@@ -186,12 +217,12 @@ def fill(readme: str, name: str, body: str) -> str:
 
 def main() -> int:
     check = "--check" in sys.argv[1:]
-    parts, entries, errors = load()
+    pillars, entries, errors = load()
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
 
-    grouped = group(parts, entries)
+    grouped = group(pillars, entries)
     current = README.read_text()
     updated = current
     updated = fill(updated, "CONTENTS", render_contents(grouped, len(entries)))

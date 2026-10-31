@@ -20,13 +20,16 @@ Language models are becoming database operators, and agents need somewhere to ke
 ## Contents
 
 <!-- BEGIN CONTENTS -->
-3 entries across 3 sections.
-
-- [Semantic Data Systems](#semantic-data-systems) (2)
-  - [Semantic Query Engines and Operators](#semantic-query-engines-and-operators) (1)
-  - [Ontology and Knowledge Graph Databases](#ontology-and-knowledge-graph-databases) (1)
-- [Agent Memory](#agent-memory) (1)
-  - [Memory Architectures and Systems](#memory-architectures-and-systems) (1)
+<table>
+<tr>
+<th width="50%"><a href="#semantic-data-systems">Semantic Data Systems</a> (2)</th>
+<th width="50%"><a href="#agent-memory">Agent Memory</a> (1)</th>
+</tr>
+<tr>
+<td valign="top"><a href="#sds-engines">Semantic Operators and Query Engines</a> (1)<br><a href="#sds-knowledge-graphs">Knowledge Graph and Ontology Databases</a> (1)</td>
+<td valign="top"><a href="#mem-systems">Memory Architectures and Systems</a> (1)</td>
+</tr>
+</table>
 <!-- END CONTENTS -->
 
 <!-- BEGIN RECENT -->
@@ -35,36 +38,33 @@ Language models are becoming database operators, and agents need somewhere to ke
 <!-- BEGIN LIST -->
 ## Semantic Data Systems
 
-Database systems where semantics are first class, either because models run as query operators or because the data model itself encodes meaning.
+Data systems where meaning is first class: models run as query operators, or the data model itself encodes semantics.
 
-### Semantic Query Engines and Operators
+### <a id="sds-engines"></a>Semantic Operators and Query Engines
 
-Systems that run LLM-powered operators (filter, join, extract, aggregate) inside declarative queries over structured and unstructured data.
+Semantic operators, their algebra, and the engines that run them inside declarative queries over structured and unstructured data.
 
-- **[NousDB - A Fast Query Engine for Semantic Analytics](https://arxiv.org/abs/2610.28551)**<br>
-  <sub>Christos Tsapelas, Georgia Koutrika, Yannis Ioannidis · <i>arXiv 2026</i></sub>
-  <details><summary>Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM calls.</summary><blockquote>A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token histograms.</blockquote></details>
+- **[NousDB - A Fast Query Engine for Semantic Analytics](https://arxiv.org/abs/2610.28551)** (Tsapelas et al., arXiv 2026)
+  <details><summary>Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM calls.</summary><blockquote>A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token histograms.<br><br><i>Authors:</i> Christos Tsapelas, Georgia Koutrika, Yannis Ioannidis</blockquote></details>
 
-### Ontology and Knowledge Graph Databases
+### <a id="sds-knowledge-graphs"></a>Knowledge Graph and Ontology Databases
 
-Storage and query engines for RDF, OWL ontologies, and knowledge graphs, including reasoning and semantic search over them.
+Storage and query engines for RDF, OWL ontologies, and property graphs, including reasoning and semantic search over them.
 
-- **[OntoDB: A Database Management System for Ontologies](https://github.com/lamng3/OntoDB)**<br>
-  <sub>Lam Nguyen · <i>GitHub 2026</i> · <a href="https://lamng3.com/ontodb/">Docs</a></sub>
-  <details><summary>An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic search.</summary><blockquote>An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples.</blockquote></details>
+- **[OntoDB: A Database Management System for Ontologies](https://github.com/lamng3/OntoDB)** (Nguyen, GitHub 2026) · [Docs](https://lamng3.com/ontodb/)
+  <details><summary>An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic search.</summary><blockquote>An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples.<br><br><i>Authors:</i> Lam Nguyen</blockquote></details>
 
 <div align="right"><a href="#awesome-semantic-db">Back to top</a></div>
 
 ## Agent Memory
 
-How agents store, consolidate, and retrieve what they learn across sessions, and how to measure whether memory helps.
+How agents store, organize, and recall what they learn across sessions, and how to tell whether memory helps.
 
-### Memory Architectures and Systems
+### <a id="mem-systems"></a>Memory Architectures and Systems
 
-Designs and production systems for persistent agent memory.
+End-to-end memory designs and production systems that agents read from and write to.
 
-- **[MemCurrent: Designing Persistent Memory for Production Agents](https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents)**<br>
-  <sub>Databricks AI Research · <i>Databricks Blog 2026</i></sub>
+- **[MemCurrent: Designing Persistent Memory for Production Agents](https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents)** (Databricks AI Research, Databricks Blog 2026)
   <details><summary>Episodic and derived memory for production agents, kept fresh by an offline consolidation pipeline.</summary><blockquote>Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and Genie.</blockquote></details>
 
 <div align="right"><a href="#awesome-semantic-db">Back to top</a></div>

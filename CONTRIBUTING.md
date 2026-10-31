@@ -4,12 +4,40 @@ This is a curated list, hand-picked rather than exhaustive. The maintainer choos
 
 ## Scope
 
-An entry belongs here if its main contribution is one of:
+The list has two pillars. An entry belongs here if its main contribution falls under one of them:
 
-- **Semantic data systems.** Query engines and operators that call models, the optimization of such queries, ontology and knowledge graph databases, and vector or hybrid search as a database problem.
-- **Agent memory.** How agents store, consolidate, retrieve, and forget knowledge across sessions, and how memory is evaluated.
+- **Semantic Data Systems.** Data systems where meaning is first class: engines and operators that call models, the optimization of such queries, knowledge graph and ontology databases, and vector or hybrid search treated as a database problem.
+- **Agent Memory.** How agents store, organize, recall, and forget knowledge across sessions, and how memory is evaluated.
 
 General LLM papers, prompt-engineering techniques, and RAG applications that make no systems or memory contribution are out of scope.
+
+## Structure
+
+Both pillars follow the same order: surveys, then systems, then techniques, then benchmarks. Sections are defined in [`data/taxonomy.toml`](data/taxonomy.toml).
+
+| Semantic Data Systems | Agent Memory |
+| --- | --- |
+| `sds-surveys` Surveys and Vision | `mem-surveys` Surveys and Vision |
+| `sds-engines` Semantic Operators and Query Engines | `mem-systems` Memory Architectures and Systems |
+| `sds-optimization` Query Optimization and Execution | `mem-representation` Representation and Retrieval |
+| `sds-knowledge-graphs` Knowledge Graph and Ontology Databases | `mem-management` Consolidation, Updating, and Forgetting |
+| `sds-vector-search` Vector and Hybrid Search | `mem-experiential` Experiential and Procedural Memory |
+| `sds-benchmarks` Benchmarks | `mem-benchmarks` Benchmarks and Evaluation |
+
+### Placement rules
+
+Each entry goes in exactly one section, chosen by its main contribution:
+
+1. **Pillar first.** Memory systems built on a database belong to Agent Memory. Data systems designed for agent workloads belong to Semantic Data Systems.
+2. **Surveys and benchmarks win.** A survey goes in Surveys and Vision, and a benchmark goes in Benchmarks, even if it also proposes a system or a baseline.
+3. **Systems over techniques.** A paper that presents a complete engine or memory system goes in the systems section, even if it also introduces an optimization or a retrieval method. It goes in a technique section only when that technique is the main contribution and the system is a vehicle for it.
+4. **When torn, pick the section a reader would look in first** and keep the TL;DR specific enough that it is still findable.
+
+### Changing the structure
+
+- An empty section stays hidden until it gets an entry, so planned sections cost nothing.
+- Section ids are the README link anchors. Never change an id once it has entries. Titles can be renamed freely.
+- Add a section only when an existing one doesn't fit and the new one will collect several entries. Split a section once it passes about 15 entries and has a natural seam.
 
 ## Adding an entry
 
@@ -25,7 +53,7 @@ title = "Exact Title as Published"
 authors = ["First Author", "Second Author"]   # or: org = "Databricks AI Research"
 venue = "VLDB"                               # arXiv, SIGMOD, CIDR, Databricks Blog, GitHub, ...
 year = 2026
-section = "semantic-query-engines"           # an id from data/taxonomy.toml
+section = "sds-engines"                      # an id from data/taxonomy.toml
 url = "https://arxiv.org/abs/2610.28551"
 code = "https://github.com/..."              # optional
 docs = "https://..."                         # optional
@@ -40,19 +68,16 @@ added = 2026-10-31
 | Field | Required | Notes |
 | --- | --- | --- |
 | `title` | yes | Exact title, no trailing period. |
-| `authors` or `org` | one of them | Full author list. The README shows up to three names, then "et al.", and lists everyone in the expanded view. Use `org` for team-authored posts. |
+| `authors` or `org` | one of them | Full author list, each name written given name first. The list shows a citation (Smith; Smith and Lee; Smith et al.), and the expanded view shows every name. Use `org` for team-authored posts. |
+| `cite` | no | Overrides the citation when the family name is not the last word, for example `cite = "Zhang Wei"`. |
 | `venue` | yes | The venue where it was published. When a preprint is accepted, change `arXiv` to the conference and keep the same `url`. |
 | `year` | yes | Year of the version being linked. |
-| `section` | yes | Exactly one section. Pick the one that matches its main contribution. |
+| `section` | yes | One section id. See the placement rules. |
 | `url` | yes | Canonical page. For arXiv, use the versionless abstract page, `https://arxiv.org/abs/NNNN.NNNNN`, not a PDF. |
 | `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. |
 | `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
 | `summary` | no | At most 400 characters, hidden until the TL;DR is clicked. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
 | `added` | yes | The date the entry was added. Drives "Recently Added". |
-
-## Sections
-
-Sections are defined in [`data/taxonomy.toml`](data/taxonomy.toml). An empty section stays hidden until it gets an entry. Before adding a section, check that an existing one doesn't already fit, and expect it to collect at least a few entries. Changing a section's title changes its link anchor, so rename sections sparingly.
 
 ## Checks
 

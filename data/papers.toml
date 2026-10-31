@@ -8,6 +8,7 @@ venue = "arXiv"
 year = 2026
 section = "semantic-query-engines"
 url = "https://arxiv.org/abs/2610.28551"
+tldr = "Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM calls."
 summary = "A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token histograms."
 added = 2026-10-31
 
@@ -19,6 +20,7 @@ year = 2026
 section = "ontology-kg-databases"
 url = "https://github.com/lamng3/OntoDB"
 docs = "https://lamng3.com/ontodb/"
+tldr = "An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic search."
 summary = "An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples."
 added = 2026-10-31
 
@@ -29,5 +31,6 @@ venue = "Databricks Blog"
 year = 2026
 section = "memory-systems"
 url = "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents"
+tldr = "Episodic and derived memory for production agents, kept fresh by an offline consolidation pipeline."
 summary = "Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and Genie."
 added = 2026-10-31

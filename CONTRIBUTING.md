@@ -30,7 +30,8 @@ url = "https://arxiv.org/abs/2610.28551"
 code = "https://github.com/..."              # optional
 docs = "https://..."                         # optional
 project = "https://..."                      # optional
-summary = "One or two sentences on what it contributes."
+tldr = "One line, shown in the list."
+summary = "One or two sentences, shown when the TL;DR is expanded."   # optional
 added = 2026-10-31
 ```
 
@@ -39,13 +40,14 @@ added = 2026-10-31
 | Field | Required | Notes |
 | --- | --- | --- |
 | `title` | yes | Exact title, no trailing period. |
-| `authors` or `org` | one of them | Full author list. The README shows up to three names, then "et al.". Use `org` for team-authored posts. |
+| `authors` or `org` | one of them | Full author list. The README shows up to three names, then "et al.", and lists everyone in the expanded view. Use `org` for team-authored posts. |
 | `venue` | yes | The venue where it was published. When a preprint is accepted, change `arXiv` to the conference and keep the same `url`. |
 | `year` | yes | Year of the version being linked. |
 | `section` | yes | Exactly one section. Pick the one that matches its main contribution. |
 | `url` | yes | Canonical page. For arXiv, use the versionless abstract page, `https://arxiv.org/abs/NNNN.NNNNN`, not a PDF. |
 | `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. |
-| `summary` | yes | At most 400 characters. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
+| `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
+| `summary` | no | At most 400 characters, hidden until the TL;DR is clicked. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
 | `added` | yes | The date the entry was added. Drives "Recently Added". |
 
 ## Sections

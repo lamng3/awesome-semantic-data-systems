@@ -11,6 +11,7 @@ Usage:
 from __future__ import annotations
 
 import datetime as dt
+import html
 import re
 import sys
 import tomllib
@@ -21,10 +22,12 @@ TAXONOMY = ROOT / "data" / "taxonomy.toml"
 PAPERS = ROOT / "data" / "papers.toml"
 README = ROOT / "README.md"
 
-REQUIRED = {"title", "venue", "year", "section", "url", "summary", "added"}
-OPTIONAL = {"authors", "org", "code", "docs", "project"}
+REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
+OPTIONAL = {"authors", "org", "code", "docs", "project", "summary"}
 EXTRA_LINKS = [("code", "Code"), ("docs", "Docs"), ("project", "Project")]
 MAX_AUTHORS = 3
+# Long enough for one clause, short enough to stay on one line in GitHub's README column.
+MAX_TLDR = 100
 MAX_SUMMARY = 400
 RECENT_COUNT = 10
 ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
@@ -78,8 +81,13 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
         for key in ["url"] + [k for k, _ in EXTRA_LINKS]:
             if key in e and not e[key].startswith("https://"):
                 errors.append(f"{where}: {key} must start with https://")
-        if len(e["summary"]) > MAX_SUMMARY:
+        if len(e["tldr"]) > MAX_TLDR:
+            errors.append(f"{where}: tldr is {len(e['tldr'])} characters, limit {MAX_TLDR}")
+        if len(e.get("summary", "")) > MAX_SUMMARY:
             errors.append(f"{where}: summary is {len(e['summary'])} characters, limit {MAX_SUMMARY}")
+        for key in ("tldr", "summary"):
+            if "\n" in e.get(key, ""):
+                errors.append(f"{where}: {key} must be a single line")
         if e["title"].endswith("."):
             errors.append(f"{where}: title ends with a period")
         for seen, key, label in [(seen_urls, e["url"], "url"), (seen_titles, e["title"].casefold(), "title")]:
@@ -99,13 +107,20 @@ def byline(e: dict) -> str:
 
 
 def render_entry(e: dict) -> str:
-    meta = [byline(e), f"*{e['venue']} {e['year']}*"]
-    meta += [f"[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e]
-    return (
-        f"- **[{e['title']}]({e['url']})**<br>\n"
-        f"  {' · '.join(meta)}<br>\n"
-        f"  {e['summary']}"
-    )
+    meta = [html.escape(byline(e)), f"<i>{html.escape(e['venue'])} {e['year']}</i>"]
+    meta += [f'<a href="{e[key]}">{label}</a>' for key, label in EXTRA_LINKS if key in e]
+    head = f"- **[{e['title']}]({e['url']})**<br>\n  <sub>{' · '.join(meta)}</sub>\n"
+
+    details = []
+    if "summary" in e:
+        details.append(html.escape(e["summary"]))
+    if len(e.get("authors", [])) > MAX_AUTHORS:
+        details.append(f"<i>Authors:</i> {html.escape(', '.join(e['authors']))}")
+    tldr = html.escape(e["tldr"])
+    if not details:
+        return head + f"  <br>{tldr}"
+    body = "<br><br>".join(details)
+    return head + f"  <details><summary>{tldr}</summary><blockquote>{body}</blockquote></details>"
 
 
 def newest_first(entries: list[dict]) -> list[dict]:

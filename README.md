@@ -17,7 +17,7 @@
 
 Language models are becoming database operators, and agents need somewhere to keep what they learn. This list follows both threads: query engines that run models inside query plans, databases built around meaning (ontologies, knowledge graphs, embeddings), and memory systems that let agents carry knowledge across sessions.
 
-Entries are hand-picked rather than exhaustive. Each one appears in a single section, newest first, with a short summary of what it contributes.
+Entries are hand-picked rather than exhaustive. Each one appears in a single section, newest first, with a one-line TL;DR. Click a TL;DR to expand a longer summary.
 
 ## Contents
 
@@ -44,16 +44,16 @@ Database systems where semantics are first class, either because models run as q
 Systems that run LLM-powered operators (filter, join, extract, aggregate) inside declarative queries over structured and unstructured data.
 
 - **[NousDB - A Fast Query Engine for Semantic Analytics](https://arxiv.org/abs/2610.28551)**<br>
-  Christos Tsapelas, Georgia Koutrika, Yannis Ioannidis · *arXiv 2026*<br>
-  A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token histograms.
+  <sub>Christos Tsapelas, Georgia Koutrika, Yannis Ioannidis · <i>arXiv 2026</i></sub>
+  <details><summary>Semantic operators with algebraic rewrite rules and a token-based cost model for batching LLM calls.</summary><blockquote>A semantic analytics engine on Apache DataFusion. Extends relational algebra with three semantic operators whose algebraic properties enable query rewriting, and batches tuples under context-window limits using a token-based cost model built on equi-depth token histograms.</blockquote></details>
 
 ### Ontology and Knowledge Graph Databases
 
 Storage and query engines for RDF, OWL ontologies, and knowledge graphs, including reasoning and semantic search over them.
 
 - **[OntoDB: A Database Management System for Ontologies](https://github.com/lamng3/OntoDB)**<br>
-  Lam Nguyen · *GitHub 2026* · [Docs](https://lamng3.com/ontodb/)<br>
-  An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples.
+  <sub>Lam Nguyen · <i>GitHub 2026</i> · <a href="https://lamng3.com/ontodb/">Docs</a></sub>
+  <details><summary>An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic search.</summary><blockquote>An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples.</blockquote></details>
 
 <div align="right"><a href="#awesome-semantic-db">Back to top</a></div>
 
@@ -66,8 +66,8 @@ How agents store, consolidate, and retrieve what they learn across sessions, and
 Designs and production systems for persistent agent memory.
 
 - **[MemCurrent: Designing Persistent Memory for Production Agents](https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents)**<br>
-  Databricks AI Research · *Databricks Blog 2026*<br>
-  Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and Genie.
+  <sub>Databricks AI Research · <i>Databricks Blog 2026</i></sub>
+  <details><summary>Episodic and derived memory for production agents, kept fresh by an offline consolidation pipeline.</summary><blockquote>Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and Genie.</blockquote></details>
 
 <div align="right"><a href="#awesome-semantic-db">Back to top</a></div>
 <!-- END LIST -->

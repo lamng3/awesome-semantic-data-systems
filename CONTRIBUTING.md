@@ -13,16 +13,18 @@ General LLM papers, prompt-engineering techniques, and RAG applications that mak
 
 ## Structure
 
-Both pillars follow the same order: surveys, then systems, then techniques, then benchmarks. Sections are defined in [`data/taxonomy.toml`](data/taxonomy.toml).
+Both pillars follow the same order: surveys, then systems, then techniques, then benchmarks. Semantic Data Systems has two extra sections for ontologies, which are a focus of this list. Sections are defined in [`data/taxonomy.toml`](data/taxonomy.toml).
 
 | Semantic Data Systems | Agent Memory |
 | --- | --- |
 | `sds-surveys` Surveys and Vision | `mem-surveys` Surveys and Vision |
 | `sds-engines` Semantic Operators and Query Engines | `mem-systems` Memory Architectures and Systems |
 | `sds-optimization` Query Optimization and Execution | `mem-representation` Representation and Retrieval |
-| `sds-knowledge-graphs` Knowledge Graph and Ontology Databases | `mem-management` Consolidation, Updating, and Forgetting |
-| `sds-vector-search` Vector and Hybrid Search | `mem-experiential` Experiential and Procedural Memory |
-| `sds-benchmarks` Benchmarks | `mem-benchmarks` Benchmarks and Evaluation |
+| `sds-semantic-layers` Ontologies and Semantic Layers for Agents | `mem-management` Consolidation, Updating, and Forgetting |
+| `sds-knowledge-graphs` Knowledge Graph and Ontology Databases | `mem-experiential` Experiential and Procedural Memory |
+| `sds-ontology-evolution` Ontology Matching, Versioning, and Evolution | `mem-benchmarks` Benchmarks and Evaluation |
+| `sds-vector-search` Vector and Hybrid Search | |
+| `sds-benchmarks` Benchmarks | |
 
 ### Placement rules
 
@@ -74,7 +76,9 @@ added = 2026-10-31
 | `year` | yes | Year of the version being linked. |
 | `section` | yes | One section id. See the placement rules. |
 | `url` | yes | Canonical page. For arXiv, use the versionless abstract page, `https://arxiv.org/abs/NNNN.NNNNN`, not a PDF. |
+| `arxiv` | no | The arXiv abstract page of a paper whose `url` is the published version, so readers have a free copy. |
 | `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. |
+| `star` | no | `star = true` marks a standout entry with ⭐. Use it sparingly, or it stops meaning anything. |
 | `tldr` | yes | At most 100 characters, so it stays on one line. Name the core idea, not the paper's claims, so it jogs your memory when skimming. |
 | `summary` | no | At most 400 characters, hidden until the TL;DR is clicked. Say what it does and what is new, in neutral terms. Leave out headline numbers that only make sense in context. |
 | `added` | yes | The date the entry was added. Drives "Recently Added". |

@@ -25,11 +25,11 @@ README = ROOT / "README.md"
 BIB = ROOT / "references.bib"
 
 REQUIRED = {"title", "venue", "year", "section", "url", "tldr", "added"}
-OPTIONAL = {"authors", "org", "cite", "code", "docs", "project", "summary", "bibkey", "bibtex"}
+OPTIONAL = {"authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex", "star"}
 BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
 BIB_SKIP_WORDS = {"a", "an", "the", "on", "of", "towards", "toward"}
 ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
-EXTRA_LINKS = [("code", "Code"), ("docs", "Docs"), ("project", "Project")]
+EXTRA_LINKS = [("arxiv", "arXiv"), ("code", "Code"), ("docs", "Docs"), ("project", "Project")]
 # Long enough for one clause, short enough to stay on one line in GitHub's README column.
 MAX_TLDR = 100
 MAX_DESCRIPTION = 100
@@ -107,8 +107,13 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             errors.append(f"{where}: year must be an integer between 1950 and {this_year + 1}")
         if not isinstance(e["added"], dt.date):
             errors.append(f"{where}: added must be a date like 2026-10-31")
-        if "arxiv.org" in e["url"] and not ARXIV_ABS.match(e["url"]):
-            errors.append(f"{where}: arXiv links use the versionless abstract page, https://arxiv.org/abs/NNNN.NNNNN")
+        for key in ("url", "arxiv"):
+            if "arxiv.org" in e.get(key, "") and not ARXIV_ABS.match(e[key]):
+                errors.append(f"{where}: arXiv links use the versionless abstract page, https://arxiv.org/abs/NNNN.NNNNN")
+        if "arxiv" in e and ARXIV_ABS.match(e["url"]):
+            errors.append(f"{where}: url is already the arXiv page; drop arxiv")
+        if "star" in e and e["star"] is not True:
+            errors.append(f"{where}: star must be true, or omitted")
         for key in ["url"] + [k for k, _ in EXTRA_LINKS]:
             if key in e and not e[key].startswith("https://"):
                 errors.append(f"{where}: {key} must start with https://")
@@ -195,7 +200,7 @@ def render_bib_entry(e: dict) -> str:
     else:
         author = " and ".join(bib_escape(a) for a in e["authors"])
     fields = [("author", author), ("title", f"{{{bib_escape(e['title'])}}}"), ("year", str(e["year"]))]
-    if arxiv := ARXIV_ID.search(e["url"]):
+    if arxiv := ARXIV_ID.search(e.get("arxiv", e["url"])):
         fields += [("eprint", arxiv.group(1)), ("archivePrefix", "arXiv")]
     else:
         fields.append(("howpublished", bib_escape(e["venue"])))
@@ -214,7 +219,8 @@ def render_entry(e: dict) -> str:
     # The citation may break only after its comma, and never leaves the title's last word behind.
     links = "".join(f"&nbsp;·&nbsp;[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
     citation = f"({nbsp(md_escape(cite(e)))}, {nbsp(md_escape(e['venue']))}&nbsp;{e['year']})"
-    head = f"- **[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
+    star = "⭐&nbsp;" if e.get("star") else ""
+    head = f"- {star}**[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
 
     details = []
     if "summary" in e:

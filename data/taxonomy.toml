@@ -26,9 +26,19 @@ description = "Data systems where meaning is first class, in the query operators
   description = "Cost models, rewrites, batching, model cascades, and caching for queries that call models."
 
   [[pillar.section]]
+  id = "sds-semantic-layers"
+  title = "Ontologies and Semantic Layers for Agents"
+  description = "Ontologies and semantic layers that give agents a typed, queryable view of their data."
+
+  [[pillar.section]]
   id = "sds-knowledge-graphs"
   title = "Knowledge Graph and Ontology Databases"
   description = "Storage and query engines for RDF, OWL ontologies, and property graphs."
+
+  [[pillar.section]]
+  id = "sds-ontology-evolution"
+  title = "Ontology Matching, Versioning, and Evolution"
+  description = "Aligning ontologies, tracking how they change, and checking each change for errors."
 
   [[pillar.section]]
   id = "sds-vector-search"

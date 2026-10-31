@@ -33,3 +33,98 @@ url = "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-pr
 tldr = "Episodic and derived memory for production agents, kept fresh by an offline consolidation pipeline."
 summary = "Combines episodic memory (raw session traces) with derived memory (a structured knowledge base of distilled learnings), accessed through plugins, agent tools, and an offline consolidation pipeline. Powers Agent Bricks Memory and Genie."
 added = 2026-10-31
+
+[[entry]]
+title = "EvoOntology: A Self-Evolving Ontology Layer for Data Agents"
+authors = ["Meiduo Chong", "Shaolei Zhang", "Ju Fan", "Xiaoyong Du"]
+venue = "arXiv"
+year = 2026
+section = "sds-semantic-layers"
+url = "https://arxiv.org/abs/2609.15779"
+code = "https://github.com/ruc-datalab/EvoOntology"
+star = true
+tldr = "An ontology layer, served over MCP, that data agents query at runtime and that refines itself."
+summary = "Wraps an ontology of heterogeneous data (tables, files, databases) as an MCP server with schema, content, and tool layers. A builder agent constructs it, and a self-evolution loop applies attribution-guided typed edits, keeping each only if a paired evaluation shows it helps."
+added = 2026-10-31
+
+[[entry]]
+title = "Toward Effective and Reliable LLM Agents via Dynamic Ontology"
+authors = ["Xiaohui Zhang", "Zequn Sun", "Chengyuan Yang", "Yuanning Cui", "Lingbing Guo", "Wei Hu"]
+venue = "arXiv"
+year = 2026
+section = "sds-semantic-layers"
+url = "https://arxiv.org/abs/2608.22974"
+tldr = "OaK builds a task-specific ontology with typed reasoning functions and uses it as an agent's kernel."
+summary = "OaK (ontology as a kernel) constructs a task-oriented schema and knowledge graph from task data, generates typed functions for retrieval and multi-step graph reasoning, and refines both with judge feedback before freezing the kernel for inference."
+added = 2026-10-31
+
+[[entry]]
+title = "OM4OV: Leveraging Ontology Matching for Ontology Versioning"
+authors = ["Zhangcheng Qiang", "Kerry Taylor", "Weiqing Wang"]
+venue = "TGDK"
+year = 2026
+section = "sds-ontology-evolution"
+url = "https://doi.org/10.4230/TGDK.4.2.6"
+arxiv = "https://arxiv.org/abs/2409.20302"
+tldr = "Separates ontology versioning from matching and reuses matching systems to detect what changed."
+summary = "Analyzes where ontology versioning differs from ontology matching and defines an OM4OV pipeline in the LLM-based Agent-OM system. A cross-reference mechanism reuses earlier alignments to cut candidates and better detect updated entities."
+added = 2026-10-31
+bibtex = '''
+@article{qiang2026om4ov,
+  author        = {Zhangcheng Qiang and Kerry Taylor and Weiqing Wang},
+  title         = {{OM4OV: Leveraging Ontology Matching for Ontology Versioning}},
+  journal       = {Transactions on Graph Data and Knowledge},
+  volume        = {4},
+  number        = {2},
+  pages         = {6:1--6:19},
+  year          = {2026},
+  doi           = {10.4230/TGDK.4.2.6}
+}
+'''
+
+[[entry]]
+title = "KROMA: Ontology Matching with Knowledge Retrieval and Large Language Models"
+authors = ["Lam Nguyen", "Erika Barcelos", "Roger French", "Yinghui Wu"]
+venue = "ISWC"
+year = 2025
+section = "sds-ontology-evolution"
+url = "https://doi.org/10.1007/978-3-032-09527-5_34"
+arxiv = "https://arxiv.org/abs/2507.14032"
+code = "https://github.com/lamng3/kroma"
+tldr = "Ontology matching that retrieves each concept's context, asks an LLM, and refines as it goes."
+summary = "For each candidate pair, KROMA retrieves local context from the ontologies, their graphs, and external knowledge bases, asks a language model whether the concepts match, and updates equivalence classes online as matches are accepted. Pairs it cannot settle go to an expert."
+added = 2026-10-31
+bibtex = '''
+@inproceedings{nguyen2025kroma,
+  author        = {Lam Nguyen and Erika Barcelos and Roger French and Yinghui Wu},
+  title         = {{KROMA: Ontology Matching with Knowledge Retrieval and Large Language Models}},
+  booktitle     = {The Semantic Web -- ISWC 2025},
+  series        = {Lecture Notes in Computer Science},
+  publisher     = {Springer},
+  pages         = {629--649},
+  year          = {2025},
+  doi           = {10.1007/978-3-032-09527-5_34}
+}
+'''
+
+[[entry]]
+title = "OntoLDiff: A Highly Efficient System for Tracking Logical Difference in Large-Scale Ontologies"
+authors = ["Yizheng Zhao", "Renate A. Schmidt"]
+venue = "CIKM"
+year = 2025
+section = "sds-ontology-evolution"
+url = "https://doi.org/10.1145/3746252.3761464"
+tldr = "Shows what a change to an ontology gained or lost logically, via uniform interpolation."
+summary = "The logical difference between two versions is the set of axioms entailed by one but not the other. OntoLDiff computes a finite representation of it for ELH ontologies, so curators can see the semantic effect of each change in industrial-scale ontologies."
+added = 2026-10-31
+bibtex = '''
+@inproceedings{zhao2025ontoldiff,
+  author        = {Yizheng Zhao and Renate A. Schmidt},
+  title         = {{OntoLDiff: A Highly Efficient System for Tracking Logical Difference in Large-Scale Ontologies}},
+  booktitle     = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM)},
+  publisher     = {ACM},
+  pages         = {6762--6766},
+  year          = {2025},
+  doi           = {10.1145/3746252.3761464}
+}
+'''

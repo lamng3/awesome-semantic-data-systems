@@ -16,6 +16,7 @@
 </div>
 
 Language models are becoming database operators, and agents need somewhere to keep what they learn. This list follows both threads: query engines that run models inside query plans, databases built around meaning (ontologies, knowledge graphs, embeddings), and memory systems that let agents carry knowledge across sessions.
+
 ## Contents
 
 <!-- BEGIN CONTENTS -->

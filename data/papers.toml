@@ -19,7 +19,6 @@ venue = "GitHub"
 year = 2026
 section = "sds-knowledge-graphs"
 url = "https://github.com/lamng3/OntoDB"
-docs = "https://lamng3.com/ontodb/"
 tldr = "An RDF/SPARQL database with B+ tree indexes, ARIES recovery, and ontology-aware semantic search."
 summary = "An RDF and SPARQL database with B+ tree triple indexes, a cost-based optimizer, strict two-phase locking, and ARIES recovery. Supports semantic search through interval labeling of class hierarchies and vector indexes, and answers RDFS subclass entailment without materializing triples."
 added = 2026-10-31

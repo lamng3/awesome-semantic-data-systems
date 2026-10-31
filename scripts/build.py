@@ -27,6 +27,7 @@ OPTIONAL = {"authors", "org", "cite", "code", "docs", "project", "summary"}
 EXTRA_LINKS = [("code", "Code"), ("docs", "Docs"), ("project", "Project")]
 # Long enough for one clause, short enough to stay on one line in GitHub's README column.
 MAX_TLDR = 100
+MAX_DESCRIPTION = 100
 MAX_SUMMARY = 400
 RECENT_COUNT = 10
 ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
@@ -46,6 +47,16 @@ def md_escape(text: str) -> str:
     return re.sub(r"([\\`*_\[\]<>])", r"\\\1", text)
 
 
+def nbsp(text: str) -> str:
+    return text.replace(" ", "&nbsp;")
+
+
+def no_widow(text: str) -> str:
+    """Join the last two words so a wrapped line never ends with a single word."""
+    head, _, last = text.rpartition(" ")
+    return f"{head}&nbsp;{last}" if head else text
+
+
 def load() -> tuple[list[dict], list[dict], list[str]]:
     errors: list[str] = []
     pillars = tomllib.loads(TAXONOMY.read_text())["pillar"]
@@ -57,6 +68,9 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
         if slug(pillar["title"]) in anchors:
             errors.append(f"taxonomy: pillar {pillar['title']!r} collides with another heading")
         anchors.add(slug(pillar["title"]))
+    for item in [*pillars, *(s for p in pillars for s in p["section"])]:
+        if len(item["description"]) > MAX_DESCRIPTION:
+            errors.append(f"taxonomy: description of {item['title']!r} is {len(item['description'])} characters, limit {MAX_DESCRIPTION}")
     for pillar in pillars:
         for section in pillar["section"]:
             sid = section["id"]
@@ -133,18 +147,17 @@ def cite(e: dict) -> str:
 
 
 def render_entry(e: dict) -> str:
-    links = "".join(f" · [{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
-    head = (
-        f"- **[{md_escape(e['title'])}]({e['url']})** "
-        f"({md_escape(cite(e))}, {md_escape(e['venue'])} {e['year']}){links}"
-    )
+    # The citation may break only after its comma, and never leaves the title's last word behind.
+    links = "".join(f"&nbsp;·&nbsp;[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
+    citation = f"({nbsp(md_escape(cite(e)))}, {nbsp(md_escape(e['venue']))}&nbsp;{e['year']})"
+    head = f"- **[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
 
     details = []
     if "summary" in e:
-        details.append(html.escape(e["summary"]))
+        details.append(no_widow(html.escape(e["summary"])))
     if "authors" in e:
-        details.append(f"<i>Authors:</i> {html.escape(', '.join(e['authors']))}")
-    tldr = html.escape(e["tldr"])
+        details.append(f"<i>Authors:</i> {no_widow(html.escape(', '.join(e['authors'])))}")
+    tldr = no_widow(html.escape(e["tldr"]))
     if not details:
         return f"{head}<br>\n  {tldr}"
     body = "<br><br>".join(details)
@@ -169,17 +182,14 @@ def group(pillars: list[dict], entries: list[dict]) -> list[tuple[dict, list[tup
 
 
 def render_contents(grouped, total: int) -> str:
-    width = f"{100 // len(grouped)}%"
-    header, cells = [], []
-    for pillar, sections in grouped:
-        count = sum(len(m) for _, m in sections)
-        header.append(f'<th width="{width}"><a href="#{slug(pillar["title"])}">{html.escape(pillar["title"])}</a> ({count})</th>')
-        rows = [f'<a href="#{s["id"]}">{html.escape(s["title"])}</a> ({len(m)})' for s, m in sections]
-        cells.append(f'<td valign="top">{"<br>".join(rows) or "<i>Coming soon</i>"}</td>')
     lines = []
     if total >= RECENT_COUNT:
-        lines += [f"[Recently Added](#{slug('Recently Added')})", ""]
-    lines += ["<table>", "<tr>", *header, "</tr>", "<tr>", *cells, "</tr>", "</table>"]
+        lines.append(f"- [Recently Added](#{slug('Recently Added')})")
+    for pillar, sections in grouped:
+        if not sections:
+            continue
+        lines.append(f"- [{pillar['title']}](#{slug(pillar['title'])})")
+        lines += [f"  - [{s['title']}](#{s['id']})" for s, _ in sections]
     return "\n".join(lines)
 
 
@@ -197,12 +207,10 @@ def render_list(grouped) -> str:
     for pillar, sections in grouped:
         if not sections:
             continue
-        lines = [f"## {pillar['title']}", "", pillar["description"], ""]
+        lines = [f"## {pillar['title']}", "", no_widow(pillar["description"])]
         for section, members in sections:
-            lines += [f'### <a id="{section["id"]}"></a>{section["title"]}', "", section["description"], ""]
+            lines += ["", f'### <a id="{section["id"]}"></a>{section["title"]}', "", no_widow(section["description"]), ""]
             lines += [render_entry(e) for e in members]
-            lines.append("")
-        lines.append('<div align="right"><a href="#awesome-semantic-db">Back to top</a></div>')
         blocks.append("\n".join(lines))
     return "\n\n".join(blocks)
 

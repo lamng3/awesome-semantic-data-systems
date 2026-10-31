@@ -4,10 +4,11 @@
 # A section with no entries is hidden from the README until it gets one.
 # Section ids are the README link anchors, so never change an id once it has entries;
 # titles can be renamed freely. Placement rules are in CONTRIBUTING.md.
+# Descriptions are limited to 100 characters so each renders as a single line.
 
 [[pillar]]
 title = "Semantic Data Systems"
-description = "Data systems where meaning is first class: models run as query operators, or the data model itself encodes semantics."
+description = "Data systems where meaning is first class, in the query operators or in the data model."
 
   [[pillar.section]]
   id = "sds-surveys"
@@ -17,7 +18,7 @@ description = "Data systems where meaning is first class: models run as query op
   [[pillar.section]]
   id = "sds-engines"
   title = "Semantic Operators and Query Engines"
-  description = "Semantic operators, their algebra, and the engines that run them inside declarative queries over structured and unstructured data."
+  description = "Semantic operators, their algebra, and the engines that run them inside declarative queries."
 
   [[pillar.section]]
   id = "sds-optimization"
@@ -27,12 +28,12 @@ description = "Data systems where meaning is first class: models run as query op
   [[pillar.section]]
   id = "sds-knowledge-graphs"
   title = "Knowledge Graph and Ontology Databases"
-  description = "Storage and query engines for RDF, OWL ontologies, and property graphs, including reasoning and semantic search over them."
+  description = "Storage and query engines for RDF, OWL ontologies, and property graphs."
 
   [[pillar.section]]
   id = "sds-vector-search"
   title = "Vector and Hybrid Search"
-  description = "Embedding indexes and engines that combine vector similarity with relational, text, or graph predicates."
+  description = "Embedding indexes, alone or combined with relational, text, or graph predicates."
 
   [[pillar.section]]
   id = "sds-benchmarks"
@@ -41,7 +42,7 @@ description = "Data systems where meaning is first class: models run as query op
 
 [[pillar]]
 title = "Agent Memory"
-description = "How agents store, organize, and recall what they learn across sessions, and how to tell whether memory helps."
+description = "How agents store, organize, and recall what they learn, and how to tell whether memory helps."
 
   [[pillar.section]]
   id = "mem-surveys"
@@ -56,7 +57,7 @@ description = "How agents store, organize, and recall what they learn across ses
   [[pillar.section]]
   id = "mem-representation"
   title = "Representation and Retrieval"
-  description = "How memories are structured (text, graphs, hierarchies, parameters) and how the relevant ones are found."
+  description = "How memories are structured (text, graphs, hierarchies, weights) and how they are found."
 
   [[pillar.section]]
   id = "mem-management"

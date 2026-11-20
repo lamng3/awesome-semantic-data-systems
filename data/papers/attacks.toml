@@ -1,0 +1,1697 @@
+[[entry]]
+title = "PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models"
+authors = ["Wei Zou", "Runpeng Geng", "Binghui Wang", "Jinyuan Jia"]
+section = "attacks-rag"
+venue = "USENIX Security"
+year = 2025
+url = "https://www.usenix.org/conference/usenixsecurity25/presentation/zou-poisonedrag"
+arxiv = "https://arxiv.org/abs/2402.07867"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zou2025poisonedrag,
+  author        = {Wei Zou and Runpeng Geng and Binghui Wang and Jinyuan Jia},
+  title         = {{PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models}},
+  booktitle     = {34th USENIX Security Symposium (USENIX Security 25)},
+  pages         = {3827--3844},
+  publisher     = {USENIX Association},
+  year          = {2025},
+  url           = {https://www.usenix.org/conference/usenixsecurity25/presentation/zou-poisonedrag}
+}
+'''
+
+[[entry]]
+title = "Poisoning Retrieval Corpora by Injecting Adversarial Passages"
+authors = ["Zexuan Zhong", "Ziqing Huang", "Alexander Wettig", "Danqi Chen"]
+section = "attacks-rag"
+venue = "EMNLP"
+year = 2023
+url = "https://doi.org/10.18653/v1/2023.emnlp-main.849"
+arxiv = "https://arxiv.org/abs/2310.19156"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhong2023poisoning,
+  author        = {Zexuan Zhong and Ziqing Huang and Alexander Wettig and Danqi Chen},
+  title         = {{Poisoning Retrieval Corpora by Injecting Adversarial Passages}},
+  booktitle     = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  pages         = {13764--13775},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2023},
+  doi           = {10.18653/v1/2023.emnlp-main.849}
+}
+'''
+
+[[entry]]
+title = "BadRAG: Identifying Vulnerabilities in Retrieval Augmented Generation of Large Language Models"
+authors = ["Jiaqi Xue", "Mengxin Zheng", "Yebowen Hu", "Fei Liu", "Xun Chen", "Qian Lou"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2024
+url = "https://arxiv.org/abs/2406.00083"
+added = 2026-11-20
+
+[[entry]]
+title = "TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models"
+authors = ["Pengzhou Cheng", "Yidong Ding", "Tianjie Ju", "Zongru Wu", "Wei Du", "Ping Yi", "Zhuosheng Zhang", "Gongshen Liu"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2024
+url = "https://arxiv.org/abs/2405.13401"
+added = 2026-11-20
+
+[[entry]]
+title = "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases"
+authors = ["Zhaorun Chen", "Zhen Xiang", "Chaowei Xiao", "Dawn Song", "Bo Li"]
+section = "attacks-rag"
+venue = "NeurIPS"
+year = 2024
+url = "https://papers.nips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2407.12784"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chen2024agentpoison,
+  author        = {Zhaorun Chen and Zhen Xiang and Chaowei Xiao and Dawn Song and Bo Li},
+  title         = {{AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {37},
+  pages         = {130185--130213},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2024},
+  doi           = {10.52202/079017-4136}
+}
+'''
+
+[[entry]]
+title = "Phantom: General Backdoor Attacks on Retrieval Augmented Language Generation"
+authors = ["Harsh Chaudhari", "Giorgio Severi", "John Abascal", "Anshuman Suri", "Matthew Jagielski", "Christopher A. Choquette-Choo", "Milad Nasr", "Cristina Nita-Rotaru", "Alina Oprea"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2024
+url = "https://arxiv.org/abs/2405.20485"
+added = 2026-11-20
+
+[[entry]]
+title = "Machine Against the RAG: Jamming Retrieval-Augmented Generation with Blocker Documents"
+authors = ["Avital Shafran", "Roei Schuster", "Vitaly Shmatikov"]
+section = "attacks-rag"
+venue = "USENIX Security"
+year = 2025
+url = "https://www.usenix.org/conference/usenixsecurity25/presentation/shafran"
+arxiv = "https://arxiv.org/abs/2406.05870"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{shafran2025machine,
+  author        = {Avital Shafran and Roei Schuster and Vitaly Shmatikov},
+  title         = {{Machine Against the RAG: Jamming Retrieval-Augmented Generation with Blocker Documents}},
+  booktitle     = {34th USENIX Security Symposium (USENIX Security 25)},
+  pages         = {3787--3806},
+  publisher     = {USENIX Association},
+  year          = {2025},
+  url           = {https://www.usenix.org/conference/usenixsecurity25/presentation/shafran}
+}
+'''
+
+[[entry]]
+title = "Certifiably Robust RAG against Retrieval Corruption"
+authors = ["Chong Xiang", "Tong Wu", "Zexuan Zhong", "David Wagner", "Danqi Chen", "Prateek Mittal"]
+section = "attacks-rag"
+venue = "SaTML"
+year = 2026
+url = "https://doi.org/10.1109/satml68715.2026.00029"
+arxiv = "https://arxiv.org/abs/2405.15556"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{xiang2026certifiably,
+  author        = {Chong Xiang and Tong Wu and Zexuan Zhong and David Wagner and Danqi Chen and Prateek Mittal},
+  title         = {{Certifiably Robust RAG against Retrieval Corruption}},
+  booktitle     = {2026 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)},
+  pages         = {392--410},
+  publisher     = {IEEE},
+  year          = {2026},
+  doi           = {10.1109/satml68715.2026.00029}
+}
+'''
+
+[[entry]]
+title = "Benchmarking Poisoning Attacks against Retrieval-Augmented Generation"
+authors = ["Baolei Zhang", "Haoran Xin", "Jiatong Li", "Dongzhe Zhang", "Minghong Fang", "Zhuqing Liu", "Lihai Nie", "Zheli Liu"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2025
+url = "https://arxiv.org/abs/2505.18543"
+added = 2026-11-20
+
+[[entry]]
+title = "Practical Poisoning Attacks against Retrieval-Augmented Generation"
+authors = ["Baolei Zhang", "Yuxi Chen", "Zhuqing Liu", "Lihai Nie", "Tong Li", "Zheli Liu", "Minghong Fang"]
+section = "attacks-rag"
+venue = "SACMAT"
+year = 2026
+url = "https://doi.org/10.1145/3750555.3811900"
+arxiv = "https://arxiv.org/abs/2504.03957"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2026practical,
+  author        = {Baolei Zhang and Yuxi Chen and Zhuqing Liu and Lihai Nie and Tong Li and Zheli Liu and Minghong Fang},
+  title         = {{Practical Poisoning Attacks against Retrieval-Augmented Generation}},
+  booktitle     = {Proceedings of the 31st ACM Symposium on Access Control Models and Technologies},
+  pages         = {33--44},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3750555.3811900}
+}
+'''
+
+[[entry]]
+title = "TrustRAG: Enhancing Robustness and Trustworthiness in Retrieval-Augmented Generation"
+authors = ["Huichi Zhou", "Kin-Hei Lee", "Zhonghao Zhan", "Yue Chen", "Zhenhao Li", "Zhaoyang Wang", "Hamed Haddadi", "Emine Yilmaz"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2025
+url = "https://arxiv.org/abs/2501.00879"
+added = 2026-11-20
+
+[[entry]]
+title = "Traceback of Poisoning Attacks to Retrieval-Augmented Generation"
+authors = ["Baolei Zhang", "Haoran Xin", "Minghong Fang", "Zhuqing Liu", "Biao Yi", "Tong Li", "Zheli Liu"]
+section = "attacks-rag"
+venue = "WWW"
+year = 2025
+url = "https://doi.org/10.1145/3696410.3714756"
+arxiv = "https://arxiv.org/abs/2504.21668"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2025traceback,
+  author        = {Baolei Zhang and Haoran Xin and Minghong Fang and Zhuqing Liu and Biao Yi and Tong Li and Zheli Liu},
+  title         = {{Traceback of Poisoning Attacks to Retrieval-Augmented Generation}},
+  booktitle     = {Proceedings of the ACM on Web Conference 2025},
+  pages         = {2085--2097},
+  publisher     = {ACM},
+  year          = {2025},
+  doi           = {10.1145/3696410.3714756}
+}
+'''
+
+[[entry]]
+title = "GraphRAG under Fire"
+authors = ["Jiacheng Liang", "Yuhui Wang", "Changjiang Li", "Tanqiu Jiang", "Rongyi Zhu", "Neil Gong", "Ting Wang"]
+section = "attacks-rag"
+venue = "IEEE S&P"
+year = 2026
+url = "https://doi.org/10.1109/sp63933.2026.00070"
+arxiv = "https://arxiv.org/abs/2501.14050"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{liang2026graphrag,
+  author        = {Jiacheng Liang and Yuhui Wang and Changjiang Li and Tanqiu Jiang and Rongyi Zhu and Neil Gong and Ting Wang},
+  title         = {{GraphRAG under Fire}},
+  booktitle     = {2026 IEEE Symposium on Security and Privacy (SP)},
+  pages         = {195--212},
+  publisher     = {IEEE},
+  year          = {2026},
+  doi           = {10.1109/sp63933.2026.00070}
+}
+'''
+
+[[entry]]
+title = "KEPo: Knowledge Evolution Poison on Graph-based Retrieval-Augmented Generation"
+authors = ["Qizhi Chen", "Chao Qi", "Yihong Huang", "Muquan Li", "Rongzheng Wang", "Dongyang Zhang", "Ke Qin", "Shuang Liang"]
+section = "attacks-rag"
+venue = "WWW"
+year = 2026
+url = "https://doi.org/10.1145/3774904.3792547"
+arxiv = "https://arxiv.org/abs/2603.11501"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chen2026kepo,
+  author        = {Qizhi Chen and Chao Qi and Yihong Huang and Muquan Li and Rongzheng Wang and Dongyang Zhang and Ke Qin and Shuang Liang},
+  title         = {{KEPo: Knowledge Evolution Poison on Graph-based Retrieval-Augmented Generation}},
+  booktitle     = {Proceedings of the ACM Web Conference 2026},
+  pages         = {2308--2319},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3774904.3792547}
+}
+'''
+
+[[entry]]
+title = "A Few Words Can Distort Graphs: Knowledge Poisoning Attacks on Graph-based Retrieval-Augmented Generation of Large Language Models"
+authors = ["Jiayi Wen", "Tianxin Chen", "Zhirun Zheng", "Cheng Huang"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2025
+url = "https://arxiv.org/abs/2508.04276"
+added = 2026-11-20
+
+[[entry]]
+title = "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
+authors = ["Kai Greshake", "Sahar Abdelnabi", "Shailesh Mishra", "Christoph Endres", "Thorsten Holz", "Mario Fritz"]
+section = "attacks-rag"
+venue = "AISec"
+year = 2023
+url = "https://doi.org/10.1145/3605764.3623985"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{greshake2023not,
+  author        = {Kai Greshake and Sahar Abdelnabi and Shailesh Mishra and Christoph Endres and Thorsten Holz and Mario Fritz},
+  title         = {{Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection}},
+  booktitle     = {Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security},
+  pages         = {79--90},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3605764.3623985}
+}
+'''
+
+[[entry]]
+title = "Poisoning Web-Scale Training Datasets is Practical"
+authors = ["Nicholas Carlini", "Matthew Jagielski", "Christopher A. Choquette-Choo", "Daniel Paleka", "Will Pearce", "Hyrum Anderson", "Andreas Terzis", "Kurt Thomas", "Florian Tramèr"]
+section = "attacks-rag"
+venue = "IEEE S&P"
+year = 2024
+url = "https://doi.org/10.1109/sp54263.2024.00179"
+arxiv = "https://arxiv.org/abs/2302.10149"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{carlini2024poisoning,
+  author        = {Nicholas Carlini and Matthew Jagielski and Christopher A. Choquette-Choo and Daniel Paleka and Will Pearce and Hyrum Anderson and Andreas Terzis and Kurt Thomas and Florian Tramèr},
+  title         = {{Poisoning Web-Scale Training Datasets is Practical}},
+  booktitle     = {2024 IEEE Symposium on Security and Privacy (SP)},
+  pages         = {407--425},
+  publisher     = {IEEE},
+  year          = {2024},
+  doi           = {10.1109/sp54263.2024.00179}
+}
+'''
+
+[[entry]]
+title = "Typos that Broke the RAG's Back: Genetic Attack on RAG Pipeline by Simulating Documents in the Wild via Low-level Perturbations"
+authors = ["Sukmin Cho", "Soyeong Jeong", "Jeongyeon Seo", "Taeho Hwang", "Jong C. Park"]
+section = "attacks-rag"
+venue = "EMNLP Findings"
+year = 2024
+url = "https://doi.org/10.18653/v1/2024.findings-emnlp.161"
+arxiv = "https://arxiv.org/abs/2404.13948"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{cho2024typos,
+  author        = {Sukmin Cho and Soyeong Jeong and Jeongyeon Seo and Taeho Hwang and Jong C. Park},
+  title         = {{Typos that Broke the RAG's Back: Genetic Attack on RAG Pipeline by Simulating Documents in the Wild via Low-level Perturbations}},
+  booktitle     = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages         = {2826--2844},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2024},
+  doi           = {10.18653/v1/2024.findings-emnlp.161}
+}
+'''
+
+[[entry]]
+title = "PRADA: Practical Black-box Adversarial Attacks against Neural Ranking Models"
+authors = ["Chen Wu", "Ruqing Zhang", "Jiafeng Guo", "Maarten De Rijke", "Yixing Fan", "Xueqi Cheng"]
+section = "attacks-rag"
+venue = "TOIS"
+year = 2023
+url = "https://doi.org/10.1145/3576923"
+arxiv = "https://arxiv.org/abs/2204.01321"
+added = 2026-11-20
+bibtex = '''
+@article{wu2023prada,
+  author        = {Chen Wu and Ruqing Zhang and Jiafeng Guo and Maarten De Rijke and Yixing Fan and Xueqi Cheng},
+  title         = {{PRADA: Practical Black-box Adversarial Attacks against Neural Ranking Models}},
+  journal       = {ACM Transactions on Information Systems},
+  volume        = {41},
+  number        = {4},
+  pages         = {1--27},
+  year          = {2023},
+  doi           = {10.1145/3576923}
+}
+'''
+
+[[entry]]
+title = "Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models"
+authors = ["Yu-An Liu", "Ruqing Zhang", "Jiafeng Guo", "Maarten de Rijke", "Wei Chen", "Yixing Fan", "Xueqi Cheng"]
+section = "attacks-rag"
+venue = "SIGIR"
+year = 2023
+url = "https://doi.org/10.1145/3539618.3591777"
+arxiv = "https://arxiv.org/abs/2304.14867"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{liu2023topic,
+  author        = {Yu-An Liu and Ruqing Zhang and Jiafeng Guo and Maarten de Rijke and Wei Chen and Yixing Fan and Xueqi Cheng},
+  title         = {{Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models}},
+  booktitle     = {Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages         = {1700--1709},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3539618.3591777}
+}
+'''
+
+[[entry]]
+title = "Corpus Poisoning via Approximate Greedy Gradient Descent"
+authors = ["Jinyan Su", "Preslav Nakov", "Claire Cardie"]
+section = "attacks-rag"
+venue = "ACL Findings"
+year = 2025
+url = "https://doi.org/10.18653/v1/2025.findings-acl.222"
+arxiv = "https://arxiv.org/abs/2406.05087"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{su2025corpus,
+  author        = {Jinyan Su and Preslav Nakov and Claire Cardie},
+  title         = {{Corpus Poisoning via Approximate Greedy Gradient Descent}},
+  booktitle     = {Findings of the Association for Computational Linguistics: ACL 2025},
+  pages         = {4274--4294},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2025},
+  doi           = {10.18653/v1/2025.findings-acl.222}
+}
+'''
+
+[[entry]]
+title = "Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models"
+authors = ["Zhuo Chen", "Jiawei Liu", "Haotan Liu", "Qikai Cheng", "Fan Zhang", "Wei Lu", "Xiaozhong Liu"]
+section = "attacks-rag"
+venue = "arXiv"
+year = 2024
+url = "https://arxiv.org/abs/2407.13757"
+added = 2026-11-20
+
+[[entry]]
+title = "Data Poisoning Attack against Knowledge Graph Embedding"
+authors = ["Hengtong Zhang", "Tianhang Zheng", "Jing Gao", "Chenglin Miao", "Lu Su", "Yaliang Li", "Kui Ren"]
+section = "attacks-graph"
+venue = "IJCAI"
+year = 2019
+url = "https://doi.org/10.24963/ijcai.2019/674"
+arxiv = "https://arxiv.org/abs/1904.12052"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2019data,
+  author        = {Hengtong Zhang and Tianhang Zheng and Jing Gao and Chenglin Miao and Lu Su and Yaliang Li and Kui Ren},
+  title         = {{Data Poisoning Attack against Knowledge Graph Embedding}},
+  booktitle     = {Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence},
+  pages         = {4853--4859},
+  publisher     = {IJCAI},
+  year          = {2019},
+  doi           = {10.24963/ijcai.2019/674}
+}
+'''
+
+[[entry]]
+title = "Investigating Robustness and Interpretability of Link Prediction via Adversarial Modifications"
+authors = ["Pouya Pezeshkpour", "Yifan Tian", "Sameer Singh"]
+section = "attacks-graph"
+venue = "NAACL"
+year = 2019
+url = "https://doi.org/10.18653/v1/n19-1337"
+arxiv = "https://arxiv.org/abs/1905.00563"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{pezeshkpour2019investigating,
+  author        = {Pouya Pezeshkpour and Yifan Tian and Sameer Singh},
+  title         = {{Investigating Robustness and Interpretability of Link Prediction via Adversarial Modifications}},
+  booktitle     = {Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+  pages         = {3336--3347},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2019},
+  doi           = {10.18653/v1/n19-1337}
+}
+'''
+
+[[entry]]
+title = "Poisoning Knowledge Graph Embeddings via Relation Inference Patterns"
+authors = ["Peru Bhardwaj", "John Kelleher", "Luca Costabello", "Declan O’Sullivan"]
+section = "attacks-graph"
+venue = "ACL"
+year = 2021
+url = "https://doi.org/10.18653/v1/2021.acl-long.147"
+arxiv = "https://arxiv.org/abs/2111.06345"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{bhardwaj2021poisoning,
+  author        = {Peru Bhardwaj and John Kelleher and Luca Costabello and Declan O’Sullivan},
+  title         = {{Poisoning Knowledge Graph Embeddings via Relation Inference Patterns}},
+  booktitle     = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages         = {1875--1888},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2021},
+  doi           = {10.18653/v1/2021.acl-long.147}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attacks on Knowledge Graph Embeddings via Instance Attribution Methods"
+authors = ["Peru Bhardwaj", "John Kelleher", "Luca Costabello", "Declan O’Sullivan"]
+section = "attacks-graph"
+venue = "EMNLP"
+year = 2021
+url = "https://doi.org/10.18653/v1/2021.emnlp-main.648"
+arxiv = "https://arxiv.org/abs/2111.03120"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{bhardwaj2021adversarial,
+  author        = {Peru Bhardwaj and John Kelleher and Luca Costabello and Declan O’Sullivan},
+  title         = {{Adversarial Attacks on Knowledge Graph Embeddings via Instance Attribution Methods}},
+  booktitle     = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  pages         = {8225--8239},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2021},
+  doi           = {10.18653/v1/2021.emnlp-main.648}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attack against Cross-lingual Knowledge Graph Alignment"
+authors = ["Zeru Zhang", "Zijie Zhang", "Yang Zhou", "Lingfei Wu", "Sixing Wu", "Xiaoying Han", "Dejing Dou", "Tianshi Che", "Da Yan"]
+section = "attacks-graph"
+venue = "EMNLP"
+year = 2021
+url = "https://doi.org/10.18653/v1/2021.emnlp-main.432"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2021adversarial,
+  author        = {Zeru Zhang and Zijie Zhang and Yang Zhou and Lingfei Wu and Sixing Wu and Xiaoying Han and Dejing Dou and Tianshi Che and Da Yan},
+  title         = {{Adversarial Attack against Cross-lingual Knowledge Graph Alignment}},
+  booktitle     = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  pages         = {5320--5337},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2021},
+  doi           = {10.18653/v1/2021.emnlp-main.432}
+}
+'''
+
+[[entry]]
+title = "Untargeted Adversarial Attack on Knowledge Graph Embeddings"
+authors = ["Tianzhe Zhao", "Jiaoyan Chen", "Yanchi Ru", "Qika Lin", "Yuxia Geng", "Jun Liu"]
+section = "attacks-graph"
+venue = "SIGIR"
+year = 2024
+url = "https://doi.org/10.1145/3626772.3657702"
+arxiv = "https://arxiv.org/abs/2405.10970"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhao2024untargeted,
+  author        = {Tianzhe Zhao and Jiaoyan Chen and Yanchi Ru and Qika Lin and Yuxia Geng and Jun Liu},
+  title         = {{Untargeted Adversarial Attack on Knowledge Graph Embeddings}},
+  booktitle     = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages         = {1701--1711},
+  publisher     = {ACM},
+  year          = {2024},
+  doi           = {10.1145/3626772.3657702}
+}
+'''
+
+[[entry]]
+title = "MaSS: Model-agnostic, Semantic and Stealthy Data Poisoning Attack on Knowledge Graph Embedding"
+authors = ["Xiaoyu You", "Beina Sheng", "Daizong Ding", "Mi Zhang", "Xudong Pan", "Min Yang", "Fuli Feng"]
+section = "attacks-graph"
+venue = "WWW"
+year = 2023
+url = "https://doi.org/10.1145/3543507.3583203"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{you2023mass,
+  author        = {Xiaoyu You and Beina Sheng and Daizong Ding and Mi Zhang and Xudong Pan and Min Yang and Fuli Feng},
+  title         = {{MaSS: Model-agnostic, Semantic and Stealthy Data Poisoning Attack on Knowledge Graph Embedding}},
+  booktitle     = {Proceedings of the ACM Web Conference 2023},
+  pages         = {2000--2010},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3543507.3583203}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attacks on Neural Networks for Graph Data"
+authors = ["Daniel Zügner", "Amir Akbarnejad", "Stephan Günnemann"]
+section = "attacks-graph"
+venue = "KDD"
+year = 2018
+url = "https://doi.org/10.1145/3219819.3220078"
+arxiv = "https://arxiv.org/abs/1805.07984"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zugner2018adversarial,
+  author        = {Daniel Zügner and Amir Akbarnejad and Stephan Günnemann},
+  title         = {{Adversarial Attacks on Neural Networks for Graph Data}},
+  booktitle     = {Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages         = {2847--2856},
+  publisher     = {ACM},
+  year          = {2018},
+  doi           = {10.1145/3219819.3220078}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attacks on Graph Neural Networks via Meta Learning"
+authors = ["Daniel Zügner", "Stephan Günnemann"]
+section = "attacks-graph"
+venue = "ICLR"
+year = 2019
+url = "https://openreview.net/forum?id=Bylnx209YX"
+arxiv = "https://arxiv.org/abs/1902.08412"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zugner2019adversarial,
+  author        = {Daniel Zügner and Stephan Günnemann},
+  title         = {{Adversarial Attacks on Graph Neural Networks via Meta Learning}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2019},
+  url           = {https://openreview.net/forum?id=Bylnx209YX}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attack on Graph Structured Data"
+authors = ["Hanjun Dai", "Hui Li", "Tian Tian", "Xin Huang", "Lin Wang", "Jun Zhu", "Le Song"]
+section = "attacks-graph"
+venue = "ICML"
+year = 2018
+url = "https://proceedings.mlr.press/v80/dai18b.html"
+arxiv = "https://arxiv.org/abs/1806.02371"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{dai2018adversarial,
+  author        = {Hanjun Dai and Hui Li and Tian Tian and Xin Huang and Lin Wang and Jun Zhu and Le Song},
+  title         = {{Adversarial Attack on Graph Structured Data}},
+  booktitle     = {Proceedings of the 35th International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {80},
+  pages         = {1115--1124},
+  publisher     = {PMLR},
+  year          = {2018},
+  url           = {https://proceedings.mlr.press/v80/dai18b.html}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attacks on Node Embeddings via Graph Poisoning"
+authors = ["Aleksandar Bojchevski", "Stephan Günnemann"]
+section = "attacks-graph"
+venue = "ICML"
+year = 2019
+url = "https://proceedings.mlr.press/v97/bojchevski19a.html"
+arxiv = "https://arxiv.org/abs/1809.01093"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{bojchevski2019adversarial,
+  author        = {Aleksandar Bojchevski and Stephan Günnemann},
+  title         = {{Adversarial Attacks on Node Embeddings via Graph Poisoning}},
+  booktitle     = {Proceedings of the 36th International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {97},
+  pages         = {695--704},
+  publisher     = {PMLR},
+  year          = {2019},
+  url           = {https://proceedings.mlr.press/v97/bojchevski19a.html}
+}
+'''
+
+[[entry]]
+title = "Topology Attack and Defense for Graph Neural Networks: An Optimization Perspective"
+authors = ["Kaidi Xu", "Hongge Chen", "Sijia Liu", "Pin-Yu Chen", "Tsui-Wei Weng", "Mingyi Hong", "Xue Lin"]
+section = "attacks-graph"
+venue = "IJCAI"
+year = 2019
+url = "https://doi.org/10.24963/ijcai.2019/550"
+arxiv = "https://arxiv.org/abs/1906.04214"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{xu2019topology,
+  author        = {Kaidi Xu and Hongge Chen and Sijia Liu and Pin-Yu Chen and Tsui-Wei Weng and Mingyi Hong and Xue Lin},
+  title         = {{Topology Attack and Defense for Graph Neural Networks: An Optimization Perspective}},
+  booktitle     = {Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence},
+  pages         = {3961--3967},
+  publisher     = {IJCAI},
+  year          = {2019},
+  doi           = {10.24963/ijcai.2019/550}
+}
+'''
+
+[[entry]]
+title = "Graph Structure Learning for Robust Graph Neural Networks"
+authors = ["Wei Jin", "Yao Ma", "Xiaorui Liu", "Xianfeng Tang", "Suhang Wang", "Jiliang Tang"]
+section = "attacks-graph"
+venue = "KDD"
+year = 2020
+url = "https://doi.org/10.1145/3394486.3403049"
+arxiv = "https://arxiv.org/abs/2005.10203"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{jin2020graph,
+  author        = {Wei Jin and Yao Ma and Xiaorui Liu and Xianfeng Tang and Suhang Wang and Jiliang Tang},
+  title         = {{Graph Structure Learning for Robust Graph Neural Networks}},
+  booktitle     = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages         = {66--74},
+  publisher     = {ACM},
+  year          = {2020},
+  doi           = {10.1145/3394486.3403049}
+}
+'''
+
+[[entry]]
+title = "Adversarial Attack and Defense on Graph Data: A Survey"
+authors = ["Lichao Sun", "Yingtong Dou", "Carl Yang", "Kai Zhang", "Ji Wang", "Philip S. Yu", "Lifang He", "Bo Li"]
+section = "attacks-graph"
+venue = "TKDE"
+year = 2022
+url = "https://doi.org/10.1109/tkde.2022.3201243"
+arxiv = "https://arxiv.org/abs/1812.10528"
+added = 2026-11-20
+bibtex = '''
+@article{sun2022adversarial,
+  author        = {Lichao Sun and Yingtong Dou and Carl Yang and Kai Zhang and Ji Wang and Philip S. Yu and Lifang He and Bo Li},
+  title         = {{Adversarial Attack and Defense on Graph Data: A Survey}},
+  journal       = {IEEE Transactions on Knowledge and Data Engineering},
+  pages         = {1--20},
+  year          = {2022},
+  doi           = {10.1109/tkde.2022.3201243}
+}
+'''
+
+[[entry]]
+title = "Robustness of Graph Neural Networks at Scale"
+authors = ["Simon Geisler", "Tobias Schmidt", "Hakan Şirin", "Daniel Zügner", "Aleksandar Bojchevski", "Stephan Günnemann"]
+section = "attacks-graph"
+venue = "NeurIPS"
+year = 2021
+url = "https://papers.nips.cc/paper_files/paper/2021/hash/3ea2db50e62ceefceaf70a9d9a56a6f4-Abstract.html"
+arxiv = "https://arxiv.org/abs/2110.14038"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{geisler2021robustness,
+  author        = {Simon Geisler and Tobias Schmidt and Hakan Şirin and Daniel Zügner and Aleksandar Bojchevski and Stephan Günnemann},
+  title         = {{Robustness of Graph Neural Networks at Scale}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {34},
+  pages         = {7637--7649},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2021},
+  url           = {https://papers.nips.cc/paper_files/paper/2021/hash/3ea2db50e62ceefceaf70a9d9a56a6f4-Abstract.html}
+}
+'''
+
+[[entry]]
+title = "Are Defenses for Graph Neural Networks Robust?"
+authors = ["Felix Mujkanovic", "Simon Geisler", "Stephan Günnemann", "Aleksandar Bojchevski"]
+section = "attacks-graph"
+venue = "NeurIPS"
+year = 2022
+url = "https://papers.nips.cc/paper_files/paper/2022/hash/3ac904a31f9141444009777abef2ed8e-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2301.13694"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{mujkanovic2022are,
+  author        = {Felix Mujkanovic and Simon Geisler and Stephan Günnemann and Aleksandar Bojchevski},
+  title         = {{Are Defenses for Graph Neural Networks Robust?}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {35},
+  pages         = {8954--8968},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2022},
+  doi           = {10.52202/068431-0651}
+}
+'''
+
+[[entry]]
+title = "Data Cleaning: Overview and Emerging Challenges"
+authors = ["Xu Chu", "Ihab F. Ilyas", "Sanjay Krishnan", "Jiannan Wang"]
+section = "attacks-quality"
+venue = "SIGMOD"
+year = 2016
+url = "https://doi.org/10.1145/2882903.2912574"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chu2016data,
+  author        = {Xu Chu and Ihab F. Ilyas and Sanjay Krishnan and Jiannan Wang},
+  title         = {{Data Cleaning: Overview and Emerging Challenges}},
+  booktitle     = {Proceedings of the 2016 International Conference on Management of Data},
+  pages         = {2201--2206},
+  publisher     = {ACM},
+  year          = {2016},
+  doi           = {10.1145/2882903.2912574}
+}
+'''
+
+[[entry]]
+title = "HoloClean: Holistic Data Repairs with Probabilistic Inference"
+authors = ["Theodoros Rekatsinas", "Xu Chu", "Ihab F. Ilyas", "Christopher Ré"]
+section = "attacks-quality"
+venue = "VLDB"
+year = 2017
+url = "https://doi.org/10.14778/3137628.3137631"
+arxiv = "https://arxiv.org/abs/1702.00820"
+added = 2026-11-20
+bibtex = '''
+@article{rekatsinas2017holoclean,
+  author        = {Theodoros Rekatsinas and Xu Chu and Ihab F. Ilyas and Christopher Ré},
+  title         = {{HoloClean: Holistic Data Repairs with Probabilistic Inference}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {10},
+  number        = {11},
+  pages         = {1190--1201},
+  year          = {2017},
+  doi           = {10.14778/3137628.3137631}
+}
+'''
+
+[[entry]]
+title = "Automating Large-Scale Data Quality Verification"
+authors = ["Sebastian Schelter", "Dustin Lange", "Philipp Schmidt", "Meltem Celikel", "Felix Biessmann", "Andreas Grafberger"]
+section = "attacks-quality"
+venue = "VLDB"
+year = 2018
+url = "https://doi.org/10.14778/3229863.3229867"
+added = 2026-11-20
+bibtex = '''
+@article{schelter2018automating,
+  author        = {Sebastian Schelter and Dustin Lange and Philipp Schmidt and Meltem Celikel and Felix Biessmann and Andreas Grafberger},
+  title         = {{Automating Large-Scale Data Quality Verification}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {11},
+  number        = {12},
+  pages         = {1781--1794},
+  year          = {2018},
+  doi           = {10.14778/3229863.3229867}
+}
+'''
+
+[[entry]]
+title = "Raha: A Configuration-Free Error Detection System"
+authors = ["Mohammad Mahdavi", "Ziawasch Abedjan", "Raul Castro Fernandez", "Samuel Madden", "Mourad Ouzzani", "Michael Stonebraker", "Nan Tang"]
+section = "attacks-quality"
+venue = "SIGMOD"
+year = 2019
+url = "https://doi.org/10.1145/3299869.3324956"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{mahdavi2019raha,
+  author        = {Mohammad Mahdavi and Ziawasch Abedjan and Raul Castro Fernandez and Samuel Madden and Mourad Ouzzani and Michael Stonebraker and Nan Tang},
+  title         = {{Raha: A Configuration-Free Error Detection System}},
+  booktitle     = {Proceedings of the 2019 International Conference on Management of Data},
+  pages         = {865--882},
+  publisher     = {ACM},
+  year          = {2019},
+  doi           = {10.1145/3299869.3324956}
+}
+'''
+
+[[entry]]
+title = "CleanML: A Study for Evaluating the Impact of Data Cleaning on ML Classification Tasks"
+authors = ["Peng Li", "Xi Rao", "Jennifer Blase", "Yue Zhang", "Xu Chu", "Ce Zhang"]
+section = "attacks-quality"
+venue = "ICDE"
+year = 2021
+url = "https://doi.org/10.1109/icde51399.2021.00009"
+arxiv = "https://arxiv.org/abs/1904.09483"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{li2021cleanml,
+  author        = {Peng Li and Xi Rao and Jennifer Blase and Yue Zhang and Xu Chu and Ce Zhang},
+  title         = {{CleanML: A Study for Evaluating the Impact of Data Cleaning on ML Classification Tasks}},
+  booktitle     = {2021 IEEE 37th International Conference on Data Engineering (ICDE)},
+  pages         = {13--24},
+  publisher     = {IEEE},
+  year          = {2021},
+  doi           = {10.1109/icde51399.2021.00009}
+}
+'''
+
+[[entry]]
+title = "Quality Assessment for Linked Data: A Survey"
+authors = ["Amrapali Zaveri", "Anisa Rula", "Andrea Maurino", "Ricardo Pietrobon", "Jens Lehmann", "Sören Auer"]
+section = "attacks-quality"
+venue = "Semantic Web"
+year = 2016
+url = "https://doi.org/10.3233/sw-150175"
+added = 2026-11-20
+bibtex = '''
+@article{zaveri2016quality,
+  author        = {Amrapali Zaveri and Anisa Rula and Andrea Maurino and Ricardo Pietrobon and Jens Lehmann and Sören Auer},
+  title         = {{Quality Assessment for Linked Data: A Survey}},
+  journal       = {Semantic Web},
+  volume        = {7},
+  number        = {1},
+  pages         = {63--93},
+  year          = {2016},
+  doi           = {10.3233/sw-150175}
+}
+'''
+
+[[entry]]
+title = "Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods"
+authors = ["Heiko Paulheim"]
+section = "attacks-quality"
+venue = "Semantic Web"
+year = 2017
+url = "https://doi.org/10.3233/sw-160218"
+added = 2026-11-20
+bibtex = '''
+@article{paulheim2017knowledge,
+  author        = {Heiko Paulheim},
+  title         = {{Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods}},
+  journal       = {Semantic Web},
+  volume        = {8},
+  number        = {3},
+  pages         = {489--508},
+  year          = {2017},
+  doi           = {10.3233/sw-160218}
+}
+'''
+
+[[entry]]
+title = "Test-driven Evaluation of Linked Data Quality"
+authors = ["Dimitris Kontokostas", "Patrick Westphal", "Sören Auer", "Sebastian Hellmann", "Jens Lehmann", "Roland Cornelissen", "Amrapali Zaveri"]
+section = "attacks-quality"
+venue = "WWW"
+year = 2014
+url = "https://doi.org/10.1145/2566486.2568002"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{kontokostas2014test,
+  author        = {Dimitris Kontokostas and Patrick Westphal and Sören Auer and Sebastian Hellmann and Jens Lehmann and Roland Cornelissen and Amrapali Zaveri},
+  title         = {{Test-driven Evaluation of Linked Data Quality}},
+  booktitle     = {Proceedings of the 23rd international conference on World wide web},
+  pages         = {747--758},
+  publisher     = {ACM},
+  year          = {2014},
+  doi           = {10.1145/2566486.2568002}
+}
+'''
+
+[[entry]]
+title = "Improving the Quality of Linked Data Using Statistical Distributions"
+authors = ["Heiko Paulheim", "Christian Bizer"]
+section = "attacks-quality"
+venue = "IJSWIS"
+year = 2014
+url = "https://doi.org/10.4018/ijswis.2014040104"
+added = 2026-11-20
+bibtex = '''
+@article{paulheim2014improving,
+  author        = {Heiko Paulheim and Christian Bizer},
+  title         = {{Improving the Quality of Linked Data Using Statistical Distributions}},
+  journal       = {International Journal on Semantic Web and Information Systems},
+  volume        = {10},
+  number        = {2},
+  pages         = {63--86},
+  year          = {2014},
+  doi           = {10.4018/ijswis.2014040104}
+}
+'''
+
+[[entry]]
+title = "Dr.Spider: A Diagnostic Evaluation Benchmark towards Text-to-SQL Robustness"
+authors = ["Shuaichen Chang", "Jun Wang", "Mingwen Dong", "Lin Pan", "Henghui Zhu", "Alexander Hanbo Li", "Wuwei Lan", "Sheng Zhang", "Jiarong Jiang", "Joseph Lilien", "Steve Ash", "William Yang Wang", "Zhiguo Wang", "Vittorio Castelli", "Patrick Ng", "Bing Xiang"]
+section = "attacks-quality"
+venue = "ICLR"
+year = 2023
+url = "https://openreview.net/forum?id=Wc5bmZZU9cy"
+arxiv = "https://arxiv.org/abs/2301.08881"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chang2023drspider,
+  author        = {Shuaichen Chang and Jun Wang and Mingwen Dong and Lin Pan and Henghui Zhu and Alexander Hanbo Li and Wuwei Lan and Sheng Zhang and Jiarong Jiang and Joseph Lilien and Steve Ash and William Yang Wang and Zhiguo Wang and Vittorio Castelli and Patrick Ng and Bing Xiang},
+  title         = {{Dr.Spider: A Diagnostic Evaluation Benchmark towards Text-to-SQL Robustness}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2023},
+  url           = {https://openreview.net/forum?id=Wc5bmZZU9cy}
+}
+'''
+
+[[entry]]
+title = "Towards Robustness of Text-to-SQL Models against Synonym Substitution"
+authors = ["Yujian Gan", "Xinyun Chen", "Qiuping Huang", "Matthew Purver", "John R. Woodward", "Jinxia Xie", "Pengsheng Huang"]
+section = "attacks-quality"
+venue = "ACL"
+year = 2021
+url = "https://doi.org/10.18653/v1/2021.acl-long.195"
+arxiv = "https://arxiv.org/abs/2106.01065"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{gan2021robustness,
+  author        = {Yujian Gan and Xinyun Chen and Qiuping Huang and Matthew Purver and John R. Woodward and Jinxia Xie and Pengsheng Huang},
+  title         = {{Towards Robustness of Text-to-SQL Models against Synonym Substitution}},
+  booktitle     = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages         = {2505--2515},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2021},
+  doi           = {10.18653/v1/2021.acl-long.195}
+}
+'''
+
+[[entry]]
+title = "Towards Robustness of Text-to-SQL Models Against Natural and Realistic Adversarial Table Perturbation"
+authors = ["Xinyu Pi", "Bing Wang", "Yan Gao", "Jiaqi Guo", "Zhoujun Li", "Jian-Guang Lou"]
+section = "attacks-quality"
+venue = "ACL"
+year = 2022
+url = "https://doi.org/10.18653/v1/2022.acl-long.142"
+arxiv = "https://arxiv.org/abs/2212.09994"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{pi2022robustness,
+  author        = {Xinyu Pi and Bing Wang and Yan Gao and Jiaqi Guo and Zhoujun Li and Jian-Guang Lou},
+  title         = {{Towards Robustness of Text-to-SQL Models Against Natural and Realistic Adversarial Table Perturbation}},
+  booktitle     = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages         = {2007--2022},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2022},
+  doi           = {10.18653/v1/2022.acl-long.142}
+}
+'''
+
+[[entry]]
+title = "RobuT: A Systematic Study of Table QA Robustness Against Human-Annotated Adversarial Perturbations"
+authors = ["Yilun Zhao", "Chen Zhao", "Linyong Nan", "Zhenting Qi", "Wenlin Zhang", "Xiangru Tang", "Boyu Mi", "Dragomir Radev"]
+section = "attacks-quality"
+venue = "ACL"
+year = 2023
+url = "https://doi.org/10.18653/v1/2023.acl-long.334"
+arxiv = "https://arxiv.org/abs/2306.14321"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhao2023robut,
+  author        = {Yilun Zhao and Chen Zhao and Linyong Nan and Zhenting Qi and Wenlin Zhang and Xiangru Tang and Boyu Mi and Dragomir Radev},
+  title         = {{RobuT: A Systematic Study of Table QA Robustness Against Human-Annotated Adversarial Perturbations}},
+  booktitle     = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages         = {6064--6081},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2023},
+  doi           = {10.18653/v1/2023.acl-long.334}
+}
+'''
+
+[[entry]]
+title = "Making Retrieval-Augmented Language Models Robust to Irrelevant Context"
+authors = ["Ori Yoran", "Tomer Wolfson", "Ori Ram", "Jonathan Berant"]
+section = "attacks-quality"
+venue = "ICLR"
+year = 2024
+url = "https://openreview.net/forum?id=ZS4m74kZpH"
+arxiv = "https://arxiv.org/abs/2310.01558"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{yoran2024making,
+  author        = {Ori Yoran and Tomer Wolfson and Ori Ram and Jonathan Berant},
+  title         = {{Making Retrieval-Augmented Language Models Robust to Irrelevant Context}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2024},
+  url           = {https://openreview.net/forum?id=ZS4m74kZpH}
+}
+'''
+
+[[entry]]
+title = "Large Language Models Can Be Easily Distracted by Irrelevant Context"
+authors = ["Freda Shi", "Xinyun Chen", "Kanishka Misra", "Nathan Scales", "David Dohan", "Ed H. Chi", "Nathanael Schärli", "Denny Zhou"]
+section = "attacks-quality"
+venue = "ICML"
+year = 2023
+url = "https://proceedings.mlr.press/v202/shi23a.html"
+arxiv = "https://arxiv.org/abs/2302.00093"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{shi2023large,
+  author        = {Freda Shi and Xinyun Chen and Kanishka Misra and Nathan Scales and David Dohan and Ed H. Chi and Nathanael Schärli and Denny Zhou},
+  title         = {{Large Language Models Can Be Easily Distracted by Irrelevant Context}},
+  booktitle     = {Proceedings of the 40th International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {202},
+  pages         = {31210--31227},
+  publisher     = {PMLR},
+  year          = {2023},
+  url           = {https://proceedings.mlr.press/v202/shi23a.html}
+}
+'''
+
+[[entry]]
+title = "The Power of Noise: Redefining Retrieval for RAG Systems"
+authors = ["Florin Cuconasu", "Giovanni Trappolini", "Federico Siciliano", "Simone Filice", "Cesare Campagnano", "Yoelle Maarek", "Nicola Tonellotto", "Fabrizio Silvestri"]
+section = "attacks-quality"
+venue = "SIGIR"
+year = 2024
+url = "https://doi.org/10.1145/3626772.3657834"
+arxiv = "https://arxiv.org/abs/2401.14887"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{cuconasu2024power,
+  author        = {Florin Cuconasu and Giovanni Trappolini and Federico Siciliano and Simone Filice and Cesare Campagnano and Yoelle Maarek and Nicola Tonellotto and Fabrizio Silvestri},
+  title         = {{The Power of Noise: Redefining Retrieval for RAG Systems}},
+  booktitle     = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages         = {719--729},
+  publisher     = {ACM},
+  year          = {2024},
+  doi           = {10.1145/3626772.3657834}
+}
+'''
+
+[[entry]]
+title = "Benchmarking Large Language Models in Retrieval-Augmented Generation"
+authors = ["Jiawei Chen", "Hongyu Lin", "Xianpei Han", "Le Sun"]
+section = "attacks-quality"
+venue = "AAAI"
+year = 2024
+url = "https://doi.org/10.1609/aaai.v38i16.29728"
+arxiv = "https://arxiv.org/abs/2309.01431"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chen2024benchmarking,
+  author        = {Jiawei Chen and Hongyu Lin and Xianpei Han and Le Sun},
+  title         = {{Benchmarking Large Language Models in Retrieval-Augmented Generation}},
+  booktitle     = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume        = {38},
+  pages         = {17754--17762},
+  publisher     = {AAAI Press},
+  year          = {2024},
+  doi           = {10.1609/aaai.v38i16.29728}
+}
+'''
+
+[[entry]]
+title = "Dealing with Typos for BERT-based Passage Retrieval and Ranking"
+authors = ["Shengyao Zhuang", "Guido Zuccon"]
+section = "attacks-quality"
+venue = "EMNLP"
+year = 2021
+url = "https://doi.org/10.18653/v1/2021.emnlp-main.225"
+arxiv = "https://arxiv.org/abs/2108.12139"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhuang2021dealing,
+  author        = {Shengyao Zhuang and Guido Zuccon},
+  title         = {{Dealing with Typos for BERT-based Passage Retrieval and Ranking}},
+  booktitle     = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  pages         = {2836--2842},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2021},
+  doi           = {10.18653/v1/2021.emnlp-main.225}
+}
+'''
+
+[[entry]]
+title = "An Agentic Approach to Metadata Reasoning"
+authors = ["Jiani Zhang", "Sercan O. Arik", "Cosmin Arad", "Fatma Ozcan", "Alon Halevy"]
+section = "attacks-quality"
+venue = "arXiv"
+year = 2026
+url = "https://arxiv.org/abs/2604.20144"
+added = 2026-11-20
+
+[[entry]]
+title = "Less Is More? When Dataset Context Hurts LLM-Generated Dataset Descriptions"
+authors = ["Lisa-Yao Gan", "Arunav Das", "Johanna Walker", "Klaus Diepold", "Elena Simperl"]
+section = "attacks-quality"
+venue = "ICDE Workshops"
+year = 2026
+url = "https://doi.org/10.1109/icdew71238.2026.00022"
+arxiv = "https://arxiv.org/abs/2606.02334"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{gan2026less,
+  author        = {Lisa-Yao Gan and Arunav Das and Johanna Walker and Klaus Diepold and Elena Simperl},
+  title         = {{Less Is More? When Dataset Context Hurts LLM-Generated Dataset Descriptions}},
+  booktitle     = {2026 IEEE 42nd International Conference on Data Engineering Workshops (ICDEW)},
+  pages         = {166--175},
+  publisher     = {IEEE},
+  year          = {2026},
+  doi           = {10.1109/icdew71238.2026.00022}
+}
+'''
+
+[[entry]]
+title = "Data Lakes: A Survey of Functions and Systems"
+authors = ["Rihan Hai", "Christos Koutras", "Christoph Quix", "Matthias Jarke"]
+section = "attacks-quality"
+venue = "TKDE"
+year = 2023
+url = "https://doi.org/10.1109/tkde.2023.3270101"
+arxiv = "https://arxiv.org/abs/2106.09592"
+added = 2026-11-20
+bibtex = '''
+@article{hai2023data,
+  author        = {Rihan Hai and Christos Koutras and Christoph Quix and Matthias Jarke},
+  title         = {{Data Lakes: A Survey of Functions and Systems}},
+  journal       = {IEEE Transactions on Knowledge and Data Engineering},
+  volume        = {35},
+  number        = {12},
+  pages         = {12571--12590},
+  year          = {2023},
+  doi           = {10.1109/tkde.2023.3270101}
+}
+'''
+
+[[entry]]
+title = "HotFlip: White-Box Adversarial Examples for Text Classification"
+authors = ["Javid Ebrahimi", "Anyi Rao", "Daniel Lowd", "Dejing Dou"]
+section = "attacks-algorithms"
+venue = "ACL"
+year = 2018
+url = "https://doi.org/10.18653/v1/p18-2006"
+arxiv = "https://arxiv.org/abs/1712.06751"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{ebrahimi2018hotflip,
+  author        = {Javid Ebrahimi and Anyi Rao and Daniel Lowd and Dejing Dou},
+  title         = {{HotFlip: White-Box Adversarial Examples for Text Classification}},
+  booktitle     = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  pages         = {31--36},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2018},
+  doi           = {10.18653/v1/p18-2006}
+}
+'''
+
+[[entry]]
+title = "Universal Adversarial Triggers for Attacking and Analyzing NLP"
+authors = ["Eric Wallace", "Shi Feng", "Nikhil Kandpal", "Matt Gardner", "Sameer Singh"]
+section = "attacks-algorithms"
+venue = "EMNLP"
+year = 2019
+url = "https://doi.org/10.18653/v1/d19-1221"
+arxiv = "https://arxiv.org/abs/1908.07125"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wallace2019universal,
+  author        = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
+  title         = {{Universal Adversarial Triggers for Attacking and Analyzing NLP}},
+  booktitle     = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  pages         = {2153--2162},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2019},
+  doi           = {10.18653/v1/d19-1221}
+}
+'''
+
+[[entry]]
+title = "Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment"
+authors = ["Di Jin", "Zhijing Jin", "Joey Tianyi Zhou", "Peter Szolovits"]
+section = "attacks-algorithms"
+venue = "AAAI"
+year = 2020
+url = "https://doi.org/10.1609/aaai.v34i05.6311"
+arxiv = "https://arxiv.org/abs/1907.11932"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{jin2020bert,
+  author        = {Di Jin and Zhijing Jin and Joey Tianyi Zhou and Peter Szolovits},
+  title         = {{Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment}},
+  booktitle     = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume        = {34},
+  pages         = {8018--8025},
+  publisher     = {AAAI Press},
+  year          = {2020},
+  doi           = {10.1609/aaai.v34i05.6311}
+}
+'''
+
+[[entry]]
+title = "Generating Natural Language Adversarial Examples"
+authors = ["Moustafa Alzantot", "Yash Sharma", "Ahmed Elgohary", "Bo-Jhang Ho", "Mani Srivastava", "Kai-Wei Chang"]
+section = "attacks-algorithms"
+venue = "EMNLP"
+year = 2018
+url = "https://doi.org/10.18653/v1/d18-1316"
+arxiv = "https://arxiv.org/abs/1804.07998"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{alzantot2018generating,
+  author        = {Moustafa Alzantot and Yash Sharma and Ahmed Elgohary and Bo-Jhang Ho and Mani Srivastava and Kai-Wei Chang},
+  title         = {{Generating Natural Language Adversarial Examples}},
+  booktitle     = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  pages         = {2890--2896},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2018},
+  doi           = {10.18653/v1/d18-1316}
+}
+'''
+
+[[entry]]
+title = "Word-level Textual Adversarial Attacking as Combinatorial Optimization"
+authors = ["Yuan Zang", "Fanchao Qi", "Chenghao Yang", "Zhiyuan Liu", "Meng Zhang", "Qun Liu", "Maosong Sun"]
+section = "attacks-algorithms"
+venue = "ACL"
+year = 2020
+url = "https://doi.org/10.18653/v1/2020.acl-main.540"
+arxiv = "https://arxiv.org/abs/1910.12196"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zang2020word,
+  author        = {Yuan Zang and Fanchao Qi and Chenghao Yang and Zhiyuan Liu and Meng Zhang and Qun Liu and Maosong Sun},
+  title         = {{Word-level Textual Adversarial Attacking as Combinatorial Optimization}},
+  booktitle     = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages         = {6066--6080},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2020},
+  doi           = {10.18653/v1/2020.acl-main.540}
+}
+'''
+
+[[entry]]
+title = "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+authors = ["Andy Zou", "Zifan Wang", "Nicholas Carlini", "Milad Nasr", "J. Zico Kolter", "Matt Fredrikson"]
+section = "attacks-algorithms"
+venue = "arXiv"
+year = 2023
+url = "https://arxiv.org/abs/2307.15043"
+added = 2026-11-20
+
+[[entry]]
+title = "Fast Adversarial Attacks on Language Models In One GPU Minute"
+authors = ["Vinu Sankar Sadasivan", "Shoumik Saha", "Gaurang Sriramanan", "Priyatham Kattakinda", "Atoosa Chegini", "Soheil Feizi"]
+section = "attacks-algorithms"
+venue = "ICML"
+year = 2024
+url = "https://proceedings.mlr.press/v235/sadasivan24a.html"
+arxiv = "https://arxiv.org/abs/2402.15570"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{sadasivan2024fast,
+  author        = {Vinu Sankar Sadasivan and Shoumik Saha and Gaurang Sriramanan and Priyatham Kattakinda and Atoosa Chegini and Soheil Feizi},
+  title         = {{Fast Adversarial Attacks on Language Models In One GPU Minute}},
+  booktitle     = {Proceedings of the 41st International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {235},
+  pages         = {42976--42998},
+  publisher     = {PMLR},
+  year          = {2024},
+  url           = {https://proceedings.mlr.press/v235/sadasivan24a.html}
+}
+'''
+
+[[entry]]
+title = "Tree of Attacks: Jailbreaking Black-Box LLMs Automatically"
+authors = ["Anay Mehrotra", "Manolis Zampetakis", "Paul Kassianik", "Blaine Nelson", "Hyrum Anderson", "Yaron Singer", "Amin Karbasi"]
+section = "attacks-algorithms"
+venue = "NeurIPS"
+year = 2024
+url = "https://papers.nips.cc/paper_files/paper/2024/hash/70702e8cbb4890b4a467b984ae59828a-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2312.02119"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{mehrotra2024tree,
+  author        = {Anay Mehrotra and Manolis Zampetakis and Paul Kassianik and Blaine Nelson and Hyrum Anderson and Yaron Singer and Amin Karbasi},
+  title         = {{Tree of Attacks: Jailbreaking Black-Box LLMs Automatically}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {37},
+  pages         = {61065--61105},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2024},
+  doi           = {10.52202/079017-1952}
+}
+'''
+
+[[entry]]
+title = "Monte Carlo Tree Search Based Prompt Autogeneration for Jailbreak Attacks against LLMs"
+authors = ["Suhuang Wu", "Huimin Wang", "Yutian Zhao", "Xian Wu", "Yefeng Zheng", "Wei Li", "Hui Li", "Rongrong Ji"]
+section = "attacks-algorithms"
+venue = "COLING"
+year = 2025
+url = "https://aclanthology.org/2025.coling-main.71/"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wu2025monte,
+  author        = {Suhuang Wu and Huimin Wang and Yutian Zhao and Xian Wu and Yefeng Zheng and Wei Li and Hui Li and Rongrong Ji},
+  title         = {{Monte Carlo Tree Search Based Prompt Autogeneration for Jailbreak Attacks against LLMs}},
+  booktitle     = {Proceedings of the 31st International Conference on Computational Linguistics},
+  pages         = {1057--1068},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2025},
+  url           = {https://aclanthology.org/2025.coling-main.71/}
+}
+'''
+
+[[entry]]
+title = "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models"
+authors = ["Xiaogeng Liu", "Nan Xu", "Muhao Chen", "Chaowei Xiao"]
+section = "attacks-algorithms"
+venue = "ICLR"
+year = 2024
+url = "https://openreview.net/forum?id=7Jwpw4qKkb"
+arxiv = "https://arxiv.org/abs/2310.04451"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{liu2024autodan,
+  author        = {Xiaogeng Liu and Nan Xu and Muhao Chen and Chaowei Xiao},
+  title         = {{AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2024},
+  url           = {https://openreview.net/forum?id=7Jwpw4qKkb}
+}
+'''
+
+[[entry]]
+title = "Jailbreaking Black Box Large Language Models in Twenty Queries"
+authors = ["Patrick Chao", "Alexander Robey", "Edgar Dobriban", "Hamed Hassani", "George J. Pappas", "Eric Wong"]
+section = "attacks-algorithms"
+venue = "SaTML"
+year = 2025
+url = "https://doi.org/10.1109/satml64287.2025.00010"
+arxiv = "https://arxiv.org/abs/2310.08419"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chao2025jailbreaking,
+  author        = {Patrick Chao and Alexander Robey and Edgar Dobriban and Hamed Hassani and George J. Pappas and Eric Wong},
+  title         = {{Jailbreaking Black Box Large Language Models in Twenty Queries}},
+  booktitle     = {2025 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)},
+  pages         = {23--42},
+  publisher     = {IEEE},
+  year          = {2025},
+  doi           = {10.1109/satml64287.2025.00010}
+}
+'''
+
+[[entry]]
+title = "If Beam Search Is the Answer, What Was the Question?"
+authors = ["Clara Meister", "Ryan Cotterell", "Tim Vieira"]
+section = "attacks-algorithms"
+venue = "EMNLP"
+year = 2020
+url = "https://doi.org/10.18653/v1/2020.emnlp-main.170"
+arxiv = "https://arxiv.org/abs/2010.02650"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{meister2020if,
+  author        = {Clara Meister and Ryan Cotterell and Tim Vieira},
+  title         = {{If Beam Search Is the Answer, What Was the Question?}},
+  booktitle     = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages         = {2173--2185},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2020},
+  doi           = {10.18653/v1/2020.emnlp-main.170}
+}
+'''
+
+[[entry]]
+title = "Bandit Based Monte-Carlo Planning"
+authors = ["Levente Kocsis", "Csaba Szepesvári"]
+section = "attacks-algorithms"
+venue = "ECML"
+year = 2006
+url = "https://doi.org/10.1007/11871842_29"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{kocsis2006bandit,
+  author        = {Levente Kocsis and Csaba Szepesvári},
+  title         = {{Bandit Based Monte-Carlo Planning}},
+  booktitle     = {Machine Learning: ECML 2006},
+  series        = {Lecture Notes in Computer Science},
+  pages         = {282--293},
+  publisher     = {Springer},
+  year          = {2006},
+  doi           = {10.1007/11871842_29}
+}
+'''
+
+[[entry]]
+title = "Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search"
+authors = ["Rémi Coulom"]
+section = "attacks-algorithms"
+venue = "Computers and Games"
+year = 2006
+url = "https://doi.org/10.1007/978-3-540-75538-8_7"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{coulom2006efficient,
+  author        = {Rémi Coulom},
+  title         = {{Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search}},
+  booktitle     = {Computers and Games},
+  series        = {Lecture Notes in Computer Science},
+  pages         = {72--83},
+  publisher     = {Springer},
+  year          = {2006},
+  doi           = {10.1007/978-3-540-75538-8_7}
+}
+'''
+
+[[entry]]
+title = "A Survey of Monte Carlo Tree Search Methods"
+authors = ["Cameron B. Browne", "Edward Powley", "Daniel Whitehouse", "Simon M. Lucas", "Peter I. Cowling", "Philipp Rohlfshagen", "Stephen Tavener", "Diego Perez", "Spyridon Samothrakis", "Simon Colton"]
+section = "attacks-algorithms"
+venue = "IEEE TCIAIG"
+year = 2012
+url = "https://doi.org/10.1109/tciaig.2012.2186810"
+added = 2026-11-20
+bibtex = '''
+@article{browne2012survey,
+  author        = {Cameron B. Browne and Edward Powley and Daniel Whitehouse and Simon M. Lucas and Peter I. Cowling and Philipp Rohlfshagen and Stephen Tavener and Diego Perez and Spyridon Samothrakis and Simon Colton},
+  title         = {{A Survey of Monte Carlo Tree Search Methods}},
+  journal       = {IEEE Transactions on Computational Intelligence and AI in Games},
+  volume        = {4},
+  number        = {1},
+  pages         = {1--43},
+  year          = {2012},
+  doi           = {10.1109/tciaig.2012.2186810}
+}
+'''
+
+[[entry]]
+title = "Finite-time Analysis of the Multiarmed Bandit Problem"
+authors = ["Peter Auer", "Nicolò Cesa-Bianchi", "Paul Fischer"]
+section = "attacks-algorithms"
+venue = "Machine Learning"
+year = 2002
+url = "https://doi.org/10.1023/a:1013689704352"
+added = 2026-11-20
+bibtex = '''
+@article{auer2002finite,
+  author        = {Peter Auer and Nicolò Cesa-Bianchi and Paul Fischer},
+  title         = {{Finite-time Analysis of the Multiarmed Bandit Problem}},
+  journal       = {Machine Learning},
+  volume        = {47},
+  number        = {2-3},
+  pages         = {235--256},
+  year          = {2002},
+  doi           = {10.1023/a:1013689704352}
+}
+'''
+
+[[entry]]
+title = "Mastering the Game of Go with Deep Neural Networks and Tree Search"
+authors = ["David Silver", "Aja Huang", "Chris J. Maddison", "Arthur Guez", "Laurent Sifre", "George van den Driessche", "Julian Schrittwieser", "Ioannis Antonoglou", "Veda Panneershelvam", "Marc Lanctot", "Sander Dieleman", "Dominik Grewe", "John Nham", "Nal Kalchbrenner", "Ilya Sutskever", "Timothy Lillicrap", "Madeleine Leach", "Koray Kavukcuoglu", "Thore Graepel", "Demis Hassabis"]
+section = "attacks-algorithms"
+venue = "Nature"
+year = 2016
+url = "https://doi.org/10.1038/nature16961"
+added = 2026-11-20
+bibtex = '''
+@article{silver2016mastering,
+  author        = {David Silver and Aja Huang and Chris J. Maddison and Arthur Guez and Laurent Sifre and George van den Driessche and Julian Schrittwieser and Ioannis Antonoglou and Veda Panneershelvam and Marc Lanctot and Sander Dieleman and Dominik Grewe and John Nham and Nal Kalchbrenner and Ilya Sutskever and Timothy Lillicrap and Madeleine Leach and Koray Kavukcuoglu and Thore Graepel and Demis Hassabis},
+  title         = {{Mastering the Game of Go with Deep Neural Networks and Tree Search}},
+  journal       = {Nature},
+  volume        = {529},
+  number        = {7587},
+  pages         = {484--489},
+  year          = {2016},
+  doi           = {10.1038/nature16961}
+}
+'''
+
+[[entry]]
+title = "Maximum Flow and Minimum-Cost Flow in Almost-Linear Time"
+authors = ["Li Chen", "Rasmus Kyng", "Yang P. Liu", "Richard Peng", "Maximilian Probst Gutenberg", "Sushant Sachdeva"]
+section = "attacks-algorithms"
+venue = "FOCS"
+year = 2022
+url = "https://doi.org/10.1109/focs54457.2022.00064"
+arxiv = "https://arxiv.org/abs/2203.00671"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chen2022maximum,
+  author        = {Li Chen and Rasmus Kyng and Yang P. Liu and Richard Peng and Maximilian Probst Gutenberg and Sushant Sachdeva},
+  title         = {{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time}},
+  booktitle     = {2022 IEEE 63rd Annual Symposium on Foundations of Computer Science (FOCS)},
+  pages         = {612--623},
+  publisher     = {IEEE},
+  year          = {2022},
+  doi           = {10.1109/focs54457.2022.00064}
+}
+'''
+
+[[entry]]
+title = "A New Approach to the Maximum-Flow Problem"
+authors = ["Andrew V. Goldberg", "Robert E. Tarjan"]
+section = "attacks-algorithms"
+venue = "JACM"
+year = 1988
+url = "https://doi.org/10.1145/48014.61051"
+added = 2026-11-20
+bibtex = '''
+@article{goldberg1988new,
+  author        = {Andrew V. Goldberg and Robert E. Tarjan},
+  title         = {{A New Approach to the Maximum-Flow Problem}},
+  journal       = {Journal of the ACM},
+  volume        = {35},
+  number        = {4},
+  pages         = {921--940},
+  year          = {1988},
+  doi           = {10.1145/48014.61051}
+}
+'''
+
+[[entry]]
+title = "An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Vision"
+authors = ["Yuri Boykov", "Vladimir Kolmogorov"]
+section = "attacks-algorithms"
+venue = "TPAMI"
+year = 2004
+url = "https://doi.org/10.1109/tpami.2004.60"
+added = 2026-11-20
+bibtex = '''
+@article{boykov2004experimental,
+  author        = {Yuri Boykov and Vladimir Kolmogorov},
+  title         = {{An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Vision}},
+  journal       = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume        = {26},
+  number        = {9},
+  pages         = {1124--1137},
+  year          = {2004},
+  doi           = {10.1109/tpami.2004.60}
+}
+'''
+
+[[entry]]
+title = "A Data Structure for Dynamic Trees"
+authors = ["Daniel D. Sleator", "Robert Endre Tarjan"]
+section = "attacks-algorithms"
+venue = "JCSS"
+year = 1983
+url = "https://doi.org/10.1016/0022-0000(83)90006-5"
+added = 2026-11-20
+bibtex = '''
+@article{sleator1983data,
+  author        = {Daniel D. Sleator and Robert Endre Tarjan},
+  title         = {{A Data Structure for Dynamic Trees}},
+  journal       = {Journal of Computer and System Sciences},
+  volume        = {26},
+  number        = {3},
+  pages         = {362--391},
+  year          = {1983},
+  doi           = {10.1016/0022-0000(83)90006-5}
+}
+'''
+
+[[entry]]
+title = "Randomized Fully Dynamic Graph Algorithms with Polylogarithmic Time per Operation"
+authors = ["Monika R. Henzinger", "Valerie King"]
+section = "attacks-algorithms"
+venue = "JACM"
+year = 1999
+url = "https://doi.org/10.1145/320211.320215"
+added = 2026-11-20
+bibtex = '''
+@article{henzinger1999randomized,
+  author        = {Monika R. Henzinger and Valerie King},
+  title         = {{Randomized Fully Dynamic Graph Algorithms with Polylogarithmic Time per Operation}},
+  journal       = {Journal of the ACM},
+  volume        = {46},
+  number        = {4},
+  pages         = {502--516},
+  year          = {1999},
+  doi           = {10.1145/320211.320215}
+}
+'''
+
+[[entry]]
+title = "Poly-Logarithmic Deterministic Fully-Dynamic Algorithms for Connectivity, Minimum Spanning Tree, 2-Edge, and Biconnectivity"
+authors = ["Jacob Holm", "Kristian de Lichtenberg", "Mikkel Thorup"]
+section = "attacks-algorithms"
+venue = "JACM"
+year = 2001
+url = "https://doi.org/10.1145/502090.502095"
+added = 2026-11-20
+bibtex = '''
+@article{holm2001poly,
+  author        = {Jacob Holm and Kristian de Lichtenberg and Mikkel Thorup},
+  title         = {{Poly-Logarithmic Deterministic Fully-Dynamic Algorithms for Connectivity, Minimum Spanning Tree, 2-Edge, and Biconnectivity}},
+  journal       = {Journal of the ACM},
+  volume        = {48},
+  number        = {4},
+  pages         = {723--760},
+  year          = {2001},
+  doi           = {10.1145/502090.502095}
+}
+'''
+
+[[entry]]
+title = "Dynamic Trees in Practice"
+authors = ["Robert E. Tarjan", "Renato F. Werneck"]
+section = "attacks-algorithms"
+venue = "JEA"
+year = 2009
+url = "https://doi.org/10.1145/1498698.1594231"
+added = 2026-11-20
+bibtex = '''
+@article{tarjan2009dynamic,
+  author        = {Robert E. Tarjan and Renato F. Werneck},
+  title         = {{Dynamic Trees in Practice}},
+  journal       = {ACM Journal of Experimental Algorithmics},
+  volume        = {14},
+  year          = {2009},
+  doi           = {10.1145/1498698.1594231}
+}
+'''
+
+[[entry]]
+title = "Batch-Parallel Euler Tour Trees"
+authors = ["Thomas Tseng", "Laxman Dhulipala", "Guy Blelloch"]
+section = "attacks-algorithms"
+venue = "ALENEX"
+year = 2019
+url = "https://doi.org/10.1137/1.9781611975499.8"
+arxiv = "https://arxiv.org/abs/1810.10738"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{tseng2019batch,
+  author        = {Thomas Tseng and Laxman Dhulipala and Guy Blelloch},
+  title         = {{Batch-Parallel Euler Tour Trees}},
+  booktitle     = {2019 Proceedings of the Twenty-First Workshop on Algorithm Engineering and Experiments (ALENEX)},
+  pages         = {92--106},
+  publisher     = {SIAM},
+  year          = {2019},
+  doi           = {10.1137/1.9781611975499.8}
+}
+'''
+
+[[entry]]
+title = "Parallel Batch-Dynamic Graph Connectivity"
+authors = ["Umut A. Acar", "Daniel Anderson", "Guy E. Blelloch", "Laxman Dhulipala"]
+section = "attacks-algorithms"
+venue = "SPAA"
+year = 2019
+url = "https://doi.org/10.1145/3323165.3323196"
+arxiv = "https://arxiv.org/abs/1903.08794"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{acar2019parallel,
+  author        = {Umut A. Acar and Daniel Anderson and Guy E. Blelloch and Laxman Dhulipala},
+  title         = {{Parallel Batch-Dynamic Graph Connectivity}},
+  booktitle     = {The 31st ACM Symposium on Parallelism in Algorithms and Architectures},
+  pages         = {381--392},
+  publisher     = {ACM},
+  year          = {2019},
+  doi           = {10.1145/3323165.3323196}
+}
+'''
+
+[[entry]]
+title = "Maintaining Information in Fully Dynamic Trees with Top Trees"
+authors = ["Stephen Alstrup", "Jacob Holm", "Kristian De Lichtenberg", "Mikkel Thorup"]
+section = "attacks-algorithms"
+venue = "TALG"
+year = 2005
+url = "https://doi.org/10.1145/1103963.1103966"
+arxiv = "https://arxiv.org/abs/cs/0310065"
+added = 2026-11-20
+bibtex = '''
+@article{alstrup2005maintaining,
+  author        = {Stephen Alstrup and Jacob Holm and Kristian De Lichtenberg and Mikkel Thorup},
+  title         = {{Maintaining Information in Fully Dynamic Trees with Top Trees}},
+  journal       = {ACM Transactions on Algorithms},
+  volume        = {1},
+  number        = {2},
+  pages         = {243--264},
+  year          = {2005},
+  doi           = {10.1145/1103963.1103966}
+}
+'''

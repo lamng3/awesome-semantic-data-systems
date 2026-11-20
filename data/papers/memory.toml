@@ -1,0 +1,227 @@
+[[entry]]
+title = "MemCurrent: Designing Persistent Memory for Production Agents"
+org = "Databricks AI Research"
+section = "memory-systems"
+venue = "Databricks Blog"
+year = 2026
+url = "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents"
+added = 2026-10-31
+
+[[entry]]
+title = "MemGPT: Towards LLMs as Operating Systems"
+authors = ["Charles Packer", "Sarah Wooders", "Kevin Lin", "Vivian Fang", "Shishir G. Patil", "Ion Stoica", "Joseph E. Gonzalez"]
+section = "memory-systems"
+venue = "arXiv"
+year = 2023
+url = "https://arxiv.org/abs/2310.08560"
+added = 2026-11-20
+
+[[entry]]
+title = "Generative Agents: Interactive Simulacra of Human Behavior"
+authors = ["Joon Sung Park", "Joseph O'Brien", "Carrie Jun Cai", "Meredith Ringel Morris", "Percy Liang", "Michael S. Bernstein"]
+section = "memory-systems"
+venue = "UIST"
+year = 2023
+url = "https://doi.org/10.1145/3586183.3606763"
+arxiv = "https://arxiv.org/abs/2304.03442"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{park2023generative,
+  author        = {Joon Sung Park and Joseph O'Brien and Carrie Jun Cai and Meredith Ringel Morris and Percy Liang and Michael S. Bernstein},
+  title         = {{Generative Agents: Interactive Simulacra of Human Behavior}},
+  booktitle     = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+  pages         = {1--22},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3586183.3606763}
+}
+'''
+
+[[entry]]
+title = "Zep: A Temporal Knowledge Graph Architecture for Agent Memory"
+authors = ["Preston Rasmussen", "Pavlo Paliychuk", "Travis Beauvais", "Jack Ryan", "Daniel Chalef"]
+section = "memory-systems"
+venue = "arXiv"
+year = 2025
+url = "https://arxiv.org/abs/2501.13956"
+added = 2026-11-20
+
+[[entry]]
+title = "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory"
+authors = ["Prateek Chhikara", "Dev Khant", "Saket Aryan", "Taranjeet Singh", "Deshraj Yadav"]
+section = "memory-systems"
+venue = "ECAI"
+year = 2025
+url = "https://doi.org/10.3233/faia251160"
+arxiv = "https://arxiv.org/abs/2504.19413"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chhikara2025mem0,
+  author        = {Prateek Chhikara and Dev Khant and Saket Aryan and Taranjeet Singh and Deshraj Yadav},
+  title         = {{Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory}},
+  booktitle     = {ECAI 2025},
+  series        = {Frontiers in Artificial Intelligence and Applications},
+  publisher     = {IOS Press},
+  year          = {2025},
+  doi           = {10.3233/faia251160}
+}
+'''
+
+[[entry]]
+title = "A-Mem: Agentic Memory for LLM Agents"
+authors = ["Wujiang Xu", "Zujie Liang", "Kai Mei", "Hang Gao", "Juntao Tan", "Yongfeng Zhang"]
+section = "memory-systems"
+venue = "NeurIPS"
+year = 2025
+url = "https://doi.org/10.52202/085713-0593"
+arxiv = "https://arxiv.org/abs/2502.12110"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{xu2025mem,
+  author        = {Wujiang Xu and Zujie Liang and Kai Mei and Hang Gao and Juntao Tan and Yongfeng Zhang},
+  title         = {{A-Mem: Agentic Memory for LLM Agents}},
+  booktitle     = {Advances in Neural Information Processing Systems 38},
+  pages         = {20004--20031},
+  publisher     = {Neural Information Processing Systems Foundation, Inc. (NeurIPS)},
+  year          = {2025},
+  doi           = {10.52202/085713-0593}
+}
+'''
+
+[[entry]]
+title = "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+authors = ["Di Wu", "Hongwei Wang", "Wenhao Yu", "Yuwei Zhang", "Kai-Wei Chang", "Dong Yu"]
+section = "memory-systems"
+venue = "ICLR"
+year = 2025
+url = "https://openreview.net/forum?id=pZiyCaVuti"
+arxiv = "https://arxiv.org/abs/2410.10813"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wu2025longmemeval,
+  author        = {Di Wu and Hongwei Wang and Wenhao Yu and Yuwei Zhang and Kai-Wei Chang and Dong Yu},
+  title         = {{LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2025},
+  url           = {https://openreview.net/forum?id=pZiyCaVuti}
+}
+'''
+
+[[entry]]
+title = "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories"
+authors = ["Ali Behrouz", "Farnoosh Hashemi", "Adel Javanmard", "Vahab Mirrokni"]
+section = "memory-sleep"
+venue = "arXiv"
+year = 2026
+url = "https://arxiv.org/abs/2606.03979"
+added = 2026-11-20
+
+[[entry]]
+title = "Sleep-time Compute: Beyond Inference Scaling at Test-time"
+authors = ["Kevin Lin", "Charlie Snell", "Yu Wang", "Charles Packer", "Sarah Wooders", "Ion Stoica", "Joseph E. Gonzalez"]
+section = "memory-sleep"
+venue = "arXiv"
+year = 2025
+url = "https://arxiv.org/abs/2504.13171"
+added = 2026-11-20
+
+[[entry]]
+title = "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+authors = ["Chongrui Ye", "Yuxiang Liu", "Yu Wang", "Haofei Yu", "Yining Zhao", "Ge Liu", "Julian McAuley", "Jiaxuan You"]
+section = "memory-sleep"
+venue = "NeurIPS"
+year = 2026
+url = "https://openreview.net/forum?id=SR1n2zkaBO"
+arxiv = "https://arxiv.org/abs/2605.20616"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{ye2026auto,
+  author        = {Chongrui Ye and Yuxiang Liu and Yu Wang and Haofei Yu and Yining Zhao and Ge Liu and Julian McAuley and Jiaxuan You},
+  title         = {{Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  year          = {2026},
+  url           = {https://openreview.net/forum?id=SR1n2zkaBO}
+}
+'''
+
+[[entry]]
+title = "The “Wake-Sleep” Algorithm for Unsupervised Neural Networks"
+authors = ["Geoffrey E. Hinton", "Peter Dayan", "Brendan J. Frey", "Radford M. Neal"]
+section = "memory-sleep"
+venue = "Science"
+year = 1995
+url = "https://doi.org/10.1126/science.7761831"
+added = 2026-11-20
+bibtex = '''
+@article{hinton1995wake,
+  author        = {Geoffrey E. Hinton and Peter Dayan and Brendan J. Frey and Radford M. Neal},
+  title         = {{The “Wake-Sleep” Algorithm for Unsupervised Neural Networks}},
+  journal       = {Science},
+  volume        = {268},
+  number        = {5214},
+  pages         = {1158--1161},
+  year          = {1995},
+  doi           = {10.1126/science.7761831}
+}
+'''
+
+[[entry]]
+title = "DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning"
+authors = ["Kevin Ellis", "Catherine Wong", "Maxwell Nye", "Mathias Sablé-Meyer", "Lucas Morales", "Luke Hewitt", "Luc Cary", "Armando Solar-Lezama", "Joshua B. Tenenbaum"]
+section = "memory-sleep"
+venue = "PLDI"
+year = 2021
+url = "https://doi.org/10.1145/3453483.3454080"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{ellis2021dreamcoder,
+  author        = {Kevin Ellis and Catherine Wong and Maxwell Nye and Mathias Sablé-Meyer and Lucas Morales and Luke Hewitt and Luc Cary and Armando Solar-Lezama and Joshua B. Tenenbaum},
+  title         = {{DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning}},
+  booktitle     = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+  pages         = {835--850},
+  publisher     = {ACM},
+  year          = {2021},
+  doi           = {10.1145/3453483.3454080}
+}
+'''
+
+[[entry]]
+title = "Continual Learning with Deep Generative Replay"
+authors = ["Hanul Shin", "Jung Kwon Lee", "Jaehong Kim", "Jiwon Kim"]
+section = "memory-sleep"
+venue = "NeurIPS"
+year = 2017
+url = "https://papers.nips.cc/paper_files/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html"
+arxiv = "https://arxiv.org/abs/1705.08690"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{shin2017continual,
+  author        = {Hanul Shin and Jung Kwon Lee and Jaehong Kim and Jiwon Kim},
+  title         = {{Continual Learning with Deep Generative Replay}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {30},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2017},
+  url           = {https://papers.nips.cc/paper_files/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html}
+}
+'''
+
+[[entry]]
+title = "Sleep-Like Unsupervised Replay Reduces Catastrophic Forgetting in Artificial Neural Networks"
+authors = ["Timothy Tadros", "Giri P. Krishnan", "Ramyaa Ramyaa", "Maxim Bazhenov"]
+section = "memory-sleep"
+venue = "Nature Communications"
+year = 2022
+url = "https://doi.org/10.1038/s41467-022-34938-7"
+added = 2026-11-20
+bibtex = '''
+@article{tadros2022sleep,
+  author        = {Timothy Tadros and Giri P. Krishnan and Ramyaa Ramyaa and Maxim Bazhenov},
+  title         = {{Sleep-Like Unsupervised Replay Reduces Catastrophic Forgetting in Artificial Neural Networks}},
+  journal       = {Nature Communications},
+  volume        = {13},
+  number        = {1},
+  year          = {2022},
+  doi           = {10.1038/s41467-022-34938-7}
+}
+'''

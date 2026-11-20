@@ -1,0 +1,86 @@
+[[entry]]
+title = "OntoDB: A Database Management System for Ontologies"
+authors = ["Lam Nguyen"]
+venue = "GitHub"
+year = 2026
+url = "https://github.com/lamng3/OntoDB"
+added = 2026-10-31
+
+[[entry]]
+title = "EvoOntology: A Self-Evolving Ontology Layer for Data Agents"
+authors = ["Meiduo Chong", "Shaolei Zhang", "Ju Fan", "Xiaoyong Du"]
+venue = "arXiv"
+year = 2026
+url = "https://arxiv.org/abs/2609.15779"
+code = "https://github.com/ruc-datalab/EvoOntology"
+added = 2026-10-31
+
+[[entry]]
+title = "Toward Effective and Reliable LLM Agents via Dynamic Ontology"
+authors = ["Xiaohui Zhang", "Zequn Sun", "Chengyuan Yang", "Yuanning Cui", "Lingbing Guo", "Wei Hu"]
+venue = "arXiv"
+year = 2026
+url = "https://arxiv.org/abs/2608.22974"
+added = 2026-10-31
+
+[[entry]]
+title = "OM4OV: Leveraging Ontology Matching for Ontology Versioning"
+authors = ["Zhangcheng Qiang", "Kerry Taylor", "Weiqing Wang"]
+venue = "TGDK"
+year = 2026
+url = "https://doi.org/10.4230/TGDK.4.2.6"
+arxiv = "https://arxiv.org/abs/2409.20302"
+added = 2026-10-31
+bibtex = '''
+@article{qiang2026om4ov,
+  author        = {Zhangcheng Qiang and Kerry Taylor and Weiqing Wang},
+  title         = {{OM4OV: Leveraging Ontology Matching for Ontology Versioning}},
+  journal       = {Transactions on Graph Data and Knowledge},
+  volume        = {4},
+  number        = {2},
+  pages         = {6:1--6:19},
+  year          = {2026},
+  doi           = {10.4230/TGDK.4.2.6}
+}
+'''
+
+[[entry]]
+title = "KROMA: Ontology Matching with Knowledge Retrieval and Large Language Models"
+authors = ["Lam Nguyen", "Erika Barcelos", "Roger French", "Yinghui Wu"]
+venue = "ISWC"
+year = 2025
+url = "https://doi.org/10.1007/978-3-032-09527-5_34"
+arxiv = "https://arxiv.org/abs/2507.14032"
+code = "https://github.com/lamng3/kroma"
+added = 2026-10-31
+bibtex = '''
+@inproceedings{nguyen2025kroma,
+  author        = {Lam Nguyen and Erika Barcelos and Roger French and Yinghui Wu},
+  title         = {{KROMA: Ontology Matching with Knowledge Retrieval and Large Language Models}},
+  booktitle     = {The Semantic Web -- ISWC 2025},
+  series        = {Lecture Notes in Computer Science},
+  publisher     = {Springer},
+  pages         = {629--649},
+  year          = {2025},
+  doi           = {10.1007/978-3-032-09527-5_34}
+}
+'''
+
+[[entry]]
+title = "OntoLDiff: A Highly Efficient System for Tracking Logical Difference in Large-Scale Ontologies"
+authors = ["Yizheng Zhao", "Renate A. Schmidt"]
+venue = "CIKM"
+year = 2025
+url = "https://doi.org/10.1145/3746252.3761464"
+added = 2026-10-31
+bibtex = '''
+@inproceedings{zhao2025ontoldiff,
+  author        = {Yizheng Zhao and Renate A. Schmidt},
+  title         = {{OntoLDiff: A Highly Efficient System for Tracking Logical Difference in Large-Scale Ontologies}},
+  booktitle     = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM)},
+  publisher     = {ACM},
+  pages         = {6762--6766},
+  year          = {2025},
+  doi           = {10.1145/3746252.3761464}
+}
+'''

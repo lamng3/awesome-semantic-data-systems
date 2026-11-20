@@ -1,15 +1,14 @@
-# Three pillars, in display order. Each entry belongs to exactly one.
+# Five pillars, in display order. Each pillar's entries live in data/papers/<id>.toml.
 #
 # A pillar is one flat list until it passes about 15 entries. Then split it into
 # 2 to 4 sections along a seam the entries already show, and give every entry
 # in it a section. Never create a section ahead of the entries that fill it.
 #
 # Likely seams, for when the time comes:
-#   query:     engines and operators / optimization / vector and hybrid search
+#   query:     engines and operators / optimization
 #   knowledge: storage and querying / matching and versioning / ontologies for agents
-#   memory:    memory systems / representation and retrieval / consolidation and forgetting
 #
-# Pillar and section ids are referenced by data/papers.toml; section ids also become
+# Pillar and section ids are referenced by data/papers/; section ids also become
 # README anchors, so never change one once it has entries.
 # Descriptions are limited to 100 characters so each renders as a single line.
 
@@ -17,6 +16,31 @@
 id = "query"
 title = "Semantic Query Processing"
 description = "Engines that run models as query operators, and the techniques that make such queries efficient."
+
+[[pillar]]
+id = "vector"
+title = "Vector Search"
+description = "Approximate nearest neighbor search, from index design down to the hardware it runs on."
+
+[[pillar.section]]
+id = "vector-graph"
+title = "Graph-Based Indexes"
+description = "Proximity graphs: construction, routing, disk-resident and streaming indexes, and theory."
+
+[[pillar.section]]
+id = "vector-quantization"
+title = "Quantization and Partitioning"
+description = "Compressed codes, inverted files, and learned partitions."
+
+[[pillar.section]]
+id = "vector-hardware"
+title = "Hardware-Aware Search"
+description = "GPUs, CPU caches and SIMD, and kernel fusion."
+
+[[pillar.section]]
+id = "vector-systems"
+title = "Vector Databases and Filtered Search"
+description = "Vector data management systems, queries with structured predicates, and benchmarks."
 
 [[pillar]]
 id = "knowledge"
@@ -27,3 +51,38 @@ description = "Storing, querying, aligning, versioning, and evolving ontologies 
 id = "memory"
 title = "Agent Memory"
 description = "How agents store, organize, and recall what they learn, and how to tell whether memory helps."
+
+[[pillar.section]]
+id = "memory-systems"
+title = "Memory Systems"
+description = "Memory architectures for agents and benchmarks for long-term memory."
+
+[[pillar.section]]
+id = "memory-sleep"
+title = "Sleep and Dreaming"
+description = "Offline consolidation: replaying, distilling, and rewriting memories between sessions."
+
+[[pillar]]
+id = "attacks"
+title = "Attacks and Robustness"
+description = "Poisoning and adversarial attacks on semantic data systems, and the algorithms behind them."
+
+[[pillar.section]]
+id = "attacks-rag"
+title = "RAG and Retrieval Poisoning"
+description = "Corrupting the corpus, retriever, or ranker that a retrieval-augmented model depends on."
+
+[[pillar.section]]
+id = "attacks-graph"
+title = "Knowledge Graph and Graph Attacks"
+description = "Perturbing triples and edges to mislead embeddings, alignment, and graph neural networks."
+
+[[pillar.section]]
+id = "attacks-quality"
+title = "Data Quality and Perturbation"
+description = "Noisy, perturbed, or low-quality data and metadata, and how well systems hold up."
+
+[[pillar.section]]
+id = "attacks-algorithms"
+title = "Search and Graph Algorithms"
+description = "Beam search, Monte Carlo tree search and UCT, network flows, and dynamic trees."

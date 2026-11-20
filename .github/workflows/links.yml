@@ -12,14 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # ACM answers 403 to every automated client, so its DOIs (10.1145) cannot be checked here.
+      # ACM and PVLDB (10.1145, 10.14778), IEEE (10.1109), Science (10.1126), IOS Press (10.3233),
+      # and SIAM (10.1137) answer automated clients with 403 or a bot check, so their DOIs are not checked here.
       - uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --no-progress
             --max-retries 3
             --accept 200,206,429
-            --exclude '^https://doi\.org/10\.1145/'
+            --exclude '^https://doi\.org/10\.(1145|14778|1109|1126|3233|1137)/'
             --exclude-path data
             README.md CONTRIBUTING.md
           fail: true

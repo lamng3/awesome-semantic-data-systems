@@ -1,17 +1,16 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""Validate data/*.toml and regenerate the marked blocks of README.md.
+"""Validate data/ and regenerate the marked blocks of README.md and references.bib.
 
 Usage:
-    uv run scripts/build.py          # rewrite README.md
-    uv run scripts/build.py --check  # exit 1 if README.md is stale or data is invalid
+    uv run scripts/build.py          # rewrite README.md and references.bib
+    uv run scripts/build.py --check  # exit 1 if either is stale or the data is invalid
 """
 
 from __future__ import annotations
 
 import datetime as dt
-import html
 import re
 import sys
 import tomllib
@@ -20,22 +19,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = ROOT / "data" / "taxonomy.toml"
-PAPERS = ROOT / "data" / "papers.toml"
+PAPERS = ROOT / "data" / "papers"  # one <pillar id>.toml per pillar
 README = ROOT / "README.md"
 BIB = ROOT / "references.bib"
 
-REQUIRED = {"title", "venue", "year", "pillar", "url", "tldr", "added"}
-OPTIONAL = {"section", "authors", "org", "cite", "arxiv", "code", "docs", "project", "summary", "bibkey", "bibtex"}
+REQUIRED = {"title", "venue", "year", "url", "added"}
+OPTIONAL = {"section", "authors", "org", "cite", "arxiv", "code", "docs", "project", "bibkey", "bibtex"}
 BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
-BIB_SKIP_WORDS = {"a", "an", "the", "on", "of", "towards", "toward"}
-ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})")
+BIB_SKIP_WORDS = {"a", "an", "the", "is", "on", "of", "towards", "toward"}
+ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5}|[a-z-]+(?:\.[A-Z]{2})?/\d{7})$")
 EXTRA_LINKS = [("arxiv", "arXiv"), ("code", "Code"), ("docs", "Docs"), ("project", "Project")]
-# Long enough for one clause, short enough to stay on one line in GitHub's README column.
-MAX_TLDR = 100
+# Short enough to stay on one line in GitHub's README column.
 MAX_DESCRIPTION = 100
-MAX_SUMMARY = 400
-RECENT_COUNT = 10
-ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
+ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/(\d{4}\.\d{4,5}|[a-z-]+(\.[A-Z]{2})?/\d{7})$")
 PILLAR_ID = re.compile(r"^[a-z]+$")
 SECTION_ID = re.compile(r"^[a-z]+-[a-z0-9-]+$")
 # A pillar stays one flat list until it is worth splitting; then it gets 2 to 4 sections.
@@ -43,7 +39,7 @@ MAX_SECTIONS = 4
 SURNAME_PARTICLES = {"da", "das", "de", "del", "della", "der", "di", "dos", "du", "la", "le", "ten", "ter", "van", "von"}
 NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
 # Headings written by hand in README.md; generated anchors must not collide with them.
-STATIC_HEADINGS = {"Awesome Semantic Data Systems", "Contents", "Recently Added", "Citing", "Contributing", "License"}
+STATIC_HEADINGS = {"Awesome Semantic Data Systems", "Contents", "Citing", "Contributing", "License"}
 
 
 def slug(text: str) -> str:
@@ -53,6 +49,11 @@ def slug(text: str) -> str:
 
 def md_escape(text: str) -> str:
     return re.sub(r"([\\`*_\[\]<>])", r"\\\1", text)
+
+
+def md_url(url: str) -> str:
+    """Percent-encode parentheses, which some DOIs contain and Markdown links end on."""
+    return url.replace("(", "%28").replace(")", "%29")
 
 
 def nbsp(text: str) -> str:
@@ -68,7 +69,6 @@ def no_widow(text: str) -> str:
 def load() -> tuple[list[dict], list[dict], list[str]]:
     errors: list[str] = []
     pillars = tomllib.loads(TAXONOMY.read_text())["pillar"]
-    entries = tomllib.loads(PAPERS.read_text()).get("entry", [])
 
     anchors = {slug(h) for h in STATIC_HEADINGS}
     sections_of: dict[str, set[str]] = {}
@@ -97,27 +97,37 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
                 errors.append(f"taxonomy: section id {sid!r} is not unique")
             seen_sections.add(sid)
 
+    entries: list[dict] = []
+    for path in sorted(PAPERS.glob("*.toml")):
+        if path.stem not in sections_of:
+            errors.append(f"{path.name}: no pillar with id {path.stem!r} in taxonomy.toml")
+            continue
+        for e in tomllib.loads(path.read_text()).get("entry", []):
+            e["pillar"] = path.stem
+            e["file"] = path.name
+            entries.append(e)
+
     seen_urls: dict[str, str] = {}
     seen_titles: dict[str, str] = {}
     seen_keys: dict[str, str] = {}
     this_year = dt.date.today().year
     for e in entries:
         name = e.get("title", "<untitled>")
-        where = f"papers.toml: {name!r}"
-        if missing := REQUIRED - e.keys():
+        where = f"{e['file']}: {name!r}"
+        fields = e.keys() - {"pillar", "file"}
+        if missing := REQUIRED - fields:
             errors.append(f"{where}: missing {', '.join(sorted(missing))}")
             continue
-        if unknown := e.keys() - REQUIRED - OPTIONAL:
+        if unknown := fields - REQUIRED - OPTIONAL:
             errors.append(f"{where}: unknown field {', '.join(sorted(unknown))}")
         if ("authors" in e) == ("org" in e):
             errors.append(f"{where}: set exactly one of authors or org")
         if "authors" in e and (not e["authors"] or not all(isinstance(a, str) and a.strip() for a in e["authors"])):
             errors.append(f"{where}: authors must be a non-empty list of names")
-        if e["pillar"] not in sections_of:
-            errors.append(f"{where}: unknown pillar {e['pillar']!r}")
-        elif sections_of[e["pillar"]] and e.get("section") not in sections_of[e["pillar"]]:
-            errors.append(f"{where}: pillar {e['pillar']!r} is split; set section to one of {', '.join(sorted(sections_of[e['pillar']]))}")
-        elif not sections_of[e["pillar"]] and "section" in e:
+        sections = sections_of[e["pillar"]]
+        if sections and e.get("section") not in sections:
+            errors.append(f"{where}: pillar {e['pillar']!r} is split; set section to one of {', '.join(sorted(sections))}")
+        elif not sections and "section" in e:
             errors.append(f"{where}: pillar {e['pillar']!r} has no sections; drop section")
         if not isinstance(e["year"], int) or not 1950 <= e["year"] <= this_year + 1:
             errors.append(f"{where}: year must be an integer between 1950 and {this_year + 1}")
@@ -125,19 +135,12 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
             errors.append(f"{where}: added must be a date like 2026-10-31")
         for key in ("url", "arxiv"):
             if "arxiv.org" in e.get(key, "") and not ARXIV_ABS.match(e[key]):
-                errors.append(f"{where}: arXiv links use the versionless abstract page, https://arxiv.org/abs/NNNN.NNNNN")
+                errors.append(f"{where}: arXiv links use the versionless abstract page, https://arxiv.org/abs/NNNN.NNNNN (or cs/NNNNNNN)")
         if "arxiv" in e and ARXIV_ABS.match(e["url"]):
             errors.append(f"{where}: url is already the arXiv page; drop arxiv")
         for key in ["url"] + [k for k, _ in EXTRA_LINKS]:
             if key in e and not e[key].startswith("https://"):
                 errors.append(f"{where}: {key} must start with https://")
-        if len(e["tldr"]) > MAX_TLDR:
-            errors.append(f"{where}: tldr is {len(e['tldr'])} characters, limit {MAX_TLDR}")
-        if len(e.get("summary", "")) > MAX_SUMMARY:
-            errors.append(f"{where}: summary is {len(e['summary'])} characters, limit {MAX_SUMMARY}")
-        for key in ("tldr", "summary", "cite"):
-            if "\n" in e.get(key, ""):
-                errors.append(f"{where}: {key} must be a single line")
         if e["title"].endswith("."):
             errors.append(f"{where}: title ends with a period")
         if "bibtex" in e and not e["bibtex"].lstrip().startswith("@"):
@@ -162,7 +165,7 @@ def surname(name: str) -> str:
     while len(tokens) > 1 and tokens[-1].lower() in NAME_SUFFIXES:
         tokens.pop()
     start = len(tokens) - 1
-    while start > 0 and tokens[start - 1].lower() in SURNAME_PARTICLES:
+    while start > 1 and tokens[start - 1].lower() in SURNAME_PARTICLES:  # the first token is the given name
         start -= 1
     return " ".join(tokens[start:])
 
@@ -224,28 +227,26 @@ def render_bib_entry(e: dict) -> str:
 
 
 def render_bib(grouped) -> str:
-    header = "% Generated from data/papers.toml by scripts/build.py. Do not edit by hand.\n"
-    entries = [e for _, sections in grouped for _, members in sections for e in members]
-    return header + "\n" + "\n\n".join(render_bib_entry(e) for e in entries) + "\n"
+    """One block per README section, under a comment header naming it."""
+    blocks = ["% Generated from data/papers/*.toml by scripts/build.py. Do not edit by hand."]
+    rule = "% " + "=" * 76
+    for pillar, sections in grouped:
+        for section, members in sections:
+            name = f"{pillar['title']}: {section['title']}" if section else pillar["title"]
+            blocks.append(f"{rule}\n% {name}\n{rule}")
+            blocks += [render_bib_entry(e) for e in members]
+    return "\n\n".join(blocks) + "\n"
 
 
 def render_entry(e: dict) -> str:
-    # The citation may break only after its comma, and never leaves the title's last word behind.
-    links = "".join(f"&nbsp;·&nbsp;[{label}]({e[key]})" for key, label in EXTRA_LINKS if key in e)
-    citation = f"({nbsp(md_escape(cite(e)))}, {nbsp(md_escape(e['venue']))}&nbsp;{e['year']})"
-    head = f"- **[{md_escape(e['title'])}]({e['url']})**&nbsp;{citation}{links}"
+    """One line: venue and year, the linked title, the authors, then any extra links.
 
-    details = []
-    if "summary" in e:
-        details.append(no_widow(html.escape(e["summary"])))
-    if "authors" in e:
-        details.append(f"<i>Authors:</i> {no_widow(html.escape(', '.join(e['authors'])))}")
-    details.append(f'<i>BibTeX:</i> <a href="references.bib"><code>{bibkey(e)}</code></a>')
-    tldr = no_widow(html.escape(e["tldr"]))
-    if not details:
-        return f"{head}<br>\n  {tldr}"
-    body = "<br><br>".join(details)
-    return f"{head}\n  <details><summary>{tldr}</summary><blockquote>{body}</blockquote></details>"
+    The parts after the title are joined with non-breaking spaces, so a wrapped line
+    never leaves the title's last word or a lone link behind.
+    """
+    venue = f"**{nbsp(md_escape(e['venue']))}&nbsp;{e['year']}**"
+    links = "".join(f"&nbsp;·&nbsp;[{label}]({md_url(e[key])})" for key, label in EXTRA_LINKS if key in e)
+    return f"- {venue} · [{md_escape(e['title'])}]({md_url(e['url'])})&nbsp;·&nbsp;{nbsp(md_escape(cite(e)))}{links}"
 
 
 def newest_first(entries: list[dict]) -> list[dict]:
@@ -272,24 +273,13 @@ def group(pillars: list[dict], entries: list[dict]) -> list[tuple[dict, list[tup
     return out
 
 
-def render_contents(grouped, total: int) -> str:
+def render_contents(grouped) -> str:
     lines = []
-    if total >= RECENT_COUNT:
-        lines.append(f"- [Recently Added](#{slug('Recently Added')})")
     for pillar, sections in grouped:
         if not sections:
             continue
         lines.append(f"- [{pillar['title']}](#{slug(pillar['title'])})")
         lines += [f"  - [{s['title']}](#{s['id']})" for s, _ in sections if s]
-    return "\n".join(lines)
-
-
-def render_recent(entries: list[dict]) -> str:
-    if len(entries) < RECENT_COUNT:
-        return ""
-    recent = sorted(entries, key=lambda e: (-e["added"].toordinal(), e["title"].casefold()))[:RECENT_COUNT]
-    lines = ["## Recently Added", ""]
-    lines += [f"- {e['added'].isoformat()} · [{md_escape(e['title'])}]({e['url']})" for e in recent]
     return "\n".join(lines)
 
 
@@ -325,9 +315,7 @@ def main() -> int:
 
     grouped = group(pillars, entries)
     current = README.read_text()
-    updated = current
-    updated = fill(updated, "CONTENTS", render_contents(grouped, len(entries)))
-    updated = fill(updated, "RECENT", render_recent(entries))
+    updated = fill(current, "CONTENTS", render_contents(grouped))
     updated = fill(updated, "LIST", render_list(grouped))
     bib = render_bib(grouped)
 

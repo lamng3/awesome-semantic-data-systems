@@ -1,0 +1,1472 @@
+[[entry]]
+title = "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs"
+authors = ["Yury A. Malkov", "Dmitry A. Yashunin"]
+section = "vector-graph"
+venue = "TPAMI"
+year = 2020
+url = "https://doi.org/10.1109/tpami.2018.2889473"
+arxiv = "https://arxiv.org/abs/1603.09320"
+added = 2026-11-20
+bibtex = '''
+@article{malkov2020efficient,
+  author        = {Yury A. Malkov and Dmitry A. Yashunin},
+  title         = {{Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs}},
+  journal       = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume        = {42},
+  number        = {4},
+  pages         = {824--836},
+  year          = {2020},
+  doi           = {10.1109/tpami.2018.2889473}
+}
+'''
+
+[[entry]]
+title = "Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph"
+authors = ["Cong Fu", "Chao Xiang", "Changxu Wang", "Deng Cai"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2019
+url = "https://doi.org/10.14778/3303753.3303754"
+arxiv = "https://arxiv.org/abs/1707.00143"
+added = 2026-11-20
+bibtex = '''
+@article{fu2019fast,
+  author        = {Cong Fu and Chao Xiang and Changxu Wang and Deng Cai},
+  title         = {{Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {12},
+  number        = {5},
+  pages         = {461--474},
+  year          = {2019},
+  doi           = {10.14778/3303753.3303754}
+}
+'''
+
+[[entry]]
+title = "DiskANN: Fast Accurate Billion-point Nearest Neighbor Search on a Single Node"
+authors = ["Suhas Jayaram Subramanya", "Devvrit", "Harsha Vardhan Simhadri", "Ravishankar Krishnaswamy", "Rohan Kadekodi"]
+section = "vector-graph"
+venue = "NeurIPS"
+year = 2019
+url = "https://papers.nips.cc/paper_files/paper/2019/hash/09853c7fb1d3f8ee67a61b6bf4a7f8e6-Abstract.html"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{subramanya2019diskann,
+  author        = {Suhas Jayaram Subramanya and Devvrit and Harsha Vardhan Simhadri and Ravishankar Krishnaswamy and Rohan Kadekodi},
+  title         = {{DiskANN: Fast Accurate Billion-point Nearest Neighbor Search on a Single Node}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {32},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2019},
+  url           = {https://papers.nips.cc/paper_files/paper/2019/hash/09853c7fb1d3f8ee67a61b6bf4a7f8e6-Abstract.html}
+}
+'''
+
+[[entry]]
+title = "FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search"
+authors = ["Aditi Singh", "Suhas Jayaram Subramanya", "Ravishankar Krishnaswamy", "Harsha Vardhan Simhadri"]
+section = "vector-graph"
+venue = "arXiv"
+year = 2021
+url = "https://arxiv.org/abs/2105.09613"
+added = 2026-11-20
+
+[[entry]]
+title = "Efficient K-Nearest Neighbor Graph Construction for Generic Similarity Measures"
+authors = ["Wei Dong", "Charikar Moses", "Kai Li"]
+section = "vector-graph"
+venue = "WWW"
+year = 2011
+url = "https://doi.org/10.1145/1963405.1963487"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{dong2011efficient,
+  author        = {Wei Dong and Charikar Moses and Kai Li},
+  title         = {{Efficient K-Nearest Neighbor Graph Construction for Generic Similarity Measures}},
+  booktitle     = {Proceedings of the 20th international conference on World wide web},
+  pages         = {577--586},
+  publisher     = {ACM},
+  year          = {2011},
+  doi           = {10.1145/1963405.1963487}
+}
+'''
+
+[[entry]]
+title = "A Comprehensive Survey and Experimental Comparison of Graph-Based Approximate Nearest Neighbor Search"
+authors = ["Mengzhao Wang", "Xiaoliang Xu", "Qiang Yue", "Yuxiang Wang"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2021
+url = "https://doi.org/10.14778/3476249.3476255"
+arxiv = "https://arxiv.org/abs/2101.12631"
+added = 2026-11-20
+bibtex = '''
+@article{wang2021comprehensive,
+  author        = {Mengzhao Wang and Xiaoliang Xu and Qiang Yue and Yuxiang Wang},
+  title         = {{A Comprehensive Survey and Experimental Comparison of Graph-Based Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {14},
+  number        = {11},
+  pages         = {1964--1978},
+  year          = {2021},
+  doi           = {10.14778/3476249.3476255}
+}
+'''
+
+[[entry]]
+title = "Graph-Based Vector Search: An Experimental Evaluation of the State-of-the-Art"
+authors = ["Ilias Azizi", "Karima Echihabi", "Themis Palpanas"]
+section = "vector-graph"
+venue = "SIGMOD"
+year = 2025
+url = "https://doi.org/10.1145/3709693"
+arxiv = "https://arxiv.org/abs/2502.05575"
+added = 2026-11-20
+bibtex = '''
+@article{azizi2025graph,
+  author        = {Ilias Azizi and Karima Echihabi and Themis Palpanas},
+  title         = {{Graph-Based Vector Search: An Experimental Evaluation of the State-of-the-Art}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {1},
+  pages         = {1--31},
+  year          = {2025},
+  doi           = {10.1145/3709693}
+}
+'''
+
+[[entry]]
+title = "Worst-case Performance of Popular Approximate Nearest Neighbor Search Implementations: Guarantees and Limitations"
+authors = ["Piotr Indyk", "Haike Xu"]
+section = "vector-graph"
+venue = "NeurIPS"
+year = 2023
+url = "https://papers.nips.cc/paper_files/paper/2023/hash/d0ac28b79816b51124fcc804b2496a36-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2310.19126"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{indyk2023worst,
+  author        = {Piotr Indyk and Haike Xu},
+  title         = {{Worst-case Performance of Popular Approximate Nearest Neighbor Search Implementations: Guarantees and Limitations}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {36},
+  pages         = {66239--66256},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2023},
+  doi           = {10.52202/075280-2891}
+}
+'''
+
+[[entry]]
+title = "Graph-based Nearest Neighbor Search: From Practice to Theory"
+authors = ["Liudmila Prokhorenkova", "Aleksandr Shekhovtsov"]
+section = "vector-graph"
+venue = "ICML"
+year = 2020
+url = "https://proceedings.mlr.press/v119/prokhorenkova20a.html"
+arxiv = "https://arxiv.org/abs/1907.00845"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{prokhorenkova2020graph,
+  author        = {Liudmila Prokhorenkova and Aleksandr Shekhovtsov},
+  title         = {{Graph-based Nearest Neighbor Search: From Practice to Theory}},
+  booktitle     = {Proceedings of the 37th International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {119},
+  pages         = {7803--7813},
+  publisher     = {PMLR},
+  year          = {2020},
+  url           = {https://proceedings.mlr.press/v119/prokhorenkova20a.html}
+}
+'''
+
+[[entry]]
+title = "Starling: An I/O-Efficient Disk-Resident Graph Index Framework for High-Dimensional Vector Similarity Search on Data Segment"
+authors = ["Mengzhao Wang", "Weizhi Xu", "Xiaomeng Yi", "Songlin Wu", "Zhangyang Peng", "Xiangyu Ke", "Yunjun Gao", "Xiaoliang Xu", "Rentong Guo", "Charles Xie"]
+section = "vector-graph"
+venue = "SIGMOD"
+year = 2024
+url = "https://doi.org/10.1145/3639269"
+arxiv = "https://arxiv.org/abs/2401.02116"
+added = 2026-11-20
+bibtex = '''
+@article{wang2024starling,
+  author        = {Mengzhao Wang and Weizhi Xu and Xiaomeng Yi and Songlin Wu and Zhangyang Peng and Xiangyu Ke and Yunjun Gao and Xiaoliang Xu and Rentong Guo and Charles Xie},
+  title         = {{Starling: An I/O-Efficient Disk-Resident Graph Index Framework for High-Dimensional Vector Similarity Search on Data Segment}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {2},
+  number        = {1},
+  pages         = {1--27},
+  year          = {2024},
+  doi           = {10.1145/3639269}
+}
+'''
+
+[[entry]]
+title = "ELPIS: Graph-Based Similarity Search for Scalable Data Science"
+authors = ["Ilias Azizi", "Karima Echihabi", "Themis Palpanas"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2023
+url = "https://doi.org/10.14778/3583140.3583166"
+added = 2026-11-20
+bibtex = '''
+@article{azizi2023elpis,
+  author        = {Ilias Azizi and Karima Echihabi and Themis Palpanas},
+  title         = {{ELPIS: Graph-Based Similarity Search for Scalable Data Science}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {16},
+  number        = {6},
+  pages         = {1548--1559},
+  year          = {2023},
+  doi           = {10.14778/3583140.3583166}
+}
+'''
+
+[[entry]]
+title = "Probabilistic Routing for Graph-Based Approximate Nearest Neighbor Search"
+authors = ["Kejing Lu", "Chuan Xiao", "Yoshiharu Ishikawa"]
+section = "vector-graph"
+venue = "ICML"
+year = 2024
+url = "https://proceedings.mlr.press/v235/lu24l.html"
+arxiv = "https://arxiv.org/abs/2402.11354"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{lu2024probabilistic,
+  author        = {Kejing Lu and Chuan Xiao and Yoshiharu Ishikawa},
+  title         = {{Probabilistic Routing for Graph-Based Approximate Nearest Neighbor Search}},
+  booktitle     = {Proceedings of the 41st International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {235},
+  pages         = {33177--33195},
+  publisher     = {PMLR},
+  year          = {2024},
+  url           = {https://proceedings.mlr.press/v235/lu24l.html}
+}
+'''
+
+[[entry]]
+title = "RoarGraph: A Projected Bipartite Graph for Efficient Cross-Modal Approximate Nearest Neighbor Search"
+authors = ["Meng Chen", "Kai Zhang", "Zhenying He", "Yinan Jing", "X. Sean Wang"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2024
+url = "https://doi.org/10.14778/3681954.3681959"
+arxiv = "https://arxiv.org/abs/2408.08933"
+added = 2026-11-20
+bibtex = '''
+@article{chen2024roargraph,
+  author        = {Meng Chen and Kai Zhang and Zhenying He and Yinan Jing and X. Sean Wang},
+  title         = {{RoarGraph: A Projected Bipartite Graph for Efficient Cross-Modal Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {17},
+  number        = {11},
+  pages         = {2735--2749},
+  year          = {2024},
+  doi           = {10.14778/3681954.3681959}
+}
+'''
+
+[[entry]]
+title = "Steiner-Hardness: A Query Hardness Measure for Graph-Based ANN Indexes"
+authors = ["Zeyu Wang", "Qitong Wang", "Xiaoxing Cheng", "Peng Wang", "Themis Palpanas", "Wei Wang"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2024
+url = "https://doi.org/10.14778/3704965.3704974"
+added = 2026-11-20
+bibtex = '''
+@article{wang2024steiner,
+  author        = {Zeyu Wang and Qitong Wang and Xiaoxing Cheng and Peng Wang and Themis Palpanas and Wei Wang},
+  title         = {{Steiner-Hardness: A Query Hardness Measure for Graph-Based ANN Indexes}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {17},
+  number        = {13},
+  pages         = {4668--4682},
+  year          = {2024},
+  doi           = {10.14778/3704965.3704974}
+}
+'''
+
+[[entry]]
+title = "PiPNN: Ultra-Scalable Graph-Based Nearest Neighbor Indexing"
+authors = ["Tobias Rubel", "Richard Wen", "Laxman Dhulipala", "Lars Gottesbüren", "Rajesh Jayaram", "Jakub Łącki"]
+section = "vector-graph"
+venue = "KDD"
+year = 2026
+url = "https://doi.org/10.1145/3770855.3817891"
+arxiv = "https://arxiv.org/abs/2602.21247"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{rubel2026pipnn,
+  author        = {Tobias Rubel and Richard Wen and Laxman Dhulipala and Lars Gottesbüren and Rajesh Jayaram and Jakub Łącki},
+  title         = {{PiPNN: Ultra-Scalable Graph-Based Nearest Neighbor Indexing}},
+  booktitle     = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
+  pages         = {4092--4102},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3770855.3817891}
+}
+'''
+
+[[entry]]
+title = "ParlayANN: Scalable and Deterministic Parallel Graph-Based Approximate Nearest Neighbor Search Algorithms"
+authors = ["Magdalen Dobson Manohar", "Zheqi Shen", "Guy Blelloch", "Laxman Dhulipala", "Yan Gu", "Harsha Vardhan Simhadri", "Yihan Sun"]
+section = "vector-graph"
+venue = "PPoPP"
+year = 2024
+url = "https://doi.org/10.1145/3627535.3638475"
+arxiv = "https://arxiv.org/abs/2305.04359"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{manohar2024parlayann,
+  author        = {Magdalen Dobson Manohar and Zheqi Shen and Guy Blelloch and Laxman Dhulipala and Yan Gu and Harsha Vardhan Simhadri and Yihan Sun},
+  title         = {{ParlayANN: Scalable and Deterministic Parallel Graph-Based Approximate Nearest Neighbor Search Algorithms}},
+  booktitle     = {Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming},
+  pages         = {270--285},
+  publisher     = {ACM},
+  year          = {2024},
+  doi           = {10.1145/3627535.3638475}
+}
+'''
+
+[[entry]]
+title = "Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search"
+authors = ["Xiaoliang Xu", "Haonan Dai", "Can Li", "Mengzhao Wang", "Qiang Yue"]
+section = "vector-graph"
+venue = "SIGMOD"
+year = 2026
+url = "https://doi.org/10.1145/3802120"
+added = 2026-11-20
+bibtex = '''
+@article{xu2026through,
+  author        = {Xiaoliang Xu and Haonan Dai and Can Li and Mengzhao Wang and Qiang Yue},
+  title         = {{Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {4},
+  number        = {3},
+  pages         = {1--27},
+  year          = {2026},
+  doi           = {10.1145/3802120}
+}
+'''
+
+[[entry]]
+title = "Down with the Hierarchy: The ‘H’ in HNSW Stands for “Hubs”"
+authors = ["Blaise Munyampirwa", "Vihan Lakshman", "Benjamin Coleman"]
+section = "vector-graph"
+venue = "ECIR"
+year = 2026
+url = "https://doi.org/10.1007/978-3-032-21324-2_3"
+arxiv = "https://arxiv.org/abs/2412.01940"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{munyampirwa2026down,
+  author        = {Blaise Munyampirwa and Vihan Lakshman and Benjamin Coleman},
+  title         = {{Down with the Hierarchy: The ‘H’ in HNSW Stands for “Hubs”}},
+  booktitle     = {Advances in Information Retrieval},
+  series        = {Lecture Notes in Computer Science},
+  pages         = {33--48},
+  publisher     = {Springer},
+  year          = {2026},
+  doi           = {10.1007/978-3-032-21324-2_3}
+}
+'''
+
+[[entry]]
+title = "Proximity Graphs for Similarity Search: Fast Construction, Lower Bounds, and Euclidean Separation"
+authors = ["Shangqi Lu", "Yufei Tao"]
+section = "vector-graph"
+venue = "PODS"
+year = 2025
+url = "https://doi.org/10.1145/3767716"
+arxiv = "https://arxiv.org/abs/2509.07732"
+added = 2026-11-20
+bibtex = '''
+@article{lu2025proximity,
+  author        = {Shangqi Lu and Yufei Tao},
+  title         = {{Proximity Graphs for Similarity Search: Fast Construction, Lower Bounds, and Euclidean Separation}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {5},
+  pages         = {1--25},
+  year          = {2025},
+  doi           = {10.1145/3767716}
+}
+'''
+
+[[entry]]
+title = "Navigable Graphs for High-Dimensional Nearest Neighbor Search: Constructions and Limits"
+authors = ["Haya Diwan", "Jinrui Gou", "Cameron Musco", "Christopher Musco", "Torsten Suel"]
+section = "vector-graph"
+venue = "NeurIPS"
+year = 2024
+url = "https://papers.nips.cc/paper_files/paper/2024/hash/6dc63b4063c978cf195bc15178e8152a-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2405.18680"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{diwan2024navigable,
+  author        = {Haya Diwan and Jinrui Gou and Cameron Musco and Christopher Musco and Torsten Suel},
+  title         = {{Navigable Graphs for High-Dimensional Nearest Neighbor Search: Constructions and Limits}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {37},
+  pages         = {59513--59531},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2024},
+  doi           = {10.52202/079017-1901}
+}
+'''
+
+[[entry]]
+title = "Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search"
+authors = ["Shuo Yang", "Jiadong Xie", "Yingfan Liu", "Jeffrey Xu Yu", "Xiyue Gao", "Qianru Wang", "Yanguo Peng", "Jiangtao Cui"]
+section = "vector-graph"
+venue = "VLDB"
+year = 2025
+url = "https://doi.org/10.14778/3725688.3725709"
+arxiv = "https://arxiv.org/abs/2410.01231"
+added = 2026-11-20
+bibtex = '''
+@article{yang2025revisiting,
+  author        = {Shuo Yang and Jiadong Xie and Yingfan Liu and Jeffrey Xu Yu and Xiyue Gao and Qianru Wang and Yanguo Peng and Jiangtao Cui},
+  title         = {{Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {18},
+  number        = {6},
+  pages         = {1825--1838},
+  year          = {2025},
+  doi           = {10.14778/3725688.3725709}
+}
+'''
+
+[[entry]]
+title = "Product Quantization for Nearest Neighbor Search"
+authors = ["Hervé Jégou", "Matthijs Douze", "Cordelia Schmid"]
+section = "vector-quantization"
+venue = "TPAMI"
+year = 2011
+url = "https://doi.org/10.1109/tpami.2010.57"
+added = 2026-11-20
+bibtex = '''
+@article{jegou2011product,
+  author        = {Hervé Jégou and Matthijs Douze and Cordelia Schmid},
+  title         = {{Product Quantization for Nearest Neighbor Search}},
+  journal       = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume        = {33},
+  number        = {1},
+  pages         = {117--128},
+  year          = {2011},
+  doi           = {10.1109/tpami.2010.57}
+}
+'''
+
+[[entry]]
+title = "Accelerating Large-Scale Inference with Anisotropic Vector Quantization"
+authors = ["Ruiqi Guo", "Philip Sun", "Erik Lindgren", "Quan Geng", "David Simcha", "Felix Chern", "Sanjiv Kumar"]
+section = "vector-quantization"
+venue = "ICML"
+year = 2020
+url = "https://proceedings.mlr.press/v119/guo20h.html"
+arxiv = "https://arxiv.org/abs/1908.10396"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{guo2020accelerating,
+  author        = {Ruiqi Guo and Philip Sun and Erik Lindgren and Quan Geng and David Simcha and Felix Chern and Sanjiv Kumar},
+  title         = {{Accelerating Large-Scale Inference with Anisotropic Vector Quantization}},
+  booktitle     = {Proceedings of the 37th International Conference on Machine Learning},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {119},
+  pages         = {3887--3896},
+  publisher     = {PMLR},
+  year          = {2020},
+  url           = {https://proceedings.mlr.press/v119/guo20h.html}
+}
+'''
+
+[[entry]]
+title = "SOAR: Improved Indexing for Approximate Nearest Neighbor Search"
+authors = ["Philip Sun", "David Simcha", "Dave Dopson", "Ruiqi Guo", "Sanjiv Kumar"]
+section = "vector-quantization"
+venue = "NeurIPS"
+year = 2023
+url = "https://papers.nips.cc/paper_files/paper/2023/hash/0973524e02a712af33325d0688ae6f49-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2404.00774"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{sun2023soar,
+  author        = {Philip Sun and David Simcha and Dave Dopson and Ruiqi Guo and Sanjiv Kumar},
+  title         = {{SOAR: Improved Indexing for Approximate Nearest Neighbor Search}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {36},
+  pages         = {3189--3204},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2023},
+  doi           = {10.52202/075280-0141}
+}
+'''
+
+[[entry]]
+title = "RaBitQ: Quantizing High-Dimensional Vectors with a Theoretical Error Bound for Approximate Nearest Neighbor Search"
+authors = ["Jianyang Gao", "Cheng Long"]
+section = "vector-quantization"
+venue = "SIGMOD"
+year = 2024
+url = "https://doi.org/10.1145/3654970"
+arxiv = "https://arxiv.org/abs/2405.12497"
+added = 2026-11-20
+bibtex = '''
+@article{gao2024rabitq,
+  author        = {Jianyang Gao and Cheng Long},
+  title         = {{RaBitQ: Quantizing High-Dimensional Vectors with a Theoretical Error Bound for Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {2},
+  number        = {3},
+  pages         = {1--27},
+  year          = {2024},
+  doi           = {10.1145/3654970}
+}
+'''
+
+[[entry]]
+title = "Practical and Asymptotically Optimal Quantization of High-Dimensional Vectors in Euclidean Space for Approximate Nearest Neighbor Search"
+authors = ["Jianyang Gao", "Yutong Gou", "Yuexuan Xu", "Yongyi Yang", "Cheng Long", "Raymond Chi-Wing Wong"]
+section = "vector-quantization"
+venue = "SIGMOD"
+year = 2025
+url = "https://doi.org/10.1145/3725413"
+arxiv = "https://arxiv.org/abs/2409.09913"
+added = 2026-11-20
+bibtex = '''
+@article{gao2025practical,
+  author        = {Jianyang Gao and Yutong Gou and Yuexuan Xu and Yongyi Yang and Cheng Long and Raymond Chi-Wing Wong},
+  title         = {{Practical and Asymptotically Optimal Quantization of High-Dimensional Vectors in Euclidean Space for Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {3},
+  pages         = {1--26},
+  year          = {2025},
+  doi           = {10.1145/3725413}
+}
+'''
+
+[[entry]]
+title = "SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search"
+authors = ["Qi Chen", "Bing Zhao", "Haidong Wang", "Mingqin Li", "Chuanjie Liu", "Zengzhong Li", "Mao Yang", "Jingdong Wang"]
+section = "vector-quantization"
+venue = "NeurIPS"
+year = 2021
+url = "https://papers.nips.cc/paper_files/paper/2021/hash/299dc35e747eb77177d9cea10a802da2-Abstract.html"
+arxiv = "https://arxiv.org/abs/2111.08566"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{chen2021spann,
+  author        = {Qi Chen and Bing Zhao and Haidong Wang and Mingqin Li and Chuanjie Liu and Zengzhong Li and Mao Yang and Jingdong Wang},
+  title         = {{SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {34},
+  pages         = {5199--5212},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2021},
+  url           = {https://papers.nips.cc/paper_files/paper/2021/hash/299dc35e747eb77177d9cea10a802da2-Abstract.html}
+}
+'''
+
+[[entry]]
+title = "SPFresh: Incremental In-Place Update for Billion-Scale Vector Search"
+authors = ["Yuming Xu", "Hengyu Liang", "Jin Li", "Shuotao Xu", "Qi Chen", "Qianxi Zhang", "Cheng Li", "Ziyue Yang", "Fan Yang", "Yuqing Yang", "Peng Cheng", "Mao Yang"]
+section = "vector-quantization"
+venue = "SOSP"
+year = 2023
+url = "https://doi.org/10.1145/3600006.3613166"
+arxiv = "https://arxiv.org/abs/2410.14452"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{xu2023spfresh,
+  author        = {Yuming Xu and Hengyu Liang and Jin Li and Shuotao Xu and Qi Chen and Qianxi Zhang and Cheng Li and Ziyue Yang and Fan Yang and Yuqing Yang and Peng Cheng and Mao Yang},
+  title         = {{SPFresh: Incremental In-Place Update for Billion-Scale Vector Search}},
+  booktitle     = {Proceedings of the 29th Symposium on Operating Systems Principles},
+  pages         = {545--561},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3600006.3613166}
+}
+'''
+
+[[entry]]
+title = "Similarity Search in the Blink of an Eye with Compressed Indices"
+authors = ["Cecilia Aguerrebere", "Ishwar Singh Bhati", "Mark Hildebrand", "Mariano Tepper", "Theodore Willke"]
+section = "vector-quantization"
+venue = "VLDB"
+year = 2023
+url = "https://doi.org/10.14778/3611479.3611537"
+arxiv = "https://arxiv.org/abs/2304.04759"
+added = 2026-11-20
+bibtex = '''
+@article{aguerrebere2023similarity,
+  author        = {Cecilia Aguerrebere and Ishwar Singh Bhati and Mark Hildebrand and Mariano Tepper and Theodore Willke},
+  title         = {{Similarity Search in the Blink of an Eye with Compressed Indices}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {16},
+  number        = {11},
+  pages         = {3433--3446},
+  year          = {2023},
+  doi           = {10.14778/3611479.3611537}
+}
+'''
+
+[[entry]]
+title = "High-Dimensional Approximate Nearest Neighbor Search: with Reliable and Efficient Distance Comparison Operations"
+authors = ["Jianyang Gao", "Cheng Long"]
+section = "vector-quantization"
+venue = "SIGMOD"
+year = 2023
+url = "https://doi.org/10.1145/3589282"
+arxiv = "https://arxiv.org/abs/2303.09855"
+added = 2026-11-20
+bibtex = '''
+@article{gao2023high,
+  author        = {Jianyang Gao and Cheng Long},
+  title         = {{High-Dimensional Approximate Nearest Neighbor Search: with Reliable and Efficient Distance Comparison Operations}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {1},
+  number        = {2},
+  pages         = {1--27},
+  year          = {2023},
+  doi           = {10.1145/3589282}
+}
+'''
+
+[[entry]]
+title = "SymphonyQG: Towards Symphonious Integration of Quantization and Graph for Approximate Nearest Neighbor Search"
+authors = ["Yutong Gou", "Jianyang Gao", "Yuexuan Xu", "Cheng Long"]
+section = "vector-quantization"
+venue = "SIGMOD"
+year = 2025
+url = "https://doi.org/10.1145/3709730"
+arxiv = "https://arxiv.org/abs/2411.12229"
+added = 2026-11-20
+bibtex = '''
+@article{gou2025symphonyqg,
+  author        = {Yutong Gou and Jianyang Gao and Yuexuan Xu and Cheng Long},
+  title         = {{SymphonyQG: Towards Symphonious Integration of Quantization and Graph for Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {1},
+  pages         = {1--26},
+  year          = {2025},
+  doi           = {10.1145/3709730}
+}
+'''
+
+[[entry]]
+title = "Learning Space Partitions for Nearest Neighbor Search"
+authors = ["Yihe Dong", "Piotr Indyk", "Ilya Razenshteyn", "Tal Wagner"]
+section = "vector-quantization"
+venue = "ICLR"
+year = 2020
+url = "https://openreview.net/forum?id=rkenmREFDr"
+arxiv = "https://arxiv.org/abs/1901.08544"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{dong2020learning,
+  author        = {Yihe Dong and Piotr Indyk and Ilya Razenshteyn and Tal Wagner},
+  title         = {{Learning Space Partitions for Nearest Neighbor Search}},
+  booktitle     = {International Conference on Learning Representations},
+  year          = {2020},
+  url           = {https://openreview.net/forum?id=rkenmREFDr}
+}
+'''
+
+[[entry]]
+title = "Quantization Meets Projection: A Happy Marriage for Approximate k-Nearest Neighbor Search"
+authors = ["Mingyu Yang", "Liuchang Jing", "Wentao Li", "Wei Wang"]
+section = "vector-quantization"
+venue = "VLDB"
+year = 2026
+url = "https://doi.org/10.14778/3797919.3797931"
+arxiv = "https://arxiv.org/abs/2411.06158"
+added = 2026-11-20
+bibtex = '''
+@article{yang2026quantization,
+  author        = {Mingyu Yang and Liuchang Jing and Wentao Li and Wei Wang},
+  title         = {{Quantization Meets Projection: A Happy Marriage for Approximate k-Nearest Neighbor Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {19},
+  number        = {6},
+  pages         = {1240--1249},
+  year          = {2026},
+  doi           = {10.14778/3797919.3797931}
+}
+'''
+
+[[entry]]
+title = "Billion-Scale Similarity Search with GPUs"
+authors = ["Jeff Johnson", "Matthijs Douze", "Herve Jegou"]
+section = "vector-hardware"
+venue = "IEEE TBD"
+year = 2021
+url = "https://doi.org/10.1109/tbdata.2019.2921572"
+arxiv = "https://arxiv.org/abs/1702.08734"
+added = 2026-11-20
+bibtex = '''
+@article{johnson2021billion,
+  author        = {Jeff Johnson and Matthijs Douze and Herve Jegou},
+  title         = {{Billion-Scale Similarity Search with GPUs}},
+  journal       = {IEEE Transactions on Big Data},
+  volume        = {7},
+  number        = {3},
+  pages         = {535--547},
+  year          = {2021},
+  doi           = {10.1109/tbdata.2019.2921572}
+}
+'''
+
+[[entry]]
+title = "SONG: Approximate Nearest Neighbor Search on GPU"
+authors = ["Weijie Zhao", "Shulong Tan", "Ping Li"]
+section = "vector-hardware"
+venue = "ICDE"
+year = 2020
+url = "https://doi.org/10.1109/icde48307.2020.00094"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhao2020song,
+  author        = {Weijie Zhao and Shulong Tan and Ping Li},
+  title         = {{SONG: Approximate Nearest Neighbor Search on GPU}},
+  booktitle     = {2020 IEEE 36th International Conference on Data Engineering (ICDE)},
+  pages         = {1033--1044},
+  publisher     = {IEEE},
+  year          = {2020},
+  doi           = {10.1109/icde48307.2020.00094}
+}
+'''
+
+[[entry]]
+title = "GPU-accelerated Proximity Graph Approximate Nearest Neighbor Search and Construction"
+authors = ["Yuanhang Yu", "Dong Wen", "Ying Zhang", "Lu Qin", "Wenjie Zhang", "Xuemin Lin"]
+section = "vector-hardware"
+venue = "ICDE"
+year = 2022
+url = "https://doi.org/10.1109/icde53745.2022.00046"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{yu2022gpu,
+  author        = {Yuanhang Yu and Dong Wen and Ying Zhang and Lu Qin and Wenjie Zhang and Xuemin Lin},
+  title         = {{GPU-accelerated Proximity Graph Approximate Nearest Neighbor Search and Construction}},
+  booktitle     = {2022 IEEE 38th International Conference on Data Engineering (ICDE)},
+  pages         = {552--564},
+  publisher     = {IEEE},
+  year          = {2022},
+  doi           = {10.1109/icde53745.2022.00046}
+}
+'''
+
+[[entry]]
+title = "GGNN: Graph-Based GPU Nearest Neighbor Search"
+authors = ["Fabian Groh", "Lukas Ruppert", "Patrick Wieschollek", "Hendrik P. A. Lensch"]
+section = "vector-hardware"
+venue = "IEEE TBD"
+year = 2023
+url = "https://doi.org/10.1109/tbdata.2022.3161156"
+arxiv = "https://arxiv.org/abs/1912.01059"
+added = 2026-11-20
+bibtex = '''
+@article{groh2023ggnn,
+  author        = {Fabian Groh and Lukas Ruppert and Patrick Wieschollek and Hendrik P. A. Lensch},
+  title         = {{GGNN: Graph-Based GPU Nearest Neighbor Search}},
+  journal       = {IEEE Transactions on Big Data},
+  volume        = {9},
+  number        = {1},
+  pages         = {267--279},
+  year          = {2023},
+  doi           = {10.1109/tbdata.2022.3161156}
+}
+'''
+
+[[entry]]
+title = "CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs"
+authors = ["Hiroyuki Ootomo", "Akira Naruse", "Corey Nolet", "Ray Wang", "Tamas Feher", "Yong Wang"]
+section = "vector-hardware"
+venue = "ICDE"
+year = 2024
+url = "https://doi.org/10.1109/icde60146.2024.00323"
+arxiv = "https://arxiv.org/abs/2308.15136"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{ootomo2024cagra,
+  author        = {Hiroyuki Ootomo and Akira Naruse and Corey Nolet and Ray Wang and Tamas Feher and Yong Wang},
+  title         = {{CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs}},
+  booktitle     = {2024 IEEE 40th International Conference on Data Engineering (ICDE)},
+  pages         = {4236--4247},
+  publisher     = {IEEE},
+  year          = {2024},
+  doi           = {10.1109/icde60146.2024.00323}
+}
+'''
+
+[[entry]]
+title = "BANG: Billion-Scale Approximate Nearest Neighbour Search Using a Single GPU"
+authors = ["Karthik Venkatasubba", "Saim Khan", "Somesh Singh", "Harsha Vardhan Simhadri", "Jyothi Vedurada"]
+section = "vector-hardware"
+venue = "IEEE TBD"
+year = 2025
+url = "https://doi.org/10.1109/tbdata.2025.3581085"
+arxiv = "https://arxiv.org/abs/2401.11324"
+added = 2026-11-20
+bibtex = '''
+@article{venkatasubba2025bang,
+  author        = {Karthik Venkatasubba and Saim Khan and Somesh Singh and Harsha Vardhan Simhadri and Jyothi Vedurada},
+  title         = {{BANG: Billion-Scale Approximate Nearest Neighbour Search Using a Single GPU}},
+  journal       = {IEEE Transactions on Big Data},
+  volume        = {11},
+  number        = {6},
+  pages         = {3142--3157},
+  year          = {2025},
+  doi           = {10.1109/tbdata.2025.3581085}
+}
+'''
+
+[[entry]]
+title = "GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search"
+authors = ["Jifan Shi", "Jianyang Gao", "James Xia", "Tamás Béla Fehér", "Cheng Long"]
+section = "vector-hardware"
+venue = "VLDB"
+year = 2026
+url = "https://doi.org/10.14778/3836663.3836701"
+arxiv = "https://arxiv.org/abs/2602.23999"
+added = 2026-11-20
+bibtex = '''
+@article{shi2026gpu,
+  author        = {Jifan Shi and Jianyang Gao and James Xia and Tamás Béla Fehér and Cheng Long},
+  title         = {{GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {19},
+  number        = {11},
+  pages         = {3454--3467},
+  year          = {2026},
+  doi           = {10.14778/3836663.3836701}
+}
+'''
+
+[[entry]]
+title = "SilverTorch: A Unified Model-based System to Democratize Large-Scale Recommendation on GPUs"
+authors = ["Bi Xue", "Hong Wu", "Lei Chen", "Chao Yang", "Yiming Ma", "Fei Ding", "Zhen Wang", "Liang Wang", "Xiaoheng Mao", "Ke Huang", "Xialu Li", "Peng Xia", "Rui Jian", "Yanli Zhao", "Yanzun Huang", "Yijie Deng", "Harry Tran", "Ryan Chang", "Min Yu", "Eric Dong", "Jiazhou Wang", "Qianqian Zhang", "Keke Zhai", "Hongzhang Yin", "Pawel Garbacki", "Zheng Fang", "Yiyi Pan", "Min Ni", "Yang Liu"]
+section = "vector-hardware"
+venue = "SIGIR"
+year = 2026
+url = "https://doi.org/10.1145/3805712.3809755"
+arxiv = "https://arxiv.org/abs/2511.14881"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{xue2026silvertorch,
+  author        = {Bi Xue and Hong Wu and Lei Chen and Chao Yang and Yiming Ma and Fei Ding and Zhen Wang and Liang Wang and Xiaoheng Mao and Ke Huang and Xialu Li and Peng Xia and Rui Jian and Yanli Zhao and Yanzun Huang and Yijie Deng and Harry Tran and Ryan Chang and Min Yu and Eric Dong and Jiazhou Wang and Qianqian Zhang and Keke Zhai and Hongzhang Yin and Pawel Garbacki and Zheng Fang and Yiyi Pan and Min Ni and Yang Liu},
+  title         = {{SilverTorch: A Unified Model-based System to Democratize Large-Scale Recommendation on GPUs}},
+  booktitle     = {Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages         = {2139--2149},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3805712.3809755}
+}
+'''
+
+[[entry]]
+title = "Scalable Graph Indexing using GPUs for Approximate Nearest Neighbor Search"
+authors = ["Zhonggen Li", "Xiangyu Ke", "Yifan Zhu", "Bocheng Yu", "Baihua Zheng", "Yunjun Gao"]
+section = "vector-hardware"
+venue = "SIGMOD"
+year = 2025
+url = "https://doi.org/10.1145/3769825"
+arxiv = "https://arxiv.org/abs/2508.08744"
+added = 2026-11-20
+bibtex = '''
+@article{li2025scalable,
+  author        = {Zhonggen Li and Xiangyu Ke and Yifan Zhu and Bocheng Yu and Baihua Zheng and Yunjun Gao},
+  title         = {{Scalable Graph Indexing using GPUs for Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {6},
+  pages         = {1--27},
+  year          = {2025},
+  doi           = {10.1145/3769825}
+}
+'''
+
+[[entry]]
+title = "Hitcher: Efficient GPU-based Vector Search via Cluster-Centric Kernel and Hitch-Ride Ordering"
+authors = ["Qihui Zhou", "Changji Li", "Guanxian Jiang", "Chenhao Ma", "Xiao Yan", "Yu Mao", "Ming-Chang Yang", "James Cheng"]
+section = "vector-hardware"
+venue = "KDD"
+year = 2026
+url = "https://doi.org/10.1145/3770854.3780212"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhou2026hitcher,
+  author        = {Qihui Zhou and Changji Li and Guanxian Jiang and Chenhao Ma and Xiao Yan and Yu Mao and Ming-Chang Yang and James Cheng},
+  title         = {{Hitcher: Efficient GPU-based Vector Search via Cluster-Centric Kernel and Hitch-Ride Ordering}},
+  booktitle     = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1},
+  pages         = {2066--2075},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3770854.3780212}
+}
+'''
+
+[[entry]]
+title = "GLIDE: GPU-Accelerated ANN Graph Index Construction via Data Locality"
+authors = ["Fuhao Ruan", "Ziyang Yue", "Ling Xu", "Dawei Liu", "Bolong Zheng"]
+section = "vector-hardware"
+venue = "ICDE"
+year = 2026
+url = "https://doi.org/10.1109/icde65706.2026.00250"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{ruan2026glide,
+  author        = {Fuhao Ruan and Ziyang Yue and Ling Xu and Dawei Liu and Bolong Zheng},
+  title         = {{GLIDE: GPU-Accelerated ANN Graph Index Construction via Data Locality}},
+  booktitle     = {2026 IEEE 42nd International Conference on Data Engineering (ICDE)},
+  pages         = {3405--3418},
+  publisher     = {IEEE},
+  year          = {2026},
+  doi           = {10.1109/icde65706.2026.00250}
+}
+'''
+
+[[entry]]
+title = "Towards High-throughput and Low-latency Billion-scale Vector Search via CPU/GPU Collaborative Filtering and Re-ranking"
+authors = ["Bing Tian", "Haikun Liu", "Yuhang Tang", "Shihai Xiao", "Zhuohui Duan", "Xiaofei Liao", "Hai Jin", "Xuecang Zhang", "Junhua Zhu", "Yu Zhang"]
+section = "vector-hardware"
+venue = "FAST"
+year = 2025
+url = "https://www.usenix.org/conference/fast25/presentation/tian-bing"
+arxiv = "https://arxiv.org/abs/2409.16576"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{tian2025high,
+  author        = {Bing Tian and Haikun Liu and Yuhang Tang and Shihai Xiao and Zhuohui Duan and Xiaofei Liao and Hai Jin and Xuecang Zhang and Junhua Zhu and Yu Zhang},
+  title         = {{Towards High-throughput and Low-latency Billion-scale Vector Search via CPU/GPU Collaborative Filtering and Re-ranking}},
+  booktitle     = {23rd USENIX Conference on File and Storage Technologies (FAST 25)},
+  pages         = {171--185},
+  publisher     = {USENIX Association},
+  year          = {2025},
+  url           = {https://www.usenix.org/conference/fast25/presentation/tian-bing}
+}
+'''
+
+[[entry]]
+title = "Juno: Optimizing High-Dimensional Approximate Nearest Neighbour Search with Sparsity-Aware Algorithm and Ray-Tracing Core Mapping"
+authors = ["Zihan Liu", "Wentao Ni", "Jingwen Leng", "Yu Feng", "Cong Guo", "Quan Chen", "Chao Li", "Minyi Guo", "Yuhao Zhu"]
+section = "vector-hardware"
+venue = "ASPLOS"
+year = 2024
+url = "https://doi.org/10.1145/3620665.3640360"
+arxiv = "https://arxiv.org/abs/2312.01712"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{liu2024juno,
+  author        = {Zihan Liu and Wentao Ni and Jingwen Leng and Yu Feng and Cong Guo and Quan Chen and Chao Li and Minyi Guo and Yuhao Zhu},
+  title         = {{Juno: Optimizing High-Dimensional Approximate Nearest Neighbour Search with Sparsity-Aware Algorithm and Ray-Tracing Core Mapping}},
+  booktitle     = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},
+  pages         = {549--565},
+  publisher     = {ACM},
+  year          = {2024},
+  doi           = {10.1145/3620665.3640360}
+}
+'''
+
+[[entry]]
+title = "iQAN: Fast and Accurate Vector Search with Efficient Intra-Query Parallelism on Multi-Core Architectures"
+authors = ["Zhen Peng", "Minjia Zhang", "Kai Li", "Ruoming Jin", "Bin Ren"]
+section = "vector-hardware"
+venue = "PPoPP"
+year = 2023
+url = "https://doi.org/10.1145/3572848.3577527"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{peng2023iqan,
+  author        = {Zhen Peng and Minjia Zhang and Kai Li and Ruoming Jin and Bin Ren},
+  title         = {{iQAN: Fast and Accurate Vector Search with Efficient Intra-Query Parallelism on Multi-Core Architectures}},
+  booktitle     = {Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming},
+  pages         = {313--328},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3572848.3577527}
+}
+'''
+
+[[entry]]
+title = "Accelerating Graph Indexing for ANNS on Modern CPUs"
+authors = ["Mengzhao Wang", "Haotian Wu", "Xiangyu Ke", "Yunjun Gao", "Yifan Zhu", "Wenchao Zhou"]
+section = "vector-hardware"
+venue = "SIGMOD"
+year = 2025
+url = "https://doi.org/10.1145/3725260"
+arxiv = "https://arxiv.org/abs/2502.18113"
+added = 2026-11-20
+bibtex = '''
+@article{wang2025accelerating,
+  author        = {Mengzhao Wang and Haotian Wu and Xiangyu Ke and Yunjun Gao and Yifan Zhu and Wenchao Zhou},
+  title         = {{Accelerating Graph Indexing for ANNS on Modern CPUs}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {3},
+  number        = {3},
+  pages         = {1--29},
+  year          = {2025},
+  doi           = {10.1145/3725260}
+}
+'''
+
+[[entry]]
+title = "Cache Locality is not Enough: High-Performance Nearest Neighbor Search with Product Quantization Fast Scan"
+authors = ["Fabien André", "Anne-Marie Kermarrec", "Nicolas Le Scouarnec"]
+section = "vector-hardware"
+venue = "VLDB"
+year = 2015
+url = "https://doi.org/10.14778/2856318.2856324"
+added = 2026-11-20
+bibtex = '''
+@article{andre2015cache,
+  author        = {Fabien André and Anne-Marie Kermarrec and Nicolas Le Scouarnec},
+  title         = {{Cache Locality is not Enough: High-Performance Nearest Neighbor Search with Product Quantization Fast Scan}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {9},
+  number        = {4},
+  pages         = {288--299},
+  year          = {2015},
+  doi           = {10.14778/2856318.2856324}
+}
+'''
+
+[[entry]]
+title = "Quicker ADC: Unlocking the Hidden Potential of Product Quantization with SIMD"
+authors = ["Fabien André", "Anne-Marie Kermarrec", "Nicolas Le Scouarnec"]
+section = "vector-hardware"
+venue = "TPAMI"
+year = 2021
+url = "https://doi.org/10.1109/tpami.2019.2952606"
+arxiv = "https://arxiv.org/abs/1812.09162"
+added = 2026-11-20
+bibtex = '''
+@article{andre2021quicker,
+  author        = {Fabien André and Anne-Marie Kermarrec and Nicolas Le Scouarnec},
+  title         = {{Quicker ADC: Unlocking the Hidden Potential of Product Quantization with SIMD}},
+  journal       = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume        = {43},
+  number        = {5},
+  pages         = {1666--1677},
+  year          = {2021},
+  doi           = {10.1109/tpami.2019.2952606}
+}
+'''
+
+[[entry]]
+title = "Graph Reordering for Cache-Efficient Near Neighbor Search"
+authors = ["Benjamin Coleman", "Santiago Segarra", "Alexander Smola", "Anshumali Shrivastava"]
+section = "vector-hardware"
+venue = "NeurIPS"
+year = 2022
+url = "https://papers.nips.cc/paper_files/paper/2022/hash/fb44a668c2d4bc984e9d6ca261262cbb-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2104.03221"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{coleman2022graph,
+  author        = {Benjamin Coleman and Santiago Segarra and Alexander Smola and Anshumali Shrivastava},
+  title         = {{Graph Reordering for Cache-Efficient Near Neighbor Search}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {35},
+  pages         = {38488--38500},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2022},
+  doi           = {10.52202/068431-2789}
+}
+'''
+
+[[entry]]
+title = "VSAG: An Optimized Search Framework for Graph-based Approximate Nearest Neighbor Search"
+authors = ["Xiaoyao Zhong", "Haotian Li", "Jiabao Jin", "Mingyu Yang", "Deming Chu", "Xiangyu Wang", "Zhitao Shen", "Wei Jia", "George Gu", "Yi Xie", "Xuemin Lin", "Heng Tao Shen", "Jingkuan Song", "Peng Cheng"]
+section = "vector-hardware"
+venue = "VLDB"
+year = 2025
+url = "https://doi.org/10.14778/3750601.3750624"
+arxiv = "https://arxiv.org/abs/2503.17911"
+added = 2026-11-20
+bibtex = '''
+@article{zhong2025vsag,
+  author        = {Xiaoyao Zhong and Haotian Li and Jiabao Jin and Mingyu Yang and Deming Chu and Xiangyu Wang and Zhitao Shen and Wei Jia and George Gu and Yi Xie and Xuemin Lin and Heng Tao Shen and Jingkuan Song and Peng Cheng},
+  title         = {{VSAG: An Optimized Search Framework for Graph-based Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {18},
+  number        = {12},
+  pages         = {5017--5030},
+  year          = {2025},
+  doi           = {10.14778/3750601.3750624}
+}
+'''
+
+[[entry]]
+title = "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+authors = ["Tri Dao", "Dan Fu", "Stefano Ermon", "Atri Rudra", "Christopher Ré"]
+section = "vector-hardware"
+venue = "NeurIPS"
+year = 2022
+url = "https://papers.nips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html"
+arxiv = "https://arxiv.org/abs/2205.14135"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{dao2022flashattention,
+  author        = {Tri Dao and Dan Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
+  title         = {{FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness}},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {35},
+  pages         = {16344--16359},
+  publisher     = {Curran Associates, Inc.},
+  year          = {2022},
+  doi           = {10.52202/068431-1189}
+}
+'''
+
+[[entry]]
+title = "Kernel Weaver: Automatically Fusing Database Primitives for Efficient GPU Computation"
+authors = ["Haicheng Wu", "Gregory Diamos", "Srihari Cadambi", "Sudhakar Yalamanchili"]
+section = "vector-hardware"
+venue = "MICRO"
+year = 2012
+url = "https://doi.org/10.1109/micro.2012.19"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wu2012kernel,
+  author        = {Haicheng Wu and Gregory Diamos and Srihari Cadambi and Sudhakar Yalamanchili},
+  title         = {{Kernel Weaver: Automatically Fusing Database Primitives for Efficient GPU Computation}},
+  booktitle     = {2012 45th Annual IEEE/ACM International Symposium on Microarchitecture},
+  pages         = {107--118},
+  publisher     = {IEEE},
+  year          = {2012},
+  doi           = {10.1109/micro.2012.19}
+}
+'''
+
+[[entry]]
+title = "Parallel Top-K Algorithms on GPU: A Comprehensive Study and New Methods"
+authors = ["Jingrong Zhang", "Akira Naruse", "Xipeng Li", "Yong Wang"]
+section = "vector-hardware"
+venue = "SC"
+year = 2023
+url = "https://doi.org/10.1145/3581784.3607062"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2023parallel,
+  author        = {Jingrong Zhang and Akira Naruse and Xipeng Li and Yong Wang},
+  title         = {{Parallel Top-K Algorithms on GPU: A Comprehensive Study and New Methods}},
+  booktitle     = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages         = {1--13},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3581784.3607062}
+}
+'''
+
+[[entry]]
+title = "Milvus: A Purpose-Built Vector Data Management System"
+authors = ["Jianguo Wang", "Xiaomeng Yi", "Rentong Guo", "Hai Jin", "Peng Xu", "Shengjun Li", "Xiangyu Wang", "Xiangzhou Guo", "Chengming Li", "Xiaohai Xu", "Kun Yu", "Yuxing Yuan", "Yinghao Zou", "Jiquan Long", "Yudong Cai", "Zhenxiang Li", "Zhifeng Zhang", "Yihua Mo", "Jun Gu", "Ruiyi Jiang", "Yi Wei", "Charles Xie"]
+section = "vector-systems"
+venue = "SIGMOD"
+year = 2021
+url = "https://doi.org/10.1145/3448016.3457550"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wang2021milvus,
+  author        = {Jianguo Wang and Xiaomeng Yi and Rentong Guo and Hai Jin and Peng Xu and Shengjun Li and Xiangyu Wang and Xiangzhou Guo and Chengming Li and Xiaohai Xu and Kun Yu and Yuxing Yuan and Yinghao Zou and Jiquan Long and Yudong Cai and Zhenxiang Li and Zhifeng Zhang and Yihua Mo and Jun Gu and Ruiyi Jiang and Yi Wei and Charles Xie},
+  title         = {{Milvus: A Purpose-Built Vector Data Management System}},
+  booktitle     = {Proceedings of the 2021 International Conference on Management of Data},
+  pages         = {2614--2627},
+  publisher     = {ACM},
+  year          = {2021},
+  doi           = {10.1145/3448016.3457550}
+}
+'''
+
+[[entry]]
+title = "Survey of Vector Database Management Systems"
+authors = ["James Jie Pan", "Jianguo Wang", "Guoliang Li"]
+section = "vector-systems"
+venue = "VLDBJ"
+year = 2024
+url = "https://doi.org/10.1007/s00778-024-00864-x"
+arxiv = "https://arxiv.org/abs/2310.14021"
+added = 2026-11-20
+bibtex = '''
+@article{pan2024survey,
+  author        = {James Jie Pan and Jianguo Wang and Guoliang Li},
+  title         = {{Survey of Vector Database Management Systems}},
+  journal       = {The VLDB Journal},
+  volume        = {33},
+  number        = {5},
+  pages         = {1591--1615},
+  year          = {2024},
+  doi           = {10.1007/s00778-024-00864-x}
+}
+'''
+
+[[entry]]
+title = "The Faiss Library"
+authors = ["Matthijs Douze", "Alexandr Guzhva", "Chengqi Deng", "Jeff Johnson", "Gergely Szilvasy", "Pierre-Emmanuel Mazaré", "Maria Lomeli", "Lucas Hosseini", "Hervé Jégou"]
+section = "vector-systems"
+venue = "IEEE TBD"
+year = 2026
+url = "https://doi.org/10.1109/tbdata.2025.3618474"
+arxiv = "https://arxiv.org/abs/2401.08281"
+added = 2026-11-20
+bibtex = '''
+@article{douze2026faiss,
+  author        = {Matthijs Douze and Alexandr Guzhva and Chengqi Deng and Jeff Johnson and Gergely Szilvasy and Pierre-Emmanuel Mazaré and Maria Lomeli and Lucas Hosseini and Hervé Jégou},
+  title         = {{The Faiss Library}},
+  journal       = {IEEE Transactions on Big Data},
+  volume        = {12},
+  number        = {2},
+  pages         = {346--361},
+  year          = {2026},
+  doi           = {10.1109/tbdata.2025.3618474}
+}
+'''
+
+[[entry]]
+title = "ACORN: Performant and Predicate-Agnostic Search Over Vector Embeddings and Structured Data"
+authors = ["Liana Patel", "Peter Kraft", "Carlos Guestrin", "Matei Zaharia"]
+section = "vector-systems"
+venue = "SIGMOD"
+year = 2024
+url = "https://doi.org/10.1145/3654923"
+arxiv = "https://arxiv.org/abs/2403.04871"
+added = 2026-11-20
+bibtex = '''
+@article{patel2024acorn,
+  author        = {Liana Patel and Peter Kraft and Carlos Guestrin and Matei Zaharia},
+  title         = {{ACORN: Performant and Predicate-Agnostic Search Over Vector Embeddings and Structured Data}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {2},
+  number        = {3},
+  pages         = {1--27},
+  year          = {2024},
+  doi           = {10.1145/3654923}
+}
+'''
+
+[[entry]]
+title = "Filtered Vector Search: State-of-the-Art and Research Opportunities"
+authors = ["Yannis Chronis", "Helena Caminal", "Yannis Papakonstantinou", "Fatma Özcan", "Anastasia Ailamaki"]
+section = "vector-systems"
+venue = "VLDB"
+year = 2025
+url = "https://doi.org/10.14778/3750601.3750700"
+added = 2026-11-20
+bibtex = '''
+@article{chronis2025filtered,
+  author        = {Yannis Chronis and Helena Caminal and Yannis Papakonstantinou and Fatma Özcan and Anastasia Ailamaki},
+  title         = {{Filtered Vector Search: State-of-the-Art and Research Opportunities}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {18},
+  number        = {12},
+  pages         = {5488--5492},
+  year          = {2025},
+  doi           = {10.14778/3750601.3750700}
+}
+'''
+
+[[entry]]
+title = "SeRF: Segment Graph for Range-Filtering Approximate Nearest Neighbor Search"
+authors = ["Chaoji Zuo", "Miao Qiao", "Wenchao Zhou", "Feifei Li", "Dong Deng"]
+section = "vector-systems"
+venue = "SIGMOD"
+year = 2024
+url = "https://doi.org/10.1145/3639324"
+added = 2026-11-20
+bibtex = '''
+@article{zuo2024serf,
+  author        = {Chaoji Zuo and Miao Qiao and Wenchao Zhou and Feifei Li and Dong Deng},
+  title         = {{SeRF: Segment Graph for Range-Filtering Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {2},
+  number        = {1},
+  pages         = {1--26},
+  year          = {2024},
+  doi           = {10.1145/3639324}
+}
+'''
+
+[[entry]]
+title = "VBASE: Unifying Online Vector Similarity Search and Relational Queries via Relaxed Monotonicity"
+authors = ["Qianxi Zhang", "Shuotao Xu", "Qi Chen", "Guoxin Sui", "Jiadong Xie", "Zhizhen Cai", "Yaoqi Chen", "Yinxuan He", "Yuqing Yang", "Fan Yang", "Mao Yang", "Lidong Zhou"]
+section = "vector-systems"
+venue = "OSDI"
+year = 2023
+url = "https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{zhang2023vbase,
+  author        = {Qianxi Zhang and Shuotao Xu and Qi Chen and Guoxin Sui and Jiadong Xie and Zhizhen Cai and Yaoqi Chen and Yinxuan He and Yuqing Yang and Fan Yang and Mao Yang and Lidong Zhou},
+  title         = {{VBASE: Unifying Online Vector Similarity Search and Relational Queries via Relaxed Monotonicity}},
+  booktitle     = {17th USENIX Symposium on Operating Systems Design and Implementation (OSDI 23)},
+  pages         = {377--395},
+  publisher     = {USENIX Association},
+  year          = {2023},
+  url           = {https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi}
+}
+'''
+
+[[entry]]
+title = "AnalyticDB-V: A Hybrid Analytical Engine Towards Query Fusion for Structured and Unstructured Data"
+authors = ["Chuangxian Wei", "Bin Wu", "Sheng Wang", "Renjie Lou", "Chaoqun Zhan", "Feifei Li", "Yuanzhe Cai"]
+section = "vector-systems"
+venue = "VLDB"
+year = 2020
+url = "https://doi.org/10.14778/3415478.3415541"
+added = 2026-11-20
+bibtex = '''
+@article{wei2020analyticdb,
+  author        = {Chuangxian Wei and Bin Wu and Sheng Wang and Renjie Lou and Chaoqun Zhan and Feifei Li and Yuanzhe Cai},
+  title         = {{AnalyticDB-V: A Hybrid Analytical Engine Towards Query Fusion for Structured and Unstructured Data}},
+  journal       = {Proceedings of the VLDB Endowment},
+  volume        = {13},
+  number        = {12},
+  pages         = {3152--3165},
+  year          = {2020},
+  doi           = {10.14778/3415478.3415541}
+}
+'''
+
+[[entry]]
+title = "High-Throughput Vector Similarity Search in Knowledge Graphs"
+authors = ["Jason Mohoney", "Anil Pacaci", "Shihabur Rahman Chowdhury", "Ali Mousavi", "Ihab F. Ilyas", "Umar Farooq Minhas", "Jeffrey Pound", "Theodoros Rekatsinas"]
+section = "vector-systems"
+venue = "SIGMOD"
+year = 2023
+url = "https://doi.org/10.1145/3589777"
+arxiv = "https://arxiv.org/abs/2304.01926"
+added = 2026-11-20
+bibtex = '''
+@article{mohoney2023high,
+  author        = {Jason Mohoney and Anil Pacaci and Shihabur Rahman Chowdhury and Ali Mousavi and Ihab F. Ilyas and Umar Farooq Minhas and Jeffrey Pound and Theodoros Rekatsinas},
+  title         = {{High-Throughput Vector Similarity Search in Knowledge Graphs}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {1},
+  number        = {2},
+  pages         = {1--25},
+  year          = {2023},
+  doi           = {10.1145/3589777}
+}
+'''
+
+[[entry]]
+title = "CAPS: A Practical Partition Index for Filtered Similarity Search"
+authors = ["Gaurav Gupta", "Jonah Yi", "Benjamin Coleman", "Chen Luo", "Vihan Lakshman", "Anshumali Shrivastava"]
+section = "vector-systems"
+venue = "arXiv"
+year = 2023
+url = "https://arxiv.org/abs/2308.15014"
+added = 2026-11-20
+
+[[entry]]
+title = "Navigating Labels and Vectors: A Unified Approach to Filtered Approximate Nearest Neighbor Search"
+authors = ["Yuzheng Cai", "Jiayang Shi", "Yizhuo Chen", "Weiguo Zheng"]
+section = "vector-systems"
+venue = "SIGMOD"
+year = 2024
+url = "https://doi.org/10.1145/3698822"
+added = 2026-11-20
+bibtex = '''
+@article{cai2024navigating,
+  author        = {Yuzheng Cai and Jiayang Shi and Yizhuo Chen and Weiguo Zheng},
+  title         = {{Navigating Labels and Vectors: A Unified Approach to Filtered Approximate Nearest Neighbor Search}},
+  journal       = {Proceedings of the ACM on Management of Data},
+  volume        = {2},
+  number        = {6},
+  pages         = {1--27},
+  year          = {2024},
+  doi           = {10.1145/3698822}
+}
+'''
+
+[[entry]]
+title = "Filtered-DiskANN: Graph Algorithms for Approximate Nearest Neighbor Search with Filters"
+authors = ["Siddharth Gollapudi", "Neel Karia", "Varun Sivashankar", "Ravishankar Krishnaswamy", "Nikit Begwani", "Swapnil Raz", "Yiyong Lin", "Yin Zhang", "Neelam Mahapatro", "Premkumar Srinivasan", "Amit Singh", "Harsha Vardhan Simhadri"]
+section = "vector-systems"
+venue = "WWW"
+year = 2023
+url = "https://doi.org/10.1145/3543507.3583552"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{gollapudi2023filtered,
+  author        = {Siddharth Gollapudi and Neel Karia and Varun Sivashankar and Ravishankar Krishnaswamy and Nikit Begwani and Swapnil Raz and Yiyong Lin and Yin Zhang and Neelam Mahapatro and Premkumar Srinivasan and Amit Singh and Harsha Vardhan Simhadri},
+  title         = {{Filtered-DiskANN: Graph Algorithms for Approximate Nearest Neighbor Search with Filters}},
+  booktitle     = {Proceedings of the ACM Web Conference 2023},
+  pages         = {3406--3416},
+  publisher     = {ACM},
+  year          = {2023},
+  doi           = {10.1145/3543507.3583552}
+}
+'''
+
+[[entry]]
+title = "Results of the NeurIPS'21 Challenge on Billion-Scale Approximate Nearest Neighbor Search"
+authors = ["Harsha Vardhan Simhadri", "George Williams", "Martin Aumüller", "Matthijs Douze", "Artem Babenko", "Dmitry Baranchuk", "Qi Chen", "Lucas Hosseini", "Ravishankar Krishnaswamy", "Gopal Srinivasa", "Suhas Jayaram Subramanya", "Jingdong Wang"]
+section = "vector-systems"
+venue = "NeurIPS Competitions"
+year = 2021
+url = "https://proceedings.mlr.press/v176/simhadri22a.html"
+arxiv = "https://arxiv.org/abs/2205.03763"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{simhadri2021results,
+  author        = {Harsha Vardhan Simhadri and George Williams and Martin Aumüller and Matthijs Douze and Artem Babenko and Dmitry Baranchuk and Qi Chen and Lucas Hosseini and Ravishankar Krishnaswamy and Gopal Srinivasa and Suhas Jayaram Subramanya and Jingdong Wang},
+  title         = {{Results of the NeurIPS'21 Challenge on Billion-Scale Approximate Nearest Neighbor Search}},
+  booktitle     = {Proceedings of the NeurIPS 2021 Competitions and Demonstrations Track},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {176},
+  pages         = {177--189},
+  publisher     = {PMLR},
+  year          = {2021},
+  url           = {https://proceedings.mlr.press/v176/simhadri22a.html}
+}
+'''
+
+[[entry]]
+title = "ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms"
+authors = ["Martin Aumüller", "Erik Bernhardsson", "Alexander Faithfull"]
+section = "vector-systems"
+venue = "Information Systems"
+year = 2020
+url = "https://doi.org/10.1016/j.is.2019.02.006"
+arxiv = "https://arxiv.org/abs/1807.05614"
+added = 2026-11-20
+bibtex = '''
+@article{aumuller2020ann,
+  author        = {Martin Aumüller and Erik Bernhardsson and Alexander Faithfull},
+  title         = {{ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms}},
+  journal       = {Information Systems},
+  volume        = {87},
+  pages         = {101374},
+  year          = {2020},
+  doi           = {10.1016/j.is.2019.02.006}
+}
+'''
+
+[[entry]]
+title = "Text2VectorSQL: Towards a Unified Interface for Vector Search and SQL Queries"
+authors = ["Zhengren Wang", "Dongwen Yao", "Bozhou Li", "Dongsheng Ma", "Bo Li", "Zhiyu Li", "Feiyu Xiong", "Bin Cui", "Linpeng Tang", "Wentao Zhang"]
+section = "vector-systems"
+venue = "ICDE"
+year = 2026
+url = "https://doi.org/10.1109/icde65706.2026.00109"
+arxiv = "https://arxiv.org/abs/2506.23071"
+added = 2026-11-20
+bibtex = '''
+@inproceedings{wang2026text2vectorsql,
+  author        = {Zhengren Wang and Dongwen Yao and Bozhou Li and Dongsheng Ma and Bo Li and Zhiyu Li and Feiyu Xiong and Bin Cui and Linpeng Tang and Wentao Zhang},
+  title         = {{Text2VectorSQL: Towards a Unified Interface for Vector Search and SQL Queries}},
+  booktitle     = {2026 IEEE 42nd International Conference on Data Engineering (ICDE)},
+  pages         = {1406--1419},
+  publisher     = {IEEE},
+  year          = {2026},
+  doi           = {10.1109/icde65706.2026.00109}
+}
+'''

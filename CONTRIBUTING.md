@@ -2,6 +2,10 @@
 
 This is a curated list, hand-picked rather than exhaustive. The maintainer chooses what goes in, and suggestions are welcome as issues. Each entry appears in one place, newest first, as one line: venue and year, title, authors, and links. There are no badges, rankings, or&nbsp;summaries.
 
+## The bar
+
+The README is a short list meant to be read in full, so each paper has to earn its place: published at a top venue (such as KDD, VLDB, SIGMOD, ICDE, TKDE, TKDD, CIKM, ICLR, ICML, NeurIPS, ACL, ISWC, ESWC, and the top security and theory venues), or a strong industry paper that may never be published. Algorithmic contributions come first. Everything else worth tracking, such as follow-ups, benchmarks, surveys, and preprints, goes to the [long list](LONGLIST.md), marked with `longlist = true` in its&nbsp;entry.
+
 ## Scope
 
 An entry belongs here if its main contribution falls under one of five&nbsp;pillars:
@@ -37,8 +41,8 @@ Each entry goes in exactly one place, chosen by its main&nbsp;contribution:
 ## Adding an entry
 
 1. Add an `[[entry]]` to the pillar's file in&nbsp;[`data/papers/`](data/papers).
-2. Run `make`. It validates the data and regenerates `README.md` and&nbsp;`references.bib`.
-3. Commit all three. CI fails if either generated file does not match the&nbsp;data.
+2. Run `make`. It validates the data and regenerates `README.md`, `LONGLIST.md`, and&nbsp;`references.bib`.
+3. Commit the data file with `README.md`, `LONGLIST.md`, and `references.bib`. CI fails if a generated file does not match the&nbsp;data.
 
 `make` needs [uv](https://docs.astral.sh/uv/). Without it, run `python3 scripts/build.py` with Python 3.11 or&nbsp;newer.
 
@@ -53,6 +57,7 @@ url = "https://doi.org/..."
 arxiv = "https://arxiv.org/abs/NNNN.NNNNN"    # optional
 code = "https://github.com/..."              # optional
 added = 2026-11-20
+longlist = true                              # optional: track it in LONGLIST.md, not the README
 bibtex = '''
 @inproceedings{author2026title,
   ...
@@ -74,14 +79,15 @@ bibtex = '''
 | `arxiv` | no | The arXiv abstract page of a paper whose `url` is the published version. |
 | `code`, `docs`, `project` | no | Extra links. Omit them rather than leaving them empty. |
 | `added` | yes | The date the entry was added. |
+| `longlist` | no | `true` puts the entry in [LONGLIST.md](LONGLIST.md) instead of the README. See the bar above. |
 | `bibtex` | no | The BibTeX entry, pasted as a `'''` multi-line string and used verbatim. Prefer it for published papers. |
 | `bibkey` | no | Overrides the generated key (`surname` + `year` + first title word, such as `tsapelas2026nousdb`) when two entries would collide. |
 
 ## BibTeX
 
-`make` writes [`references.bib`](references.bib) in README order, with a comment header before each section. Without a `bibtex` field, arXiv papers become `@misc` entries with `eprint`, and everything else becomes `@misc` with `howpublished` set to the venue. Keys never change once published, so set `bibkey` rather than renaming when titles&nbsp;change.
+`make` writes [`references.bib`](references.bib) with every entry from the README and the long list, in section order, with a comment header before each section. Without a `bibtex` field, arXiv papers become `@misc` entries with `eprint`, and everything else becomes `@misc` with `howpublished` set to the venue. Keys never change once published, so set `bibkey` rather than renaming when titles&nbsp;change.
 
 ## Checks
 
-- `make check` validates the data and confirms that `README.md` and `references.bib` are up to date. CI runs it on every push and pull&nbsp;request.
-- A weekly workflow checks every link in the&nbsp;README.
+- `make check` validates the data and confirms that `README.md`, `LONGLIST.md`, and `references.bib` are up to date. CI runs it on every push and pull&nbsp;request.
+- A weekly workflow checks every link in the README and the long&nbsp;list.

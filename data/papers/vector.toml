@@ -70,6 +70,7 @@ venue = "arXiv"
 year = 2021
 url = "https://arxiv.org/abs/2105.09613"
 added = 2026-11-20
+longlist = true
 
 [[entry]]
 title = "Efficient K-Nearest Neighbor Graph Construction for Generic Similarity Measures"
@@ -79,6 +80,7 @@ venue = "WWW"
 year = 2011
 url = "https://doi.org/10.1145/1963405.1963487"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{dong2011efficient,
   author        = {Wei Dong and Charikar Moses and Kai Li},
@@ -100,6 +102,7 @@ year = 2021
 url = "https://doi.org/10.14778/3476249.3476255"
 arxiv = "https://arxiv.org/abs/2101.12631"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{wang2021comprehensive,
   author        = {Mengzhao Wang and Xiaoliang Xu and Qiang Yue and Yuxiang Wang},
@@ -122,6 +125,7 @@ year = 2025
 url = "https://doi.org/10.1145/3709693"
 arxiv = "https://arxiv.org/abs/2502.05575"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{azizi2025graph,
   author        = {Ilias Azizi and Karima Echihabi and Themis Palpanas},
@@ -166,6 +170,7 @@ year = 2020
 url = "https://proceedings.mlr.press/v119/prokhorenkova20a.html"
 arxiv = "https://arxiv.org/abs/1907.00845"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{prokhorenkova2020graph,
   author        = {Liudmila Prokhorenkova and Aleksandr Shekhovtsov},
@@ -189,6 +194,7 @@ year = 2024
 url = "https://doi.org/10.1145/3639269"
 arxiv = "https://arxiv.org/abs/2401.02116"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{wang2024starling,
   author        = {Mengzhao Wang and Weizhi Xu and Xiaomeng Yi and Songlin Wu and Zhangyang Peng and Xiangyu Ke and Yunjun Gao and Xiaoliang Xu and Rentong Guo and Charles Xie},
@@ -210,6 +216,7 @@ venue = "VLDB"
 year = 2023
 url = "https://doi.org/10.14778/3583140.3583166"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{azizi2023elpis,
   author        = {Ilias Azizi and Karima Echihabi and Themis Palpanas},
@@ -232,6 +239,7 @@ year = 2024
 url = "https://proceedings.mlr.press/v235/lu24l.html"
 arxiv = "https://arxiv.org/abs/2402.11354"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{lu2024probabilistic,
   author        = {Kejing Lu and Chuan Xiao and Yoshiharu Ishikawa},
@@ -255,6 +263,7 @@ year = 2024
 url = "https://doi.org/10.14778/3681954.3681959"
 arxiv = "https://arxiv.org/abs/2408.08933"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{chen2024roargraph,
   author        = {Meng Chen and Kai Zhang and Zhenying He and Yinan Jing and X. Sean Wang},
@@ -276,6 +285,7 @@ venue = "VLDB"
 year = 2024
 url = "https://doi.org/10.14778/3704965.3704974"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{wang2024steiner,
   author        = {Zeyu Wang and Qitong Wang and Xiaoxing Cheng and Peng Wang and Themis Palpanas and Wei Wang},
@@ -319,6 +329,7 @@ year = 2024
 url = "https://doi.org/10.1145/3627535.3638475"
 arxiv = "https://arxiv.org/abs/2305.04359"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{manohar2024parlayann,
   author        = {Magdalen Dobson Manohar and Zheqi Shen and Guy Blelloch and Laxman Dhulipala and Yan Gu and Harsha Vardhan Simhadri and Yihan Sun},
@@ -339,6 +350,7 @@ venue = "SIGMOD"
 year = 2026
 url = "https://doi.org/10.1145/3802120"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{xu2026through,
   author        = {Xiaoliang Xu and Haonan Dai and Can Li and Mengzhao Wang and Qiang Yue},
@@ -361,6 +373,7 @@ year = 2026
 url = "https://doi.org/10.1007/978-3-032-21324-2_3"
 arxiv = "https://arxiv.org/abs/2412.01940"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{munyampirwa2026down,
   author        = {Blaise Munyampirwa and Vihan Lakshman and Benjamin Coleman},
@@ -405,6 +418,7 @@ year = 2024
 url = "https://papers.nips.cc/paper_files/paper/2024/hash/6dc63b4063c978cf195bc15178e8152a-Abstract-Conference.html"
 arxiv = "https://arxiv.org/abs/2405.18680"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{diwan2024navigable,
   author        = {Haya Diwan and Jinrui Gou and Cameron Musco and Christopher Musco and Torsten Suel},
@@ -427,6 +441,7 @@ year = 2025
 url = "https://doi.org/10.14778/3725688.3725709"
 arxiv = "https://arxiv.org/abs/2410.01231"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{yang2025revisiting,
   author        = {Shuo Yang and Jiadong Xie and Yingfan Liu and Jeffrey Xu Yu and Xiyue Gao and Qianru Wang and Yanguo Peng and Jiangtao Cui},
@@ -537,6 +552,7 @@ year = 2025
 url = "https://doi.org/10.1145/3725413"
 arxiv = "https://arxiv.org/abs/2409.09913"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{gao2025practical,
   author        = {Jianyang Gao and Yutong Gou and Yuexuan Xu and Yongyi Yang and Cheng Long and Raymond Chi-Wing Wong},
@@ -559,6 +575,7 @@ year = 2021
 url = "https://papers.nips.cc/paper_files/paper/2021/hash/299dc35e747eb77177d9cea10a802da2-Abstract.html"
 arxiv = "https://arxiv.org/abs/2111.08566"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{chen2021spann,
   author        = {Qi Chen and Bing Zhao and Haidong Wang and Mingqin Li and Chuanjie Liu and Zengzhong Li and Mao Yang and Jingdong Wang},
@@ -581,6 +598,7 @@ year = 2023
 url = "https://doi.org/10.1145/3600006.3613166"
 arxiv = "https://arxiv.org/abs/2410.14452"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{xu2023spfresh,
   author        = {Yuming Xu and Hengyu Liang and Jin Li and Shuotao Xu and Qi Chen and Qianxi Zhang and Cheng Li and Ziyue Yang and Fan Yang and Yuqing Yang and Peng Cheng and Mao Yang},
@@ -602,6 +620,7 @@ year = 2023
 url = "https://doi.org/10.14778/3611479.3611537"
 arxiv = "https://arxiv.org/abs/2304.04759"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{aguerrebere2023similarity,
   author        = {Cecilia Aguerrebere and Ishwar Singh Bhati and Mark Hildebrand and Mariano Tepper and Theodore Willke},
@@ -624,6 +643,7 @@ year = 2023
 url = "https://doi.org/10.1145/3589282"
 arxiv = "https://arxiv.org/abs/2303.09855"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{gao2023high,
   author        = {Jianyang Gao and Cheng Long},
@@ -646,6 +666,7 @@ year = 2025
 url = "https://doi.org/10.1145/3709730"
 arxiv = "https://arxiv.org/abs/2411.12229"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{gou2025symphonyqg,
   author        = {Yutong Gou and Jianyang Gao and Yuexuan Xu and Cheng Long},
@@ -668,6 +689,7 @@ year = 2020
 url = "https://openreview.net/forum?id=rkenmREFDr"
 arxiv = "https://arxiv.org/abs/1901.08544"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{dong2020learning,
   author        = {Yihe Dong and Piotr Indyk and Ilya Razenshteyn and Tal Wagner},
@@ -687,6 +709,7 @@ year = 2026
 url = "https://doi.org/10.14778/3797919.3797931"
 arxiv = "https://arxiv.org/abs/2411.06158"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{yang2026quantization,
   author        = {Mingyu Yang and Liuchang Jing and Wentao Li and Wei Wang},
@@ -730,6 +753,7 @@ venue = "ICDE"
 year = 2020
 url = "https://doi.org/10.1109/icde48307.2020.00094"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{zhao2020song,
   author        = {Weijie Zhao and Shulong Tan and Ping Li},
@@ -750,6 +774,7 @@ venue = "ICDE"
 year = 2022
 url = "https://doi.org/10.1109/icde53745.2022.00046"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{yu2022gpu,
   author        = {Yuanhang Yu and Dong Wen and Ying Zhang and Lu Qin and Wenjie Zhang and Xuemin Lin},
@@ -771,6 +796,7 @@ year = 2023
 url = "https://doi.org/10.1109/tbdata.2022.3161156"
 arxiv = "https://arxiv.org/abs/1912.01059"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{groh2023ggnn,
   author        = {Fabian Groh and Lukas Ruppert and Patrick Wieschollek and Hendrik P. A. Lensch},
@@ -814,6 +840,7 @@ year = 2025
 url = "https://doi.org/10.1109/tbdata.2025.3581085"
 arxiv = "https://arxiv.org/abs/2401.11324"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{venkatasubba2025bang,
   author        = {Karthik Venkatasubba and Saim Khan and Somesh Singh and Harsha Vardhan Simhadri and Jyothi Vedurada},
@@ -879,6 +906,7 @@ year = 2025
 url = "https://doi.org/10.1145/3769825"
 arxiv = "https://arxiv.org/abs/2508.08744"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{li2025scalable,
   author        = {Zhonggen Li and Xiangyu Ke and Yifan Zhu and Bocheng Yu and Baihua Zheng and Yunjun Gao},
@@ -900,6 +928,7 @@ venue = "KDD"
 year = 2026
 url = "https://doi.org/10.1145/3770854.3780212"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{zhou2026hitcher,
   author        = {Qihui Zhou and Changji Li and Guanxian Jiang and Chenhao Ma and Xiao Yan and Yu Mao and Ming-Chang Yang and James Cheng},
@@ -920,6 +949,7 @@ venue = "ICDE"
 year = 2026
 url = "https://doi.org/10.1109/icde65706.2026.00250"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{ruan2026glide,
   author        = {Fuhao Ruan and Ziyang Yue and Ling Xu and Dawei Liu and Bolong Zheng},
@@ -941,6 +971,7 @@ year = 2025
 url = "https://www.usenix.org/conference/fast25/presentation/tian-bing"
 arxiv = "https://arxiv.org/abs/2409.16576"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{tian2025high,
   author        = {Bing Tian and Haikun Liu and Yuhang Tang and Shihai Xiao and Zhuohui Duan and Xiaofei Liao and Hai Jin and Xuecang Zhang and Junhua Zhu and Yu Zhang},
@@ -962,6 +993,7 @@ year = 2024
 url = "https://doi.org/10.1145/3620665.3640360"
 arxiv = "https://arxiv.org/abs/2312.01712"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{liu2024juno,
   author        = {Zihan Liu and Wentao Ni and Jingwen Leng and Yu Feng and Cong Guo and Quan Chen and Chao Li and Minyi Guo and Yuhao Zhu},
@@ -982,6 +1014,7 @@ venue = "PPoPP"
 year = 2023
 url = "https://doi.org/10.1145/3572848.3577527"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{peng2023iqan,
   author        = {Zhen Peng and Minjia Zhang and Kai Li and Ruoming Jin and Bin Ren},
@@ -1003,6 +1036,7 @@ year = 2025
 url = "https://doi.org/10.1145/3725260"
 arxiv = "https://arxiv.org/abs/2502.18113"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{wang2025accelerating,
   author        = {Mengzhao Wang and Haotian Wu and Xiangyu Ke and Yunjun Gao and Yifan Zhu and Wenchao Zhou},
@@ -1046,6 +1080,7 @@ year = 2021
 url = "https://doi.org/10.1109/tpami.2019.2952606"
 arxiv = "https://arxiv.org/abs/1812.09162"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{andre2021quicker,
   author        = {Fabien André and Anne-Marie Kermarrec and Nicolas Le Scouarnec},
@@ -1068,6 +1103,7 @@ year = 2022
 url = "https://papers.nips.cc/paper_files/paper/2022/hash/fb44a668c2d4bc984e9d6ca261262cbb-Abstract-Conference.html"
 arxiv = "https://arxiv.org/abs/2104.03221"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{coleman2022graph,
   author        = {Benjamin Coleman and Santiago Segarra and Alexander Smola and Anshumali Shrivastava},
@@ -1090,6 +1126,7 @@ year = 2025
 url = "https://doi.org/10.14778/3750601.3750624"
 arxiv = "https://arxiv.org/abs/2503.17911"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{zhong2025vsag,
   author        = {Xiaoyao Zhong and Haotian Li and Jiabao Jin and Mingyu Yang and Deming Chu and Xiangyu Wang and Zhitao Shen and Wei Jia and George Gu and Yi Xie and Xuemin Lin and Heng Tao Shen and Jingkuan Song and Peng Cheng},
@@ -1112,6 +1149,7 @@ year = 2022
 url = "https://papers.nips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html"
 arxiv = "https://arxiv.org/abs/2205.14135"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{dao2022flashattention,
   author        = {Tri Dao and Dan Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
@@ -1153,6 +1191,7 @@ venue = "SC"
 year = 2023
 url = "https://doi.org/10.1145/3581784.3607062"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{zhang2023parallel,
   author        = {Jingrong Zhang and Akira Naruse and Xipeng Li and Yong Wang},
@@ -1194,6 +1233,7 @@ year = 2024
 url = "https://doi.org/10.1007/s00778-024-00864-x"
 arxiv = "https://arxiv.org/abs/2310.14021"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{pan2024survey,
   author        = {James Jie Pan and Jianguo Wang and Guoliang Li},
@@ -1216,6 +1256,7 @@ year = 2026
 url = "https://doi.org/10.1109/tbdata.2025.3618474"
 arxiv = "https://arxiv.org/abs/2401.08281"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{douze2026faiss,
   author        = {Matthijs Douze and Alexandr Guzhva and Chengqi Deng and Jeff Johnson and Gergely Szilvasy and Pierre-Emmanuel Mazaré and Maria Lomeli and Lucas Hosseini and Hervé Jégou},
@@ -1259,6 +1300,7 @@ venue = "VLDB"
 year = 2025
 url = "https://doi.org/10.14778/3750601.3750700"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{chronis2025filtered,
   author        = {Yannis Chronis and Helena Caminal and Yannis Papakonstantinou and Fatma Özcan and Anastasia Ailamaki},
@@ -1280,6 +1322,7 @@ venue = "SIGMOD"
 year = 2024
 url = "https://doi.org/10.1145/3639324"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{zuo2024serf,
   author        = {Chaoji Zuo and Miao Qiao and Wenchao Zhou and Feifei Li and Dong Deng},
@@ -1301,6 +1344,7 @@ venue = "OSDI"
 year = 2023
 url = "https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{zhang2023vbase,
   author        = {Qianxi Zhang and Shuotao Xu and Qi Chen and Guoxin Sui and Jiadong Xie and Zhizhen Cai and Yaoqi Chen and Yinxuan He and Yuqing Yang and Fan Yang and Mao Yang and Lidong Zhou},
@@ -1321,6 +1365,7 @@ venue = "VLDB"
 year = 2020
 url = "https://doi.org/10.14778/3415478.3415541"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{wei2020analyticdb,
   author        = {Chuangxian Wei and Bin Wu and Sheng Wang and Renjie Lou and Chaoqun Zhan and Feifei Li and Yuanzhe Cai},
@@ -1343,6 +1388,7 @@ year = 2023
 url = "https://doi.org/10.1145/3589777"
 arxiv = "https://arxiv.org/abs/2304.01926"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{mohoney2023high,
   author        = {Jason Mohoney and Anil Pacaci and Shihabur Rahman Chowdhury and Ali Mousavi and Ihab F. Ilyas and Umar Farooq Minhas and Jeffrey Pound and Theodoros Rekatsinas},
@@ -1364,6 +1410,7 @@ venue = "arXiv"
 year = 2023
 url = "https://arxiv.org/abs/2308.15014"
 added = 2026-11-20
+longlist = true
 
 [[entry]]
 title = "Navigating Labels and Vectors: A Unified Approach to Filtered Approximate Nearest Neighbor Search"
@@ -1373,6 +1420,7 @@ venue = "SIGMOD"
 year = 2024
 url = "https://doi.org/10.1145/3698822"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{cai2024navigating,
   author        = {Yuzheng Cai and Jiayang Shi and Yizhuo Chen and Weiguo Zheng},
@@ -1415,6 +1463,7 @@ year = 2021
 url = "https://proceedings.mlr.press/v176/simhadri22a.html"
 arxiv = "https://arxiv.org/abs/2205.03763"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{simhadri2021results,
   author        = {Harsha Vardhan Simhadri and George Williams and Martin Aumüller and Matthijs Douze and Artem Babenko and Dmitry Baranchuk and Qi Chen and Lucas Hosseini and Ravishankar Krishnaswamy and Gopal Srinivasa and Suhas Jayaram Subramanya and Jingdong Wang},
@@ -1438,6 +1487,7 @@ year = 2020
 url = "https://doi.org/10.1016/j.is.2019.02.006"
 arxiv = "https://arxiv.org/abs/1807.05614"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{aumuller2020ann,
   author        = {Martin Aumüller and Erik Bernhardsson and Alexander Faithfull},
@@ -1459,6 +1509,7 @@ year = 2026
 url = "https://doi.org/10.1109/icde65706.2026.00109"
 arxiv = "https://arxiv.org/abs/2506.23071"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{wang2026text2vectorsql,
   author        = {Zhengren Wang and Dongwen Yao and Bozhou Li and Dongsheng Ma and Bo Li and Zhiyu Li and Feiyu Xiong and Bin Cui and Linpeng Tang and Wentao Zhang},

@@ -55,6 +55,7 @@ year = 2025
 url = "https://doi.org/10.3233/faia251160"
 arxiv = "https://arxiv.org/abs/2504.19413"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{chhikara2025mem0,
   author        = {Prateek Chhikara and Dev Khant and Saket Aryan and Taranjeet Singh and Deshraj Yadav},
@@ -194,6 +195,7 @@ year = 2017
 url = "https://papers.nips.cc/paper_files/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html"
 arxiv = "https://arxiv.org/abs/1705.08690"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @inproceedings{shin2017continual,
   author        = {Hanul Shin and Jung Kwon Lee and Jaehong Kim and Jiwon Kim},
@@ -214,6 +216,7 @@ venue = "Nature Communications"
 year = 2022
 url = "https://doi.org/10.1038/s41467-022-34938-7"
 added = 2026-11-20
+longlist = true
 bibtex = '''
 @article{tadros2022sleep,
   author        = {Timothy Tadros and Giri P. Krishnan and Ramyaa Ramyaa and Maxim Bazhenov},

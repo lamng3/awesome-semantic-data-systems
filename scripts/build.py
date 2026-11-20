@@ -1,11 +1,14 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""Validate data/ and regenerate the marked blocks of README.md and references.bib.
+"""Validate data/ and regenerate README.md (marked blocks), LONGLIST.md, and references.bib.
+
+README.md lists the short list; entries marked `longlist = true` go to LONGLIST.md instead.
+references.bib holds every entry.
 
 Usage:
-    uv run scripts/build.py          # rewrite README.md and references.bib
-    uv run scripts/build.py --check  # exit 1 if either is stale or the data is invalid
+    uv run scripts/build.py          # rewrite README.md, LONGLIST.md, and references.bib
+    uv run scripts/build.py --check  # exit 1 if any is stale or the data is invalid
 """
 
 from __future__ import annotations
@@ -21,10 +24,11 @@ ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = ROOT / "data" / "taxonomy.toml"
 PAPERS = ROOT / "data" / "papers"  # one <pillar id>.toml per pillar
 README = ROOT / "README.md"
+LONGLIST = ROOT / "LONGLIST.md"
 BIB = ROOT / "references.bib"
 
 REQUIRED = {"title", "venue", "year", "url", "added"}
-OPTIONAL = {"section", "authors", "org", "cite", "arxiv", "code", "docs", "project", "bibkey", "bibtex"}
+OPTIONAL = {"section", "authors", "org", "cite", "arxiv", "code", "docs", "project", "bibkey", "bibtex", "longlist"}
 BIBKEY = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
 BIB_SKIP_WORDS = {"a", "an", "the", "is", "on", "of", "towards", "toward"}
 ARXIV_ID = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5}|[a-z-]+(?:\.[A-Z]{2})?/\d{7})$")
@@ -39,7 +43,15 @@ MAX_SECTIONS = 4
 SURNAME_PARTICLES = {"da", "das", "de", "del", "della", "der", "di", "dos", "du", "la", "le", "ten", "ter", "van", "von"}
 NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
 # Headings written by hand in README.md; generated anchors must not collide with them.
-STATIC_HEADINGS = {"Awesome Semantic Data Systems", "Contents", "Citing", "Contributing", "License"}
+STATIC_HEADINGS = {"Awesome Semantic Data Systems", "Contents", "Long List", "Citing", "Contributing", "License"}
+LONGLIST_HEAD = """<!-- Generated from data/ by scripts/build.py. Do not edit by hand. -->
+
+# Long List
+
+Papers we track beyond the [main list](README.md), under the same sections, newest&nbsp;first.
+
+## Contents
+"""
 
 
 def slug(text: str) -> str:
@@ -143,6 +155,8 @@ def load() -> tuple[list[dict], list[dict], list[str]]:
                 errors.append(f"{where}: {key} must start with https://")
         if e["title"].endswith("."):
             errors.append(f"{where}: title ends with a period")
+        if "longlist" in e and e["longlist"] is not True:
+            errors.append(f"{where}: longlist must be true; omit it to keep the entry in the README")
         if "bibtex" in e and not e["bibtex"].lstrip().startswith("@"):
             errors.append(f"{where}: bibtex must be a complete BibTeX entry starting with @")
         if "bibtex" in e and not bibkey(e):
@@ -313,21 +327,24 @@ def main() -> int:
         print("\n".join(errors), file=sys.stderr)
         return 1
 
-    grouped = group(pillars, entries)
-    current = README.read_text()
-    updated = fill(current, "CONTENTS", render_contents(grouped))
-    updated = fill(updated, "LIST", render_list(grouped))
-    bib = render_bib(grouped)
+    short = group(pillars, [e for e in entries if not e.get("longlist")])
+    long = group(pillars, [e for e in entries if e.get("longlist")])
+    readme = fill(README.read_text(), "CONTENTS", render_contents(short))
+    readme = fill(readme, "LIST", render_list(short))
+    longlist = f"{LONGLIST_HEAD}\n{render_contents(long)}\n\n{render_list(long)}\n"
+    bib = render_bib(group(pillars, entries))
 
+    outputs = [(README, readme), (LONGLIST, longlist), (BIB, bib)]
     if check:
-        stale = [p.name for p, text in [(README, updated), (BIB, bib)] if not p.exists() or p.read_text() != text]
+        stale = [p.name for p, text in outputs if not p.exists() or p.read_text() != text]
         if stale:
             print(f"{', '.join(stale)} out of date. Run `make` and commit the result.", file=sys.stderr)
             return 1
         return 0
-    README.write_text(updated)
-    BIB.write_text(bib)
-    print(f"README.md: {len(entries)} entries")
+    for path, text in outputs:
+        path.write_text(text)
+    in_long = sum(1 for e in entries if e.get("longlist"))
+    print(f"README.md: {len(entries) - in_long} entries, LONGLIST.md: {in_long}, references.bib: {len(entries)}")
     return 0
 
 

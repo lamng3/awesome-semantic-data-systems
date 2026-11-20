@@ -5,7 +5,7 @@ on:
     - cron: "0 12 * * 1"
   workflow_dispatch:
   pull_request:
-    paths: [README.md]
+    paths: [README.md, LONGLIST.md]
 
 jobs:
   lychee:
@@ -22,5 +22,5 @@ jobs:
             --accept 200,206,429
             --exclude '^https://doi\.org/10\.(1145|14778|1109|1126|3233|1137)/'
             --exclude-path data
-            README.md CONTRIBUTING.md
+            README.md LONGLIST.md CONTRIBUTING.md
           fail: true
